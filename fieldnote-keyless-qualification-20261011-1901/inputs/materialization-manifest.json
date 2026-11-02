@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "fieldnote-cached-identity-materialization-1.0",
+  "materializedAt": "2026-10-11T18:59:51.365Z",
+  "sources": {
+    "candidates": {
+      "filename": "candidates.json",
+      "sha256": "cdd2278bea3fa218f987d08a7d0f71090c668cab9b74cea15f5910b322eff80f"
+    },
+    "checkpoint": {
+      "filename": "checkpoint.json",
+      "sha256": "7327d3ee4f06de3ab8f0eebd58c99fb02eb522708da2e13847511282acea9f57",
+      "stateSha256": "e2a6e1313ad4e43febfcfc3d89fdb3952edfa91d085e84a02b4fc5eb2c4f1fb8"
+    }
+  },
+  "output": {
+    "filename": "cached-identity-candidates.json",
+    "sha256": "db69bb4688fe30d7d23710b21c86513693214b4576d9f611b69e6c4a21661de2",
+    "bytes": 3648558
+  },
+  "sourceStatus": "partial",
+  "sourceStopReason": "invalid_steam_catalog_page",
+  "sourceFinishedAt": "2026-10-11T18:50:08.567Z",
+  "sourcePlanHash": "a3ac91e32761b394d88b47208c5d6a7aceae311c51bbd0c82192e671803fd7e7",
+  "sourceEvidenceSha256": "0f4d376aa2b54f62049d90a95b5cfaff7aea5584b79a0bb240836a03df49ffe5",
+  "countersPreserved": {
+    "requests": 31,
+    "retries": 0,
+    "igdbPages": 26,
+    "steamPages": 4,
+    "igdbBytes": 4366491,
+    "steamBytes": 19503394,
+    "elapsedMs": 40836,
+    "pendingReservation": false,
+    "blocked": null
+  },
+  "steamCoveragePreserved": {
+    "cachedMatches": 750,
+    "acceptedPages": 3,
+    "checkedThroughAppid": 4110900,
+    "fullCatalogComplete": false
+  },
+  "summary": {
+    "discovered": 1000,
+    "metadataProcessed": 1000,
+    "identityVerified": 625,
+    "identityPending": 184,
+    "quarantined": 191,
+    "pcExactDate": 498,
+    "panelAllocated": 0
+  },
+  "networkRequests": 0,
+  "credentialReads": 0,
+  "databaseWrites": 0,
+  "originalFilesModified": false
+}

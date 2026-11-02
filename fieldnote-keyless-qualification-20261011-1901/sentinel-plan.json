@@ -1,0 +1,84 @@
+{
+  "version": "steam-review-window-sentinels-1.1",
+  "endPolicy": "frozen_start_of_current_UTC_day_unless_explicit_as_of",
+  "windows": {
+    "seven": {
+      "start": 1791072000,
+      "endExclusive": 1791676800
+    },
+    "thirty": {
+      "start": 1789084800,
+      "endExclusive": 1791676800
+    }
+  },
+  "sentinels": [
+    {
+      "appid": 730050,
+      "name": "Verdant Skies",
+      "role": "prior_empty_boundary_missing"
+    },
+    {
+      "appid": 693580,
+      "name": "Goblins of Elderstone",
+      "role": "prior_empty_boundary_missing"
+    },
+    {
+      "appid": 1368410,
+      "name": "Psycron",
+      "role": "prior_empty_boundary_missing"
+    },
+    {
+      "appid": 1054550,
+      "name": "Phantom Rose",
+      "role": "prior_positive_boundary_reused"
+    },
+    {
+      "appid": 730,
+      "name": "Counter-Strike 2",
+      "role": "high_volume"
+    }
+  ],
+  "filters": {
+    "filter": 1,
+    "languages": [
+      "all"
+    ],
+    "review_type": 0,
+    "purchase_type": 0,
+    "filter_offtopic_activity": true,
+    "display_language": "english"
+  },
+  "limits": {
+    "maxRequests": 60,
+    "maxRetries": 4,
+    "retriesPerRequest": 1,
+    "minIntervalMs": 2000,
+    "requestTimeoutMs": 20000,
+    "maxRuntimeMs": 720000,
+    "maxResponseBytes": 1048576,
+    "maxBytes": 16777216,
+    "maxEnumerationPages": 3
+  },
+  "priorEvidence": {
+    "runId": "dates-20261010T180331650Z-2d32a062-1960-469e-8624-ae14ea485d4b",
+    "acceptedRequests": 24,
+    "completeEnumerations": 6,
+    "consistentPartitions": 6,
+    "positiveBoundaryAppids": [
+      1054550,
+      1706090,
+      916350
+    ],
+    "note": "Prior positive boundary checks are reused, not repeated. A zero window cannot supply a positive boundary timestamp."
+  },
+  "intendedChecks": [
+    "five lifetime + 7/30-day counts",
+    "five timestamped CCU observations",
+    "three prior-empty sentinels: pre-review-era empty window and exact live positive boundary",
+    "high-volume boundary enumeration and 7-day plus preceding23-day partition"
+  ],
+  "nominalRequests": 36,
+  "writesDatabase": false,
+  "credentialsRead": false,
+  "reviewBodiesPersisted": false
+}

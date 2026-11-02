@@ -1,0 +1,3634 @@
+{
+  "schema_version": "1.0",
+  "run_id": "cohort-20261010T175523563Z-8f965f5a-0ea4-44ce-9337-012c9b72172b",
+  "kind": "live",
+  "mode": "cohort",
+  "bundle_fingerprint": "d586666a47bc008cd243a3cf436503de9f48291cbf4bda8e0c22976f55943388",
+  "started_at": "2026-10-10T17:55:23.565Z",
+  "finished_at": "2026-10-10T17:56:43.197Z",
+  "status": "stopped",
+  "healthy": false,
+  "scope": "bounded_M1_technical_feasibility",
+  "baseline_date": "2026-10-09",
+  "baseline_source_sha256": {
+    "cohort.json": "ca971b9b127f6a6670672db143ebfaa108b288bffdffcabd2cc751242faf3764",
+    "cohort_recent.json": "84f37f67d6e06d32857d593730526717862c8ebf423b1ed5b9509bcd2f8e6f49",
+    "per_game_test_status.json": "035528955d55265ff37b75705dd1ee4f2f15ecfdaedad9aaffb292bdd75d8050",
+    "api_observations.json": "ff1b66c6efaf908b96191799c34f37ff8609227791fabdca31090efe14e0e9fc",
+    "api_recent_observations.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "review_date_observations.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "final_test_summary.json": "dd039ddd01ac4b84cba55e6cae16bf338410a0df3918da4d8364cff4ca26c9f4"
+  },
+  "pilot_rationale": null,
+  "pilot_appids": [
+    1472660,
+    916350,
+    2379780
+  ],
+  "limits": {
+    "pilot_requests": 6,
+    "cohort_requests": 120,
+    "interval_ms": 1100,
+    "timeout_ms": 20000,
+    "run_timeout_ms": 600000,
+    "body_bytes": 1048576,
+    "header_bytes": 8192,
+    "review_page_size": 100,
+    "window_page_cap": 4,
+    "concurrency": 1,
+    "retries": 0,
+    "request_cap": 120
+  },
+  "source_documents": [
+    "https://partner.steamgames.com/doc/webapi/IUserReviewsService",
+    "https://partner.steamgames.com/doc/webapi/ISteamUserStats",
+    "https://partner.steamgames.com/doc/webapi_overview"
+  ],
+  "notes": [
+    "The existing 19 saved review observations already use the same GetAppReviews API.",
+    "Current player counts are instantaneous, not DAU, historical peaks or sales.",
+    "Anonymous review responses may be cached by Valve for up to 10 minutes.",
+    "Dated review counts describe surviving matching reviews observed now, not an immutable historical snapshot.",
+    "Two fresh manual runs are not a validated collection schedule or time series.",
+    "Tag collection is disabled; no HTML/store/SteamDB requests are included.",
+    "No production use, reuse/retention rights or other M1 gates are approved by this technical test."
+  ],
+  "request_counts": {
+    "attempted": 73,
+    "successful": 72,
+    "failed": 1
+  },
+  "response_bytes": 35573,
+  "observations": [
+    {
+      "sequence": 1,
+      "appid": 413150,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:23.569Z",
+      "completed_at": "2026-10-10T17:55:23.718Z",
+      "latency_ms": 149,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 413150
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 46,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 60388,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 2,
+      "appid": 413150,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:24.670Z",
+      "completed_at": "2026-10-10T17:55:25.050Z",
+      "latency_ms": 380,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 413150,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 804,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 898414,
+        "query_summary_score_totals": {
+          "total_reviews": 898414,
+          "total_positive": 885157,
+          "total_negative": 13257
+        },
+        "created_min_utc": "2026-10-10T17:46:41.000Z",
+        "created_max_utc": "2026-10-10T17:46:41.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 3,
+      "appid": 1472660,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:25.770Z",
+      "completed_at": "2026-10-10T17:55:25.833Z",
+      "latency_ms": 63,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 1472660
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 43,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 34,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 4,
+      "appid": 1472660,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:26.870Z",
+      "completed_at": "2026-10-10T17:55:26.918Z",
+      "latency_ms": 48,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 1472660,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 965,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 3794,
+        "query_summary_score_totals": {
+          "total_reviews": 3794,
+          "total_positive": 2992,
+          "total_negative": 802
+        },
+        "created_min_utc": "2026-10-09T00:10:49.000Z",
+        "created_max_utc": "2026-10-09T00:10:49.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 5,
+      "appid": 894940,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:27.971Z",
+      "completed_at": "2026-10-10T17:55:28.255Z",
+      "latency_ms": 284,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 894940
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 43,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 25,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 6,
+      "appid": 894940,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:29.071Z",
+      "completed_at": "2026-10-10T17:55:29.469Z",
+      "latency_ms": 398,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 894940,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 958,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 6086,
+        "query_summary_score_totals": {
+          "total_reviews": 6086,
+          "total_positive": 5665,
+          "total_negative": 421
+        },
+        "created_min_utc": "2026-10-09T17:19:03.000Z",
+        "created_max_utc": "2026-10-09T17:19:03.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 7,
+      "appid": 730050,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:30.172Z",
+      "completed_at": "2026-10-10T17:55:30.488Z",
+      "latency_ms": 316,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 730050
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 42,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 0,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 8,
+      "appid": 730050,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:31.273Z",
+      "completed_at": "2026-10-10T17:55:31.600Z",
+      "latency_ms": 327,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 730050,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 1993,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 364,
+        "query_summary_score_totals": {
+          "total_reviews": 364,
+          "total_positive": 284,
+          "total_negative": 80
+        },
+        "created_min_utc": "2026-08-23T11:11:07.000Z",
+        "created_max_utc": "2026-08-23T11:11:07.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 9,
+      "appid": 432010,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:32.374Z",
+      "completed_at": "2026-10-10T17:55:32.643Z",
+      "latency_ms": 269,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 432010
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 42,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 2,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 10,
+      "appid": 432010,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:33.475Z",
+      "completed_at": "2026-10-10T17:55:33.672Z",
+      "latency_ms": 197,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 432010,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 817,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 735,
+        "query_summary_score_totals": {
+          "total_reviews": 735,
+          "total_positive": 591,
+          "total_negative": 144
+        },
+        "created_min_utc": "2026-09-06T00:53:02.000Z",
+        "created_max_utc": "2026-09-06T00:53:02.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 11,
+      "appid": 646570,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:34.575Z",
+      "completed_at": "2026-10-10T17:55:34.700Z",
+      "latency_ms": 126,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 646570
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 45,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 6767,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 12,
+      "appid": 646570,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:35.675Z",
+      "completed_at": "2026-10-10T17:55:36.070Z",
+      "latency_ms": 395,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 646570,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 760,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 192381,
+        "query_summary_score_totals": {
+          "total_reviews": 192381,
+          "total_positive": 187460,
+          "total_negative": 4921
+        },
+        "created_min_utc": "2026-10-10T17:43:10.000Z",
+        "created_max_utc": "2026-10-10T17:43:10.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 13,
+      "appid": 1102190,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:36.776Z",
+      "completed_at": "2026-10-10T17:55:37.061Z",
+      "latency_ms": 285,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 1102190
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 44,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 185,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 14,
+      "appid": 1102190,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:37.876Z",
+      "completed_at": "2026-10-10T17:55:38.091Z",
+      "latency_ms": 215,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 1102190,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 785,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 19957,
+        "query_summary_score_totals": {
+          "total_reviews": 19957,
+          "total_positive": 19148,
+          "total_negative": 809
+        },
+        "created_min_utc": "2026-10-10T08:19:12.000Z",
+        "created_max_utc": "2026-10-10T08:19:12.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 15,
+      "appid": 2179850,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:38.977Z",
+      "completed_at": "2026-10-10T17:55:39.049Z",
+      "latency_ms": 72,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 2179850
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 43,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 59,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 16,
+      "appid": 2179850,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:40.077Z",
+      "completed_at": "2026-10-10T17:55:40.412Z",
+      "latency_ms": 335,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 2179850,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 878,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 4090,
+        "query_summary_score_totals": {
+          "total_reviews": 4090,
+          "total_positive": 3924,
+          "total_negative": 166
+        },
+        "created_min_utc": "2026-10-09T23:38:12.000Z",
+        "created_max_utc": "2026-10-09T23:38:12.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 17,
+      "appid": 1054550,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:41.178Z",
+      "completed_at": "2026-10-10T17:55:41.381Z",
+      "latency_ms": 203,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 1054550
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 42,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 2,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 18,
+      "appid": 1054550,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:42.279Z",
+      "completed_at": "2026-10-10T17:55:42.513Z",
+      "latency_ms": 234,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 1054550,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 769,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 802,
+        "query_summary_score_totals": {
+          "total_reviews": 802,
+          "total_positive": 625,
+          "total_negative": 177
+        },
+        "created_min_utc": "2026-09-30T19:17:34.000Z",
+        "created_max_utc": "2026-09-30T19:17:34.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 19,
+      "appid": 1127610,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:43.380Z",
+      "completed_at": "2026-10-10T17:55:43.612Z",
+      "latency_ms": 232,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 1127610
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 42,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 4,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 20,
+      "appid": 1127610,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:44.480Z",
+      "completed_at": "2026-10-10T17:55:44.707Z",
+      "latency_ms": 227,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 1127610,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 893,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 700,
+        "query_summary_score_totals": {
+          "total_reviews": 700,
+          "total_positive": 612,
+          "total_negative": 88
+        },
+        "created_min_utc": "2026-10-07T15:10:40.000Z",
+        "created_max_utc": "2026-10-07T15:10:40.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 21,
+      "appid": 736260,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:45.581Z",
+      "completed_at": "2026-10-10T17:55:45.636Z",
+      "latency_ms": 55,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 736260
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 44,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 260,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 22,
+      "appid": 736260,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:46.682Z",
+      "completed_at": "2026-10-10T17:55:47.056Z",
+      "latency_ms": 374,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 736260,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 849,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 21059,
+        "query_summary_score_totals": {
+          "total_reviews": 21059,
+          "total_positive": 20609,
+          "total_negative": 450
+        },
+        "created_min_utc": "2026-10-10T16:52:44.000Z",
+        "created_max_utc": "2026-10-10T16:52:44.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 23,
+      "appid": 1260520,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:47.782Z",
+      "completed_at": "2026-10-10T17:55:47.850Z",
+      "latency_ms": 68,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 1260520
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 43,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 40,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 24,
+      "appid": 1260520,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:48.883Z",
+      "completed_at": "2026-10-10T17:55:49.162Z",
+      "latency_ms": 279,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 1260520,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 772,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 5020,
+        "query_summary_score_totals": {
+          "total_reviews": 5020,
+          "total_positive": 4987,
+          "total_negative": 33
+        },
+        "created_min_utc": "2026-10-10T08:10:54.000Z",
+        "created_max_utc": "2026-10-10T08:10:54.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 25,
+      "appid": 1147890,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:49.984Z",
+      "completed_at": "2026-10-10T17:55:50.175Z",
+      "latency_ms": 191,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 1147890
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 42,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 4,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 26,
+      "appid": 1147890,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:51.085Z",
+      "completed_at": "2026-10-10T17:55:51.551Z",
+      "latency_ms": 466,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 1147890,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 1225,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 286,
+        "query_summary_score_totals": {
+          "total_reviews": 286,
+          "total_positive": 267,
+          "total_negative": 19
+        },
+        "created_min_utc": "2026-09-25T21:02:46.000Z",
+        "created_max_utc": "2026-09-25T21:02:46.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 27,
+      "appid": 1052990,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:52.186Z",
+      "completed_at": "2026-10-10T17:55:52.461Z",
+      "latency_ms": 275,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 1052990
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 43,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 20,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 28,
+      "appid": 1052990,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:53.286Z",
+      "completed_at": "2026-10-10T17:55:53.577Z",
+      "latency_ms": 291,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 1052990,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 753,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 1609,
+        "query_summary_score_totals": {
+          "total_reviews": 1609,
+          "total_positive": 1522,
+          "total_negative": 87
+        },
+        "created_min_utc": "2026-10-10T14:46:39.000Z",
+        "created_max_utc": "2026-10-10T14:46:39.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 29,
+      "appid": 1706090,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:54.387Z",
+      "completed_at": "2026-10-10T17:55:54.592Z",
+      "latency_ms": 205,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 1706090
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 42,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 3,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 30,
+      "appid": 1706090,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:55.488Z",
+      "completed_at": "2026-10-10T17:55:56.214Z",
+      "latency_ms": 726,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 1706090,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 1323,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 215,
+        "query_summary_score_totals": {
+          "total_reviews": 215,
+          "total_positive": 212,
+          "total_negative": 3
+        },
+        "created_min_utc": "2026-10-05T08:35:18.000Z",
+        "created_max_utc": "2026-10-05T08:35:18.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 31,
+      "appid": 1562430,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:56.588Z",
+      "completed_at": "2026-10-10T17:55:56.746Z",
+      "latency_ms": 158,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 1562430
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 44,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 988,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 32,
+      "appid": 1562430,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:57.689Z",
+      "completed_at": "2026-10-10T17:55:58.056Z",
+      "latency_ms": 367,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 1562430,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 889,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 47910,
+        "query_summary_score_totals": {
+          "total_reviews": 47910,
+          "total_positive": 45915,
+          "total_negative": 1995
+        },
+        "created_min_utc": "2026-10-10T17:35:36.000Z",
+        "created_max_utc": "2026-10-10T17:35:36.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 33,
+      "appid": 1262350,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:58.789Z",
+      "completed_at": "2026-10-10T17:55:58.874Z",
+      "latency_ms": 85,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 1262350
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 44,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 282,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 34,
+      "appid": 1262350,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:55:59.890Z",
+      "completed_at": "2026-10-10T17:56:00.122Z",
+      "latency_ms": 232,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 1262350,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 781,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 31036,
+        "query_summary_score_totals": {
+          "total_reviews": 31036,
+          "total_positive": 29970,
+          "total_negative": 1066
+        },
+        "created_min_utc": "2026-10-10T17:50:30.000Z",
+        "created_max_utc": "2026-10-10T17:50:30.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 35,
+      "appid": 274520,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:56:00.991Z",
+      "completed_at": "2026-10-10T17:56:01.089Z",
+      "latency_ms": 98,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 274520
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 44,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 349,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 36,
+      "appid": 274520,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:56:02.092Z",
+      "completed_at": "2026-10-10T17:56:02.369Z",
+      "latency_ms": 277,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 274520,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 1720,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 22353,
+        "query_summary_score_totals": {
+          "total_reviews": 22353,
+          "total_positive": 21221,
+          "total_negative": 1132
+        },
+        "created_min_utc": "2026-10-10T16:07:25.000Z",
+        "created_max_utc": "2026-10-10T16:07:25.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 37,
+      "appid": 720350,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:56:03.193Z",
+      "completed_at": "2026-10-10T17:56:03.523Z",
+      "latency_ms": 330,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 720350
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 42,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 2,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 38,
+      "appid": 720350,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:56:04.294Z",
+      "completed_at": "2026-10-10T17:56:04.591Z",
+      "latency_ms": 297,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 720350,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 1013,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 1427,
+        "query_summary_score_totals": {
+          "total_reviews": 1427,
+          "total_positive": 1329,
+          "total_negative": 98
+        },
+        "created_min_utc": "2026-10-10T15:02:07.000Z",
+        "created_max_utc": "2026-10-10T15:02:07.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 39,
+      "appid": 916350,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "baseline_success_recheck",
+      "requested_at": "2026-10-10T17:56:05.395Z",
+      "completed_at": "2026-10-10T17:56:05.449Z",
+      "latency_ms": 54,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 916350
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 42,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 1,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 40,
+      "appid": 916350,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "previous_failed_target",
+      "requested_at": "2026-10-10T17:56:06.496Z",
+      "completed_at": "2026-10-10T17:56:06.552Z",
+      "latency_ms": 56,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 916350,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 737,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 118,
+        "query_summary_score_totals": {
+          "total_reviews": 118,
+          "total_positive": 108,
+          "total_negative": 10
+        },
+        "created_min_utc": "2026-10-09T02:40:59.000Z",
+        "created_max_utc": "2026-10-09T02:40:59.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 41,
+      "appid": 294100,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "original_unattempted_target",
+      "requested_at": "2026-10-10T17:56:07.597Z",
+      "completed_at": "2026-10-10T17:56:07.730Z",
+      "latency_ms": 133,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 294100
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 46,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 32901,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 42,
+      "appid": 294100,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "original_unattempted_target",
+      "requested_at": "2026-10-10T17:56:08.698Z",
+      "completed_at": "2026-10-10T17:56:08.964Z",
+      "latency_ms": 266,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 294100,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 911,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 209613,
+        "query_summary_score_totals": {
+          "total_reviews": 209613,
+          "total_positive": 205098,
+          "total_negative": 4515
+        },
+        "created_min_utc": "2026-10-10T17:20:31.000Z",
+        "created_max_utc": "2026-10-10T17:20:31.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 43,
+      "appid": 1336490,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "original_unattempted_target",
+      "requested_at": "2026-10-10T17:56:09.798Z",
+      "completed_at": "2026-10-10T17:56:09.880Z",
+      "latency_ms": 82,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 1336490
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 45,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 1940,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 44,
+      "appid": 1336490,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "original_unattempted_target",
+      "requested_at": "2026-10-10T17:56:10.900Z",
+      "completed_at": "2026-10-10T17:56:11.169Z",
+      "latency_ms": 269,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 1336490,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 747,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 33421,
+        "query_summary_score_totals": {
+          "total_reviews": 33421,
+          "total_positive": 31658,
+          "total_negative": 1763
+        },
+        "created_min_utc": "2026-10-10T14:05:19.000Z",
+        "created_max_utc": "2026-10-10T14:05:19.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 45,
+      "appid": 1700870,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "original_unattempted_target",
+      "requested_at": "2026-10-10T17:56:12.001Z",
+      "completed_at": "2026-10-10T17:56:12.369Z",
+      "latency_ms": 368,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 1700870
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 44,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 407,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 46,
+      "appid": 1700870,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "original_unattempted_target",
+      "requested_at": "2026-10-10T17:56:13.102Z",
+      "completed_at": "2026-10-10T17:56:13.391Z",
+      "latency_ms": 289,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 1700870,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 1131,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 3793,
+        "query_summary_score_totals": {
+          "total_reviews": 3793,
+          "total_positive": 3474,
+          "total_negative": 319
+        },
+        "created_min_utc": "2026-10-10T14:03:00.000Z",
+        "created_max_utc": "2026-10-10T14:03:00.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 47,
+      "appid": 1380910,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "original_unattempted_target",
+      "requested_at": "2026-10-10T17:56:14.203Z",
+      "completed_at": "2026-10-10T17:56:14.324Z",
+      "latency_ms": 121,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 1380910
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 43,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 43,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 48,
+      "appid": 1380910,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "original_unattempted_target",
+      "requested_at": "2026-10-10T17:56:15.304Z",
+      "completed_at": "2026-10-10T17:56:15.544Z",
+      "latency_ms": 240,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 1380910,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 798,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 1435,
+        "query_summary_score_totals": {
+          "total_reviews": 1435,
+          "total_positive": 1252,
+          "total_negative": 183
+        },
+        "created_min_utc": "2026-10-01T14:07:33.000Z",
+        "created_max_utc": "2026-10-01T14:07:33.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 49,
+      "appid": 693580,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "original_unattempted_target",
+      "requested_at": "2026-10-10T17:56:16.405Z",
+      "completed_at": "2026-10-10T17:56:16.607Z",
+      "latency_ms": 202,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 693580
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 42,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 0,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 50,
+      "appid": 693580,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "original_unattempted_target",
+      "requested_at": "2026-10-10T17:56:17.506Z",
+      "completed_at": "2026-10-10T17:56:17.807Z",
+      "latency_ms": 301,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 693580,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 867,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 305,
+        "query_summary_score_totals": {
+          "total_reviews": 305,
+          "total_positive": 212,
+          "total_negative": 93
+        },
+        "created_min_utc": "2026-07-30T18:07:37.000Z",
+        "created_max_utc": "2026-07-30T18:07:37.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 51,
+      "appid": 504230,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "original_unattempted_target",
+      "requested_at": "2026-10-10T17:56:18.607Z",
+      "completed_at": "2026-10-10T17:56:18.682Z",
+      "latency_ms": 75,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 504230
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 45,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 2675,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 52,
+      "appid": 504230,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "original_unattempted_target",
+      "requested_at": "2026-10-10T17:56:19.706Z",
+      "completed_at": "2026-10-10T17:56:20.301Z",
+      "latency_ms": 595,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 504230,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 913,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 132985,
+        "query_summary_score_totals": {
+          "total_reviews": 132985,
+          "total_positive": 129596,
+          "total_negative": 3389
+        },
+        "created_min_utc": "2026-10-10T17:22:41.000Z",
+        "created_max_utc": "2026-10-10T17:22:41.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 53,
+      "appid": 332200,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "original_unattempted_target",
+      "requested_at": "2026-10-10T17:56:20.806Z",
+      "completed_at": "2026-10-10T17:56:21.022Z",
+      "latency_ms": 217,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 332200
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 43,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 23,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 54,
+      "appid": 332200,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "original_unattempted_target",
+      "requested_at": "2026-10-10T17:56:21.907Z",
+      "completed_at": "2026-10-10T17:56:22.143Z",
+      "latency_ms": 236,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 332200,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 1213,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 5854,
+        "query_summary_score_totals": {
+          "total_reviews": 5854,
+          "total_positive": 5284,
+          "total_negative": 570
+        },
+        "created_min_utc": "2026-10-07T23:03:30.000Z",
+        "created_max_utc": "2026-10-07T23:03:30.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 55,
+      "appid": 350070,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "original_unattempted_target",
+      "requested_at": "2026-10-10T17:56:23.007Z",
+      "completed_at": "2026-10-10T17:56:23.093Z",
+      "latency_ms": 86,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 350070
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 42,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 7,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 56,
+      "appid": 350070,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "original_unattempted_target",
+      "requested_at": "2026-10-10T17:56:24.108Z",
+      "completed_at": "2026-10-10T17:56:24.410Z",
+      "latency_ms": 302,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 350070,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 758,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 1508,
+        "query_summary_score_totals": {
+          "total_reviews": 1508,
+          "total_positive": 1237,
+          "total_negative": 271
+        },
+        "created_min_utc": "2026-10-04T10:43:56.000Z",
+        "created_max_utc": "2026-10-04T10:43:56.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 57,
+      "appid": 1231880,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "original_unattempted_target",
+      "requested_at": "2026-10-10T17:56:25.208Z",
+      "completed_at": "2026-10-10T17:56:25.420Z",
+      "latency_ms": 212,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 1231880
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 43,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 20,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 58,
+      "appid": 1231880,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "original_unattempted_target",
+      "requested_at": "2026-10-10T17:56:26.308Z",
+      "completed_at": "2026-10-10T17:56:26.509Z",
+      "latency_ms": 201,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 1231880,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 969,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 2586,
+        "query_summary_score_totals": {
+          "total_reviews": 2586,
+          "total_positive": 2346,
+          "total_negative": 240
+        },
+        "created_min_utc": "2026-10-09T08:04:17.000Z",
+        "created_max_utc": "2026-10-09T08:04:17.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 59,
+      "appid": 1368410,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "original_unattempted_target",
+      "requested_at": "2026-10-10T17:56:27.408Z",
+      "completed_at": "2026-10-10T17:56:27.611Z",
+      "latency_ms": 203,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 1368410
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 42,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 0,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 60,
+      "appid": 1368410,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "original_unattempted_target",
+      "requested_at": "2026-10-10T17:56:28.508Z",
+      "completed_at": "2026-10-10T17:56:29.013Z",
+      "latency_ms": 505,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 1368410,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 760,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 105,
+        "query_summary_score_totals": {
+          "total_reviews": 105,
+          "total_positive": 98,
+          "total_negative": 7
+        },
+        "created_min_utc": "2026-04-14T10:38:17.000Z",
+        "created_max_utc": "2026-04-14T10:38:17.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 61,
+      "appid": 2379780,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "supplement_unattempted_target",
+      "requested_at": "2026-10-10T17:56:29.608Z",
+      "completed_at": "2026-10-10T17:56:29.717Z",
+      "latency_ms": 109,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 2379780
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 45,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 8864,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 62,
+      "appid": 2379780,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "supplement_unattempted_target",
+      "requested_at": "2026-10-10T17:56:30.708Z",
+      "completed_at": "2026-10-10T17:56:30.750Z",
+      "latency_ms": 42,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 2379780,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 757,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 161558,
+        "query_summary_score_totals": {
+          "total_reviews": 161558,
+          "total_positive": 158047,
+          "total_negative": 3511
+        },
+        "created_min_utc": "2026-10-10T17:16:06.000Z",
+        "created_max_utc": "2026-10-10T17:16:06.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 63,
+      "appid": 1569580,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "supplement_unattempted_target",
+      "requested_at": "2026-10-10T17:56:31.809Z",
+      "completed_at": "2026-10-10T17:56:31.876Z",
+      "latency_ms": 67,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 1569580
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 45,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 1530,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 64,
+      "appid": 1569580,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "supplement_unattempted_target",
+      "requested_at": "2026-10-10T17:56:32.910Z",
+      "completed_at": "2026-10-10T17:56:33.200Z",
+      "latency_ms": 290,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 1569580,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 894,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 17658,
+        "query_summary_score_totals": {
+          "total_reviews": 17658,
+          "total_positive": 15178,
+          "total_negative": 2480
+        },
+        "created_min_utc": "2026-10-10T14:22:54.000Z",
+        "created_max_utc": "2026-10-10T14:22:54.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 65,
+      "appid": 2142790,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "supplement_unattempted_target",
+      "requested_at": "2026-10-10T17:56:34.010Z",
+      "completed_at": "2026-10-10T17:56:34.268Z",
+      "latency_ms": 258,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 2142790
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 45,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 7466,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 66,
+      "appid": 2142790,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "supplement_unattempted_target",
+      "requested_at": "2026-10-10T17:56:35.111Z",
+      "completed_at": "2026-10-10T17:56:35.370Z",
+      "latency_ms": 259,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 2142790,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 911,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 32858,
+        "query_summary_score_totals": {
+          "total_reviews": 32858,
+          "total_positive": 31839,
+          "total_negative": 1019
+        },
+        "created_min_utc": "2026-10-10T17:21:44.000Z",
+        "created_max_utc": "2026-10-10T17:21:44.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 67,
+      "appid": 2198150,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "supplement_unattempted_target",
+      "requested_at": "2026-10-10T17:56:36.211Z",
+      "completed_at": "2026-10-10T17:56:36.245Z",
+      "latency_ms": 34,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 2198150
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 44,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 581,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 68,
+      "appid": 2198150,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "supplement_unattempted_target",
+      "requested_at": "2026-10-10T17:56:37.312Z",
+      "completed_at": "2026-10-10T17:56:37.606Z",
+      "latency_ms": 294,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 2198150,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 972,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 22891,
+        "query_summary_score_totals": {
+          "total_reviews": 22891,
+          "total_positive": 22264,
+          "total_negative": 627
+        },
+        "created_min_utc": "2026-10-10T17:37:40.000Z",
+        "created_max_utc": "2026-10-10T17:37:40.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 69,
+      "appid": 813230,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "supplement_unattempted_target",
+      "requested_at": "2026-10-10T17:56:38.413Z",
+      "completed_at": "2026-10-10T17:56:38.766Z",
+      "latency_ms": 353,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 813230
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 44,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 134,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 70,
+      "appid": 813230,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "supplement_unattempted_target",
+      "requested_at": "2026-10-10T17:56:39.514Z",
+      "completed_at": "2026-10-10T17:56:39.773Z",
+      "latency_ms": 259,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 813230,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 782,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 22920,
+        "query_summary_score_totals": {
+          "total_reviews": 22920,
+          "total_positive": 21913,
+          "total_negative": 1007
+        },
+        "created_min_utc": "2026-10-10T15:47:24.000Z",
+        "created_max_utc": "2026-10-10T15:47:24.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 71,
+      "appid": 1996010,
+      "method": "current_players",
+      "purpose": "current_snapshot",
+      "baseline_category": "supplement_unattempted_target",
+      "requested_at": "2026-10-10T17:56:40.614Z",
+      "completed_at": "2026-10-10T17:56:41.046Z",
+      "latency_ms": 432,
+      "endpoint": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "filters": {
+        "appid": 1996010
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 43,
+      "source_timestamp": null,
+      "aggregate": {
+        "player_count": 57,
+        "result": 1,
+        "unit": "Steam-connected concurrent players",
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 72,
+      "appid": 1996010,
+      "method": "reviews_all_time",
+      "purpose": "current_snapshot",
+      "baseline_category": "supplement_unattempted_target",
+      "requested_at": "2026-10-10T17:56:41.715Z",
+      "completed_at": "2026-10-10T17:56:41.982Z",
+      "latency_ms": 267,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 1996010,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*"
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 752,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "total_matching": 7834,
+        "query_summary_score_totals": {
+          "total_reviews": 7834,
+          "total_positive": 7674,
+          "total_negative": 160
+        },
+        "created_min_utc": "2026-10-10T15:32:50.000Z",
+        "created_max_utc": "2026-10-10T15:32:50.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 73,
+      "appid": 730050,
+      "method": "reviews_all_time",
+      "purpose": "date_month_pagination",
+      "baseline_category": "original_unattempted_date_probe",
+      "requested_at": "2026-10-10T17:56:42.816Z",
+      "completed_at": "2026-10-10T17:56:43.191Z",
+      "latency_ms": 375,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 730050,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 100,
+        "cursor": "*",
+        "date_range_start": 1788220800,
+        "date_range_end": 1790812799,
+        "date_range_exclude": false
+      },
+      "status": "failed",
+      "http_status": 200,
+      "response_bytes": 191,
+      "source_timestamp": null,
+      "aggregate": null,
+      "error_code": "invalid_reviews_schema",
+      "response_diagnostic": {
+        "wrapped_response": true,
+        "known_field_shapes": {
+          "player_count": "absent",
+          "result": "absent",
+          "query_summary": "object",
+          "reviews": "absent",
+          "cursor": "string",
+          "total_matching": "number",
+          "query_summary.num_reviews": "number",
+          "query_summary.total_reviews": "number",
+          "query_summary.total_positive": "number",
+          "query_summary.total_negative": "number"
+        }
+      }
+    }
+  ],
+  "date_probes": [
+    {
+      "appid": 730050,
+      "baseline_status": "not_attempted",
+      "status": "incomplete",
+      "period_utc": {
+        "start": "2026-09-01T00:00:00.000Z",
+        "end_inclusive": "2026-09-30T23:59:59.000Z"
+      },
+      "pages_attempted": 1,
+      "returned_reviews": 0,
+      "unique_reviews": 0,
+      "duplicate_reviews": 0,
+      "total_matching_first": null,
+      "total_matching_stable": true,
+      "terminal_empty_page_seen": false,
+      "complete": false,
+      "pagination_stop": null,
+      "partition": null,
+      "inclusive_boundary": null,
+      "pages_successful": 0,
+      "stop_reason": "invalid_reviews_schema"
+    }
+  ],
+  "targets": [
+    {
+      "appid": 413150,
+      "name": "Stardew Valley",
+      "cohort": "original_30",
+      "editorial_group": "Farming / life simulation",
+      "selection_review_band": "high_10000_plus",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 1
+    },
+    {
+      "appid": 413150,
+      "name": "Stardew Valley",
+      "cohort": "original_30",
+      "editorial_group": "Farming / life simulation",
+      "selection_review_band": "high_10000_plus",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 2
+    },
+    {
+      "appid": 1472660,
+      "name": "No Place Like Home",
+      "cohort": "original_30",
+      "editorial_group": "Farming / life simulation",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 3
+    },
+    {
+      "appid": 1472660,
+      "name": "No Place Like Home",
+      "cohort": "original_30",
+      "editorial_group": "Farming / life simulation",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 4
+    },
+    {
+      "appid": 894940,
+      "name": "Littlewood",
+      "cohort": "original_30",
+      "editorial_group": "Farming / life simulation",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 5
+    },
+    {
+      "appid": 894940,
+      "name": "Littlewood",
+      "cohort": "original_30",
+      "editorial_group": "Farming / life simulation",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 6
+    },
+    {
+      "appid": 730050,
+      "name": "Verdant Skies",
+      "cohort": "original_30",
+      "editorial_group": "Farming / life simulation",
+      "selection_review_band": "low_under_1000",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 7
+    },
+    {
+      "appid": 730050,
+      "name": "Verdant Skies",
+      "cohort": "original_30",
+      "editorial_group": "Farming / life simulation",
+      "selection_review_band": "low_under_1000",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 8
+    },
+    {
+      "appid": 432010,
+      "name": "World's Dawn",
+      "cohort": "original_30",
+      "editorial_group": "Farming / life simulation",
+      "selection_review_band": "low_under_1000",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 9
+    },
+    {
+      "appid": 432010,
+      "name": "World's Dawn",
+      "cohort": "original_30",
+      "editorial_group": "Farming / life simulation",
+      "selection_review_band": "low_under_1000",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 10
+    },
+    {
+      "appid": 646570,
+      "name": "Slay the Spire",
+      "cohort": "original_30",
+      "editorial_group": "Roguelike deckbuilder",
+      "selection_review_band": "high_10000_plus",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 11
+    },
+    {
+      "appid": 646570,
+      "name": "Slay the Spire",
+      "cohort": "original_30",
+      "editorial_group": "Roguelike deckbuilder",
+      "selection_review_band": "high_10000_plus",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 12
+    },
+    {
+      "appid": 1102190,
+      "name": "Monster Train",
+      "cohort": "original_30",
+      "editorial_group": "Roguelike deckbuilder",
+      "selection_review_band": "high_10000_plus",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 13
+    },
+    {
+      "appid": 1102190,
+      "name": "Monster Train",
+      "cohort": "original_30",
+      "editorial_group": "Roguelike deckbuilder",
+      "selection_review_band": "high_10000_plus",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 14
+    },
+    {
+      "appid": 2179850,
+      "name": "Cobalt Core",
+      "cohort": "original_30",
+      "editorial_group": "Roguelike deckbuilder",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 15
+    },
+    {
+      "appid": 2179850,
+      "name": "Cobalt Core",
+      "cohort": "original_30",
+      "editorial_group": "Roguelike deckbuilder",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 16
+    },
+    {
+      "appid": 1054550,
+      "name": "Phantom Rose",
+      "cohort": "original_30",
+      "editorial_group": "Roguelike deckbuilder",
+      "selection_review_band": "low_under_1000",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 17
+    },
+    {
+      "appid": 1054550,
+      "name": "Phantom Rose",
+      "cohort": "original_30",
+      "editorial_group": "Roguelike deckbuilder",
+      "selection_review_band": "low_under_1000",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 18
+    },
+    {
+      "appid": 1127610,
+      "name": "Iris and the Giant",
+      "cohort": "original_30",
+      "editorial_group": "Roguelike deckbuilder",
+      "selection_review_band": "low_under_1000",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 19
+    },
+    {
+      "appid": 1127610,
+      "name": "Iris and the Giant",
+      "cohort": "original_30",
+      "editorial_group": "Roguelike deckbuilder",
+      "selection_review_band": "low_under_1000",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 20
+    },
+    {
+      "appid": 736260,
+      "name": "Baba Is You",
+      "cohort": "original_30",
+      "editorial_group": "Puzzle",
+      "selection_review_band": "high_10000_plus",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 21
+    },
+    {
+      "appid": 736260,
+      "name": "Baba Is You",
+      "cohort": "original_30",
+      "editorial_group": "Puzzle",
+      "selection_review_band": "high_10000_plus",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 22
+    },
+    {
+      "appid": 1260520,
+      "name": "Patrick's Parabox",
+      "cohort": "original_30",
+      "editorial_group": "Puzzle",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 23
+    },
+    {
+      "appid": 1260520,
+      "name": "Patrick's Parabox",
+      "cohort": "original_30",
+      "editorial_group": "Puzzle",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 24
+    },
+    {
+      "appid": 1147890,
+      "name": "Bonfire Peaks",
+      "cohort": "original_30",
+      "editorial_group": "Puzzle",
+      "selection_review_band": "low_under_1000",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 25
+    },
+    {
+      "appid": 1147890,
+      "name": "Bonfire Peaks",
+      "cohort": "original_30",
+      "editorial_group": "Puzzle",
+      "selection_review_band": "low_under_1000",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 26
+    },
+    {
+      "appid": 1052990,
+      "name": "A Monster's Expedition",
+      "cohort": "original_30",
+      "editorial_group": "Puzzle",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 27
+    },
+    {
+      "appid": 1052990,
+      "name": "A Monster's Expedition",
+      "cohort": "original_30",
+      "editorial_group": "Puzzle",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 28
+    },
+    {
+      "appid": 1706090,
+      "name": "Bean and Nothingness",
+      "cohort": "original_30",
+      "editorial_group": "Puzzle",
+      "selection_review_band": "low_under_1000",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 29
+    },
+    {
+      "appid": 1706090,
+      "name": "Bean and Nothingness",
+      "cohort": "original_30",
+      "editorial_group": "Puzzle",
+      "selection_review_band": "low_under_1000",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 30
+    },
+    {
+      "appid": 1562430,
+      "name": "DREDGE",
+      "cohort": "original_30",
+      "editorial_group": "Horror / exploration",
+      "selection_review_band": "high_10000_plus",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 31
+    },
+    {
+      "appid": 1562430,
+      "name": "DREDGE",
+      "cohort": "original_30",
+      "editorial_group": "Horror / exploration",
+      "selection_review_band": "high_10000_plus",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 32
+    },
+    {
+      "appid": 1262350,
+      "name": "SIGNALIS",
+      "cohort": "original_30",
+      "editorial_group": "Horror / exploration",
+      "selection_review_band": "high_10000_plus",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 33
+    },
+    {
+      "appid": 1262350,
+      "name": "SIGNALIS",
+      "cohort": "original_30",
+      "editorial_group": "Horror / exploration",
+      "selection_review_band": "high_10000_plus",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 34
+    },
+    {
+      "appid": 274520,
+      "name": "Darkwood",
+      "cohort": "original_30",
+      "editorial_group": "Horror / exploration",
+      "selection_review_band": "high_10000_plus",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 35
+    },
+    {
+      "appid": 274520,
+      "name": "Darkwood",
+      "cohort": "original_30",
+      "editorial_group": "Horror / exploration",
+      "selection_review_band": "high_10000_plus",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 36
+    },
+    {
+      "appid": 720350,
+      "name": "Mundaun",
+      "cohort": "original_30",
+      "editorial_group": "Horror / exploration",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 37
+    },
+    {
+      "appid": 720350,
+      "name": "Mundaun",
+      "cohort": "original_30",
+      "editorial_group": "Horror / exploration",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 38
+    },
+    {
+      "appid": 916350,
+      "name": "Saturnalia",
+      "cohort": "original_30",
+      "editorial_group": "Horror / exploration",
+      "selection_review_band": "low_under_1000",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "success",
+      "sequence": 39
+    },
+    {
+      "appid": 916350,
+      "name": "Saturnalia",
+      "cohort": "original_30",
+      "editorial_group": "Horror / exploration",
+      "selection_review_band": "low_under_1000",
+      "method": "reviews_all_time",
+      "baseline_status": "network_proxy_refusal",
+      "baseline_category": "previous_failed_target",
+      "status": "success",
+      "sequence": 40
+    },
+    {
+      "appid": 294100,
+      "name": "RimWorld",
+      "cohort": "original_30",
+      "editorial_group": "Colony / settlement simulation",
+      "selection_review_band": "high_10000_plus",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "success",
+      "sequence": 41
+    },
+    {
+      "appid": 294100,
+      "name": "RimWorld",
+      "cohort": "original_30",
+      "editorial_group": "Colony / settlement simulation",
+      "selection_review_band": "high_10000_plus",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "success",
+      "sequence": 42
+    },
+    {
+      "appid": 1336490,
+      "name": "Against the Storm",
+      "cohort": "original_30",
+      "editorial_group": "Colony / settlement simulation",
+      "selection_review_band": "high_10000_plus",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "success",
+      "sequence": 43
+    },
+    {
+      "appid": 1336490,
+      "name": "Against the Storm",
+      "cohort": "original_30",
+      "editorial_group": "Colony / settlement simulation",
+      "selection_review_band": "high_10000_plus",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "success",
+      "sequence": 44
+    },
+    {
+      "appid": 1700870,
+      "name": "Clanfolk",
+      "cohort": "original_30",
+      "editorial_group": "Colony / settlement simulation",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "success",
+      "sequence": 45
+    },
+    {
+      "appid": 1700870,
+      "name": "Clanfolk",
+      "cohort": "original_30",
+      "editorial_group": "Colony / settlement simulation",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "success",
+      "sequence": 46
+    },
+    {
+      "appid": 1380910,
+      "name": "Stardeus",
+      "cohort": "original_30",
+      "editorial_group": "Colony / settlement simulation",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "success",
+      "sequence": 47
+    },
+    {
+      "appid": 1380910,
+      "name": "Stardeus",
+      "cohort": "original_30",
+      "editorial_group": "Colony / settlement simulation",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "success",
+      "sequence": 48
+    },
+    {
+      "appid": 693580,
+      "name": "Goblins of Elderstone",
+      "cohort": "original_30",
+      "editorial_group": "Colony / settlement simulation",
+      "selection_review_band": "low_under_1000",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "success",
+      "sequence": 49
+    },
+    {
+      "appid": 693580,
+      "name": "Goblins of Elderstone",
+      "cohort": "original_30",
+      "editorial_group": "Colony / settlement simulation",
+      "selection_review_band": "low_under_1000",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "success",
+      "sequence": 50
+    },
+    {
+      "appid": 504230,
+      "name": "Celeste",
+      "cohort": "original_30",
+      "editorial_group": "Platformer / metroidvania",
+      "selection_review_band": "high_10000_plus",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "success",
+      "sequence": 51
+    },
+    {
+      "appid": 504230,
+      "name": "Celeste",
+      "cohort": "original_30",
+      "editorial_group": "Platformer / metroidvania",
+      "selection_review_band": "high_10000_plus",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "success",
+      "sequence": 52
+    },
+    {
+      "appid": 332200,
+      "name": "Axiom Verge",
+      "cohort": "original_30",
+      "editorial_group": "Platformer / metroidvania",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "success",
+      "sequence": 53
+    },
+    {
+      "appid": 332200,
+      "name": "Axiom Verge",
+      "cohort": "original_30",
+      "editorial_group": "Platformer / metroidvania",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "success",
+      "sequence": 54
+    },
+    {
+      "appid": 350070,
+      "name": "Environmental Station Alpha",
+      "cohort": "original_30",
+      "editorial_group": "Platformer / metroidvania",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "success",
+      "sequence": 55
+    },
+    {
+      "appid": 350070,
+      "name": "Environmental Station Alpha",
+      "cohort": "original_30",
+      "editorial_group": "Platformer / metroidvania",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "success",
+      "sequence": 56
+    },
+    {
+      "appid": 1231880,
+      "name": "Haiku, the Robot",
+      "cohort": "original_30",
+      "editorial_group": "Platformer / metroidvania",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "success",
+      "sequence": 57
+    },
+    {
+      "appid": 1231880,
+      "name": "Haiku, the Robot",
+      "cohort": "original_30",
+      "editorial_group": "Platformer / metroidvania",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "success",
+      "sequence": 58
+    },
+    {
+      "appid": 1368410,
+      "name": "PSYCRON",
+      "cohort": "original_30",
+      "editorial_group": "Platformer / metroidvania",
+      "selection_review_band": "low_under_1000",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "success",
+      "sequence": 59
+    },
+    {
+      "appid": 1368410,
+      "name": "PSYCRON",
+      "cohort": "original_30",
+      "editorial_group": "Platformer / metroidvania",
+      "selection_review_band": "low_under_1000",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "success",
+      "sequence": 60
+    },
+    {
+      "appid": 2379780,
+      "name": "Balatro",
+      "cohort": "recent_6",
+      "editorial_group": "Roguelike deckbuilder",
+      "selection_review_band": "high_10000_plus",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "supplement_unattempted_target",
+      "status": "success",
+      "sequence": 61
+    },
+    {
+      "appid": 2379780,
+      "name": "Balatro",
+      "cohort": "recent_6",
+      "editorial_group": "Roguelike deckbuilder",
+      "selection_review_band": "high_10000_plus",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "supplement_unattempted_target",
+      "status": "success",
+      "sequence": 62
+    },
+    {
+      "appid": 1569580,
+      "name": "Blue Prince",
+      "cohort": "recent_6",
+      "editorial_group": "Puzzle",
+      "selection_review_band": "high_10000_plus",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "supplement_unattempted_target",
+      "status": "success",
+      "sequence": 63
+    },
+    {
+      "appid": 1569580,
+      "name": "Blue Prince",
+      "cohort": "recent_6",
+      "editorial_group": "Puzzle",
+      "selection_review_band": "high_10000_plus",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "supplement_unattempted_target",
+      "status": "success",
+      "sequence": 64
+    },
+    {
+      "appid": 2142790,
+      "name": "Fields of Mistria",
+      "cohort": "recent_6",
+      "editorial_group": "Farming / life simulation",
+      "selection_review_band": "high_10000_plus",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "supplement_unattempted_target",
+      "status": "success",
+      "sequence": 65
+    },
+    {
+      "appid": 2142790,
+      "name": "Fields of Mistria",
+      "cohort": "recent_6",
+      "editorial_group": "Farming / life simulation",
+      "selection_review_band": "high_10000_plus",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "supplement_unattempted_target",
+      "status": "success",
+      "sequence": 66
+    },
+    {
+      "appid": 2198150,
+      "name": "Tiny Glade",
+      "cohort": "recent_6",
+      "editorial_group": "Cozy building toy",
+      "selection_review_band": "high_10000_plus",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "supplement_unattempted_target",
+      "status": "success",
+      "sequence": 67
+    },
+    {
+      "appid": 2198150,
+      "name": "Tiny Glade",
+      "cohort": "recent_6",
+      "editorial_group": "Cozy building toy",
+      "selection_review_band": "high_10000_plus",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "supplement_unattempted_target",
+      "status": "success",
+      "sequence": 68
+    },
+    {
+      "appid": 813230,
+      "name": "ANIMAL WELL",
+      "cohort": "recent_6",
+      "editorial_group": "Platformer / metroidvania",
+      "selection_review_band": "high_10000_plus",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "supplement_unattempted_target",
+      "status": "success",
+      "sequence": 69
+    },
+    {
+      "appid": 813230,
+      "name": "ANIMAL WELL",
+      "cohort": "recent_6",
+      "editorial_group": "Platformer / metroidvania",
+      "selection_review_band": "high_10000_plus",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "supplement_unattempted_target",
+      "status": "success",
+      "sequence": 70
+    },
+    {
+      "appid": 1996010,
+      "name": "Crow Country",
+      "cohort": "recent_6",
+      "editorial_group": "Horror / exploration",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "supplement_unattempted_target",
+      "status": "success",
+      "sequence": 71
+    },
+    {
+      "appid": 1996010,
+      "name": "Crow Country",
+      "cohort": "recent_6",
+      "editorial_group": "Horror / exploration",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "supplement_unattempted_target",
+      "status": "success",
+      "sequence": 72
+    }
+  ],
+  "coverage": [
+    {
+      "axis": "all",
+      "value": "all",
+      "total_games": 36,
+      "current_players_success": 36,
+      "reviews_all_time_success": 36,
+      "current_players_percent": 100,
+      "reviews_all_time_percent": 100
+    },
+    {
+      "axis": "cohort",
+      "value": "original_30",
+      "total_games": 30,
+      "current_players_success": 30,
+      "reviews_all_time_success": 30,
+      "current_players_percent": 100,
+      "reviews_all_time_percent": 100
+    },
+    {
+      "axis": "editorial_group",
+      "value": "Farming / life simulation",
+      "total_games": 6,
+      "current_players_success": 6,
+      "reviews_all_time_success": 6,
+      "current_players_percent": 100,
+      "reviews_all_time_percent": 100
+    },
+    {
+      "axis": "selection_review_band",
+      "value": "high_10000_plus",
+      "total_games": 15,
+      "current_players_success": 15,
+      "reviews_all_time_success": 15,
+      "current_players_percent": 100,
+      "reviews_all_time_percent": 100
+    },
+    {
+      "axis": "selection_review_band",
+      "value": "mid_1000_to_9999",
+      "total_games": 12,
+      "current_players_success": 12,
+      "reviews_all_time_success": 12,
+      "current_players_percent": 100,
+      "reviews_all_time_percent": 100
+    },
+    {
+      "axis": "selection_review_band",
+      "value": "low_under_1000",
+      "total_games": 9,
+      "current_players_success": 9,
+      "reviews_all_time_success": 9,
+      "current_players_percent": 100,
+      "reviews_all_time_percent": 100
+    },
+    {
+      "axis": "editorial_group",
+      "value": "Roguelike deckbuilder",
+      "total_games": 6,
+      "current_players_success": 6,
+      "reviews_all_time_success": 6,
+      "current_players_percent": 100,
+      "reviews_all_time_percent": 100
+    },
+    {
+      "axis": "editorial_group",
+      "value": "Puzzle",
+      "total_games": 6,
+      "current_players_success": 6,
+      "reviews_all_time_success": 6,
+      "current_players_percent": 100,
+      "reviews_all_time_percent": 100
+    },
+    {
+      "axis": "editorial_group",
+      "value": "Horror / exploration",
+      "total_games": 6,
+      "current_players_success": 6,
+      "reviews_all_time_success": 6,
+      "current_players_percent": 100,
+      "reviews_all_time_percent": 100
+    },
+    {
+      "axis": "editorial_group",
+      "value": "Colony / settlement simulation",
+      "total_games": 5,
+      "current_players_success": 5,
+      "reviews_all_time_success": 5,
+      "current_players_percent": 100,
+      "reviews_all_time_percent": 100
+    },
+    {
+      "axis": "editorial_group",
+      "value": "Platformer / metroidvania",
+      "total_games": 6,
+      "current_players_success": 6,
+      "reviews_all_time_success": 6,
+      "current_players_percent": 100,
+      "reviews_all_time_percent": 100
+    },
+    {
+      "axis": "cohort",
+      "value": "recent_6",
+      "total_games": 6,
+      "current_players_success": 6,
+      "reviews_all_time_success": 6,
+      "current_players_percent": 100,
+      "reviews_all_time_percent": 100
+    },
+    {
+      "axis": "editorial_group",
+      "value": "Cozy building toy",
+      "total_games": 1,
+      "current_players_success": 1,
+      "reviews_all_time_success": 1,
+      "current_players_percent": 100,
+      "reviews_all_time_percent": 100
+    }
+  ],
+  "stop_reason": "invalid_reviews_schema",
+  "date_probe_targets": [
+    {
+      "appid": 730050,
+      "baseline_status": "not_attempted",
+      "status": "incomplete"
+    },
+    {
+      "appid": 1054550,
+      "baseline_status": "not_attempted",
+      "status": "not_attempted"
+    },
+    {
+      "appid": 1706090,
+      "baseline_status": "not_attempted",
+      "status": "not_attempted"
+    },
+    {
+      "appid": 916350,
+      "baseline_status": "not_attempted",
+      "status": "not_attempted"
+    },
+    {
+      "appid": 693580,
+      "baseline_status": "not_attempted",
+      "status": "not_attempted"
+    },
+    {
+      "appid": 1368410,
+      "baseline_status": "not_attempted",
+      "status": "not_attempted"
+    }
+  ],
+  "baseline_category_counts": [
+    {
+      "category": "previous_failed_target",
+      "total": 1,
+      "success": 1,
+      "failed": 0,
+      "not_attempted": 0
+    },
+    {
+      "category": "original_unattempted_target",
+      "total": 20,
+      "success": 20,
+      "failed": 0,
+      "not_attempted": 0
+    },
+    {
+      "category": "supplement_unattempted_target",
+      "total": 12,
+      "success": 12,
+      "failed": 0,
+      "not_attempted": 0
+    },
+    {
+      "category": "baseline_success_recheck",
+      "total": 39,
+      "success": 39,
+      "failed": 0,
+      "not_attempted": 0
+    }
+  ],
+  "review_window_verdict": "inconclusive_or_incomplete",
+  "wall_time_ms": 79632
+}

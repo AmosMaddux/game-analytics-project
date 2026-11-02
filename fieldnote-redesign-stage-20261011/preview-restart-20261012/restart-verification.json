@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-10-12T15:38:27.173384+00:00",
+  "action": "started",
+  "pid": 11147,
+  "database": "/workspaces/codespaces-blank/fieldnote-redesign-stage-20261011/pilot-20261011-1746/pilot-evidence.sqlite",
+  "port": 4174,
+  "bind": "127.0.0.1",
+  "health": {
+    "status": "ok",
+    "schemaVersion": 3,
+    "gameCount": 334,
+    "mode": "private_bounded_collection_cache",
+    "liveCollectionEnabled": false,
+    "boundedLocalCollectionAvailable": true,
+    "backgroundCollectionEnabled": false
+  },
+  "databaseRowsAndSchemaUnchanged": true,
+  "migrationsAlreadyApplied": [
+    "0001_foundation.sql",
+    "0002_review_windows.sql",
+    "0003_collection.sql",
+    "0004_release_research.sql"
+  ]
+}

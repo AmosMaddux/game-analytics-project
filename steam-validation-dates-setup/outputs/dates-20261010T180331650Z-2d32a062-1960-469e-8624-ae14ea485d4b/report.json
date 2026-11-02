@@ -1,0 +1,2505 @@
+{
+  "schema_version": "1.0",
+  "run_id": "dates-20261010T180331650Z-2d32a062-1960-469e-8624-ae14ea485d4b",
+  "kind": "live",
+  "mode": "dates",
+  "bundle_fingerprint": "8a8ca40c34fa4328b69859f5777430539f30fba13910034c0989718f8d7473f8",
+  "started_at": "2026-10-10T18:03:31.651Z",
+  "finished_at": "2026-10-10T18:03:57.250Z",
+  "status": "completed",
+  "healthy": true,
+  "current_metrics_scope": "not_requested_in_this_run_see_prior_proof",
+  "scope": "bounded_M1_technical_feasibility",
+  "baseline_date": "2026-10-09",
+  "baseline_source_sha256": {
+    "cohort.json": "ca971b9b127f6a6670672db143ebfaa108b288bffdffcabd2cc751242faf3764",
+    "cohort_recent.json": "84f37f67d6e06d32857d593730526717862c8ebf423b1ed5b9509bcd2f8e6f49",
+    "per_game_test_status.json": "035528955d55265ff37b75705dd1ee4f2f15ecfdaedad9aaffb292bdd75d8050",
+    "api_observations.json": "ff1b66c6efaf908b96191799c34f37ff8609227791fabdca31090efe14e0e9fc",
+    "api_recent_observations.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "review_date_observations.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "final_test_summary.json": "dd039ddd01ac4b84cba55e6cae16bf338410a0df3918da4d8364cff4ca26c9f4"
+  },
+  "pilot_rationale": null,
+  "pilot_appids": [
+    1472660,
+    916350,
+    2379780
+  ],
+  "limits": {
+    "pilot_requests": 6,
+    "cohort_requests": 120,
+    "dates_requests": 42,
+    "interval_ms": 1100,
+    "timeout_ms": 20000,
+    "run_timeout_ms": 600000,
+    "body_bytes": 1048576,
+    "header_bytes": 8192,
+    "review_page_size": 100,
+    "window_page_cap": 4,
+    "concurrency": 1,
+    "retries": 0,
+    "request_cap": 42
+  },
+  "source_documents": [
+    "https://partner.steamgames.com/doc/webapi/IUserReviewsService",
+    "https://partner.steamgames.com/doc/webapi/ISteamUserStats",
+    "https://partner.steamgames.com/doc/webapi_overview"
+  ],
+  "notes": [
+    "The existing 19 saved review observations already use the same GetAppReviews API.",
+    "Current player counts are instantaneous, not DAU, historical peaks or sales.",
+    "Anonymous review responses may be cached by Valve for up to 10 minutes.",
+    "Dated review counts describe surviving matching reviews observed now, not an immutable historical snapshot.",
+    "Two fresh manual runs are not a validated collection schedule or time series.",
+    "Tag collection is disabled; no HTML/store/SteamDB requests are included.",
+    "No production use, reuse/retention rights or other M1 gates are approved by this technical test."
+  ],
+  "request_counts": {
+    "attempted": 24,
+    "successful": 24,
+    "failed": 0
+  },
+  "response_bytes": 13728,
+  "observations": [
+    {
+      "sequence": 1,
+      "appid": 730050,
+      "method": "reviews_all_time",
+      "purpose": "date_month_pagination",
+      "baseline_category": "original_unattempted_date_probe",
+      "requested_at": "2026-10-10T18:03:31.654Z",
+      "completed_at": "2026-10-10T18:03:31.987Z",
+      "latency_ms": 333,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 730050,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 100,
+        "cursor": "*",
+        "date_range_start": 1788220800,
+        "date_range_end": 1790812799,
+        "date_range_exclude": false
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 191,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 0,
+        "empty_array_omitted": true,
+        "total_matching": 0,
+        "query_summary_score_totals": {
+          "total_reviews": 0,
+          "total_positive": 0,
+          "total_negative": 0
+        },
+        "created_min_utc": null,
+        "created_max_utc": null,
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 2,
+      "appid": 730050,
+      "method": "reviews_all_time",
+      "purpose": "date_left_partition",
+      "baseline_category": "original_unattempted_date_probe",
+      "requested_at": "2026-10-10T18:03:32.755Z",
+      "completed_at": "2026-10-10T18:03:33.012Z",
+      "latency_ms": 257,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 730050,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*",
+        "date_range_start": 1788220800,
+        "date_range_end": 1789516799,
+        "date_range_exclude": false
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 191,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 0,
+        "empty_array_omitted": true,
+        "total_matching": 0,
+        "query_summary_score_totals": {
+          "total_reviews": 0,
+          "total_positive": 0,
+          "total_negative": 0
+        },
+        "created_min_utc": null,
+        "created_max_utc": null,
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 3,
+      "appid": 730050,
+      "method": "reviews_all_time",
+      "purpose": "date_right_partition",
+      "baseline_category": "original_unattempted_date_probe",
+      "requested_at": "2026-10-10T18:03:33.856Z",
+      "completed_at": "2026-10-10T18:03:34.124Z",
+      "latency_ms": 268,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 730050,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*",
+        "date_range_start": 1789516800,
+        "date_range_end": 1790812799,
+        "date_range_exclude": false
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 191,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 0,
+        "empty_array_omitted": true,
+        "total_matching": 0,
+        "query_summary_score_totals": {
+          "total_reviews": 0,
+          "total_positive": 0,
+          "total_negative": 0
+        },
+        "created_min_utc": null,
+        "created_max_utc": null,
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 4,
+      "appid": 1054550,
+      "method": "reviews_all_time",
+      "purpose": "date_month_pagination",
+      "baseline_category": "original_unattempted_date_probe",
+      "requested_at": "2026-10-10T18:03:34.957Z",
+      "completed_at": "2026-10-10T18:03:35.262Z",
+      "latency_ms": 305,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 1054550,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 100,
+        "cursor": "*",
+        "date_range_start": 1788220800,
+        "date_range_end": 1790812799,
+        "date_range_exclude": false
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 1820,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 2,
+        "empty_array_omitted": false,
+        "total_matching": 2,
+        "query_summary_score_totals": {
+          "total_reviews": 2,
+          "total_positive": 2,
+          "total_negative": 0
+        },
+        "created_min_utc": "2026-09-09T04:44:55.000Z",
+        "created_max_utc": "2026-09-30T19:17:34.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 5,
+      "appid": 1054550,
+      "method": "reviews_all_time",
+      "purpose": "date_month_pagination",
+      "baseline_category": "original_unattempted_date_probe",
+      "requested_at": "2026-10-10T18:03:36.058Z",
+      "completed_at": "2026-10-10T18:03:36.402Z",
+      "latency_ms": 344,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 1054550,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 100,
+        "cursor": "continuation_omitted",
+        "date_range_start": 1788220800,
+        "date_range_end": 1790812799,
+        "date_range_exclude": false
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 99,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 0,
+        "empty_array_omitted": true,
+        "total_matching": 2,
+        "query_summary_score_totals": null,
+        "created_min_utc": null,
+        "created_max_utc": null,
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 6,
+      "appid": 1054550,
+      "method": "reviews_all_time",
+      "purpose": "date_left_partition",
+      "baseline_category": "original_unattempted_date_probe",
+      "requested_at": "2026-10-10T18:03:37.158Z",
+      "completed_at": "2026-10-10T18:03:37.503Z",
+      "latency_ms": 345,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 1054550,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*",
+        "date_range_start": 1788220800,
+        "date_range_end": 1789516799,
+        "date_range_exclude": false
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 1281,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "empty_array_omitted": false,
+        "total_matching": 1,
+        "query_summary_score_totals": {
+          "total_reviews": 1,
+          "total_positive": 1,
+          "total_negative": 0
+        },
+        "created_min_utc": "2026-09-09T04:44:55.000Z",
+        "created_max_utc": "2026-09-09T04:44:55.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 7,
+      "appid": 1054550,
+      "method": "reviews_all_time",
+      "purpose": "date_right_partition",
+      "baseline_category": "original_unattempted_date_probe",
+      "requested_at": "2026-10-10T18:03:38.259Z",
+      "completed_at": "2026-10-10T18:03:38.484Z",
+      "latency_ms": 225,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 1054550,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*",
+        "date_range_start": 1789516800,
+        "date_range_end": 1790812799,
+        "date_range_exclude": false
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 760,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "empty_array_omitted": false,
+        "total_matching": 1,
+        "query_summary_score_totals": {
+          "total_reviews": 1,
+          "total_positive": 1,
+          "total_negative": 0
+        },
+        "created_min_utc": "2026-09-30T19:17:34.000Z",
+        "created_max_utc": "2026-09-30T19:17:34.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 8,
+      "appid": 1054550,
+      "method": "reviews_all_time",
+      "purpose": "date_inclusive_boundary",
+      "baseline_category": "original_unattempted_date_probe",
+      "requested_at": "2026-10-10T18:03:39.361Z",
+      "completed_at": "2026-10-10T18:03:39.596Z",
+      "latency_ms": 235,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 1054550,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 100,
+        "cursor": "*",
+        "date_range_start": 1790795854,
+        "date_range_end": 1790795854,
+        "date_range_exclude": false
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 760,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "empty_array_omitted": false,
+        "total_matching": 1,
+        "query_summary_score_totals": {
+          "total_reviews": 1,
+          "total_positive": 1,
+          "total_negative": 0
+        },
+        "created_min_utc": "2026-09-30T19:17:34.000Z",
+        "created_max_utc": "2026-09-30T19:17:34.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 9,
+      "appid": 1706090,
+      "method": "reviews_all_time",
+      "purpose": "date_month_pagination",
+      "baseline_category": "original_unattempted_date_probe",
+      "requested_at": "2026-10-10T18:03:40.462Z",
+      "completed_at": "2026-10-10T18:03:40.772Z",
+      "latency_ms": 310,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 1706090,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 100,
+        "cursor": "*",
+        "date_range_start": 1788220800,
+        "date_range_end": 1790812799,
+        "date_range_exclude": false
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 1807,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 2,
+        "empty_array_omitted": false,
+        "total_matching": 2,
+        "query_summary_score_totals": {
+          "total_reviews": 2,
+          "total_positive": 2,
+          "total_negative": 0
+        },
+        "created_min_utc": "2026-09-16T20:19:41.000Z",
+        "created_max_utc": "2026-09-26T19:59:07.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 10,
+      "appid": 1706090,
+      "method": "reviews_all_time",
+      "purpose": "date_month_pagination",
+      "baseline_category": "original_unattempted_date_probe",
+      "requested_at": "2026-10-10T18:03:41.563Z",
+      "completed_at": "2026-10-10T18:03:41.757Z",
+      "latency_ms": 194,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 1706090,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 100,
+        "cursor": "continuation_omitted",
+        "date_range_start": 1788220800,
+        "date_range_end": 1790812799,
+        "date_range_exclude": false
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 99,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 0,
+        "empty_array_omitted": true,
+        "total_matching": 2,
+        "query_summary_score_totals": null,
+        "created_min_utc": null,
+        "created_max_utc": null,
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 11,
+      "appid": 1706090,
+      "method": "reviews_all_time",
+      "purpose": "date_left_partition",
+      "baseline_category": "original_unattempted_date_probe",
+      "requested_at": "2026-10-10T18:03:42.664Z",
+      "completed_at": "2026-10-10T18:03:43.023Z",
+      "latency_ms": 359,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 1706090,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*",
+        "date_range_start": 1788220800,
+        "date_range_end": 1789516799,
+        "date_range_exclude": false
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 191,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 0,
+        "empty_array_omitted": true,
+        "total_matching": 0,
+        "query_summary_score_totals": {
+          "total_reviews": 0,
+          "total_positive": 0,
+          "total_negative": 0
+        },
+        "created_min_utc": null,
+        "created_max_utc": null,
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 12,
+      "appid": 1706090,
+      "method": "reviews_all_time",
+      "purpose": "date_right_partition",
+      "baseline_category": "original_unattempted_date_probe",
+      "requested_at": "2026-10-10T18:03:43.765Z",
+      "completed_at": "2026-10-10T18:03:44.006Z",
+      "latency_ms": 241,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 1706090,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*",
+        "date_range_start": 1789516800,
+        "date_range_end": 1790812799,
+        "date_range_exclude": false
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 797,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "empty_array_omitted": false,
+        "total_matching": 2,
+        "query_summary_score_totals": {
+          "total_reviews": 2,
+          "total_positive": 2,
+          "total_negative": 0
+        },
+        "created_min_utc": "2026-09-26T19:59:07.000Z",
+        "created_max_utc": "2026-09-26T19:59:07.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 13,
+      "appid": 1706090,
+      "method": "reviews_all_time",
+      "purpose": "date_inclusive_boundary",
+      "baseline_category": "original_unattempted_date_probe",
+      "requested_at": "2026-10-10T18:03:44.866Z",
+      "completed_at": "2026-10-10T18:03:45.113Z",
+      "latency_ms": 247,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 1706090,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 100,
+        "cursor": "*",
+        "date_range_start": 1790452747,
+        "date_range_end": 1790452747,
+        "date_range_exclude": false
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 797,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "empty_array_omitted": false,
+        "total_matching": 1,
+        "query_summary_score_totals": {
+          "total_reviews": 1,
+          "total_positive": 1,
+          "total_negative": 0
+        },
+        "created_min_utc": "2026-09-26T19:59:07.000Z",
+        "created_max_utc": "2026-09-26T19:59:07.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 14,
+      "appid": 916350,
+      "method": "reviews_all_time",
+      "purpose": "date_month_pagination",
+      "baseline_category": "original_unattempted_date_probe",
+      "requested_at": "2026-10-10T18:03:45.966Z",
+      "completed_at": "2026-10-10T18:03:46.228Z",
+      "latency_ms": 262,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 916350,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 100,
+        "cursor": "*",
+        "date_range_start": 1788220800,
+        "date_range_end": 1790812799,
+        "date_range_exclude": false
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 1694,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 2,
+        "empty_array_omitted": false,
+        "total_matching": 2,
+        "query_summary_score_totals": {
+          "total_reviews": 2,
+          "total_positive": 2,
+          "total_negative": 0
+        },
+        "created_min_utc": "2026-09-03T20:49:20.000Z",
+        "created_max_utc": "2026-09-05T04:56:37.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 15,
+      "appid": 916350,
+      "method": "reviews_all_time",
+      "purpose": "date_month_pagination",
+      "baseline_category": "original_unattempted_date_probe",
+      "requested_at": "2026-10-10T18:03:47.067Z",
+      "completed_at": "2026-10-10T18:03:47.563Z",
+      "latency_ms": 496,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 916350,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 100,
+        "cursor": "continuation_omitted",
+        "date_range_start": 1788220800,
+        "date_range_end": 1790812799,
+        "date_range_exclude": false
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 99,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 0,
+        "empty_array_omitted": true,
+        "total_matching": 2,
+        "query_summary_score_totals": null,
+        "created_min_utc": null,
+        "created_max_utc": null,
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 16,
+      "appid": 916350,
+      "method": "reviews_all_time",
+      "purpose": "date_left_partition",
+      "baseline_category": "original_unattempted_date_probe",
+      "requested_at": "2026-10-10T18:03:48.168Z",
+      "completed_at": "2026-10-10T18:03:48.521Z",
+      "latency_ms": 354,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 916350,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*",
+        "date_range_start": 1788220800,
+        "date_range_end": 1789516799,
+        "date_range_exclude": false
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 807,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "empty_array_omitted": false,
+        "total_matching": 2,
+        "query_summary_score_totals": {
+          "total_reviews": 2,
+          "total_positive": 2,
+          "total_negative": 0
+        },
+        "created_min_utc": "2026-09-05T04:56:37.000Z",
+        "created_max_utc": "2026-09-05T04:56:37.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 17,
+      "appid": 916350,
+      "method": "reviews_all_time",
+      "purpose": "date_right_partition",
+      "baseline_category": "original_unattempted_date_probe",
+      "requested_at": "2026-10-10T18:03:49.268Z",
+      "completed_at": "2026-10-10T18:03:49.526Z",
+      "latency_ms": 258,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 916350,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*",
+        "date_range_start": 1789516800,
+        "date_range_end": 1790812799,
+        "date_range_exclude": false
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 191,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 0,
+        "empty_array_omitted": true,
+        "total_matching": 0,
+        "query_summary_score_totals": {
+          "total_reviews": 0,
+          "total_positive": 0,
+          "total_negative": 0
+        },
+        "created_min_utc": null,
+        "created_max_utc": null,
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 18,
+      "appid": 916350,
+      "method": "reviews_all_time",
+      "purpose": "date_inclusive_boundary",
+      "baseline_category": "original_unattempted_date_probe",
+      "requested_at": "2026-10-10T18:03:50.368Z",
+      "completed_at": "2026-10-10T18:03:50.742Z",
+      "latency_ms": 374,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 916350,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 100,
+        "cursor": "*",
+        "date_range_start": 1788584197,
+        "date_range_end": 1788584197,
+        "date_range_exclude": false
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 807,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 1,
+        "empty_array_omitted": false,
+        "total_matching": 1,
+        "query_summary_score_totals": {
+          "total_reviews": 1,
+          "total_positive": 1,
+          "total_negative": 0
+        },
+        "created_min_utc": "2026-09-05T04:56:37.000Z",
+        "created_max_utc": "2026-09-05T04:56:37.000Z",
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 19,
+      "appid": 693580,
+      "method": "reviews_all_time",
+      "purpose": "date_month_pagination",
+      "baseline_category": "original_unattempted_date_probe",
+      "requested_at": "2026-10-10T18:03:51.469Z",
+      "completed_at": "2026-10-10T18:03:51.688Z",
+      "latency_ms": 219,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 693580,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 100,
+        "cursor": "*",
+        "date_range_start": 1788220800,
+        "date_range_end": 1790812799,
+        "date_range_exclude": false
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 191,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 0,
+        "empty_array_omitted": true,
+        "total_matching": 0,
+        "query_summary_score_totals": {
+          "total_reviews": 0,
+          "total_positive": 0,
+          "total_negative": 0
+        },
+        "created_min_utc": null,
+        "created_max_utc": null,
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 20,
+      "appid": 693580,
+      "method": "reviews_all_time",
+      "purpose": "date_left_partition",
+      "baseline_category": "original_unattempted_date_probe",
+      "requested_at": "2026-10-10T18:03:52.570Z",
+      "completed_at": "2026-10-10T18:03:52.842Z",
+      "latency_ms": 272,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 693580,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*",
+        "date_range_start": 1788220800,
+        "date_range_end": 1789516799,
+        "date_range_exclude": false
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 191,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 0,
+        "empty_array_omitted": true,
+        "total_matching": 0,
+        "query_summary_score_totals": {
+          "total_reviews": 0,
+          "total_positive": 0,
+          "total_negative": 0
+        },
+        "created_min_utc": null,
+        "created_max_utc": null,
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 21,
+      "appid": 693580,
+      "method": "reviews_all_time",
+      "purpose": "date_right_partition",
+      "baseline_category": "original_unattempted_date_probe",
+      "requested_at": "2026-10-10T18:03:53.671Z",
+      "completed_at": "2026-10-10T18:03:53.872Z",
+      "latency_ms": 201,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 693580,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*",
+        "date_range_start": 1789516800,
+        "date_range_end": 1790812799,
+        "date_range_exclude": false
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 191,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 0,
+        "empty_array_omitted": true,
+        "total_matching": 0,
+        "query_summary_score_totals": {
+          "total_reviews": 0,
+          "total_positive": 0,
+          "total_negative": 0
+        },
+        "created_min_utc": null,
+        "created_max_utc": null,
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 22,
+      "appid": 1368410,
+      "method": "reviews_all_time",
+      "purpose": "date_month_pagination",
+      "baseline_category": "original_unattempted_date_probe",
+      "requested_at": "2026-10-10T18:03:54.771Z",
+      "completed_at": "2026-10-10T18:03:55.019Z",
+      "latency_ms": 249,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 1368410,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 100,
+        "cursor": "*",
+        "date_range_start": 1788220800,
+        "date_range_end": 1790812799,
+        "date_range_exclude": false
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 191,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 0,
+        "empty_array_omitted": true,
+        "total_matching": 0,
+        "query_summary_score_totals": {
+          "total_reviews": 0,
+          "total_positive": 0,
+          "total_negative": 0
+        },
+        "created_min_utc": null,
+        "created_max_utc": null,
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 23,
+      "appid": 1368410,
+      "method": "reviews_all_time",
+      "purpose": "date_left_partition",
+      "baseline_category": "original_unattempted_date_probe",
+      "requested_at": "2026-10-10T18:03:55.872Z",
+      "completed_at": "2026-10-10T18:03:56.126Z",
+      "latency_ms": 254,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 1368410,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*",
+        "date_range_start": 1788220800,
+        "date_range_end": 1789516799,
+        "date_range_exclude": false
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 191,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 0,
+        "empty_array_omitted": true,
+        "total_matching": 0,
+        "query_summary_score_totals": {
+          "total_reviews": 0,
+          "total_positive": 0,
+          "total_negative": 0
+        },
+        "created_min_utc": null,
+        "created_max_utc": null,
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    },
+    {
+      "sequence": 24,
+      "appid": 1368410,
+      "method": "reviews_all_time",
+      "purpose": "date_right_partition",
+      "baseline_category": "original_unattempted_date_probe",
+      "requested_at": "2026-10-10T18:03:56.973Z",
+      "completed_at": "2026-10-10T18:03:57.241Z",
+      "latency_ms": 268,
+      "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+      "filters": {
+        "appid": 1368410,
+        "filter": 1,
+        "languages": [
+          "all"
+        ],
+        "review_type": 0,
+        "purchase_type": 0,
+        "filter_offtopic_activity": true,
+        "display_language": "english",
+        "num_per_page": 1,
+        "cursor": "*",
+        "date_range_start": 1789516800,
+        "date_range_end": 1790812799,
+        "date_range_exclude": false
+      },
+      "status": "success",
+      "http_status": 200,
+      "response_bytes": 191,
+      "source_timestamp": null,
+      "aggregate": {
+        "returned_count": 0,
+        "empty_array_omitted": true,
+        "total_matching": 0,
+        "query_summary_score_totals": {
+          "total_reviews": 0,
+          "total_positive": 0,
+          "total_negative": 0
+        },
+        "created_min_utc": null,
+        "created_max_utc": null,
+        "out_of_range_count": 0,
+        "recent_sort_descending": true,
+        "cursor_present": true,
+        "query_summary_is_not_used_as_window_count": true,
+        "source_timestamp": null
+      }
+    }
+  ],
+  "date_probes": [
+    {
+      "appid": 730050,
+      "baseline_status": "not_attempted",
+      "status": "inconclusive",
+      "period_utc": {
+        "start": "2026-09-01T00:00:00.000Z",
+        "end_inclusive": "2026-09-30T23:59:59.000Z"
+      },
+      "pages_attempted": 1,
+      "returned_reviews": 0,
+      "unique_reviews": 0,
+      "duplicate_reviews": 0,
+      "total_matching_first": 0,
+      "total_matching_stable": true,
+      "terminal_empty_page_seen": true,
+      "complete": true,
+      "pagination_stop": "terminal_empty_page",
+      "partition": {
+        "left": {
+          "start_utc": "2026-09-01T00:00:00.000Z",
+          "end_inclusive_utc": "2026-09-15T23:59:59.000Z",
+          "total_matching": 0
+        },
+        "right": {
+          "start_utc": "2026-09-16T00:00:00.000Z",
+          "end_inclusive_utc": "2026-09-30T23:59:59.000Z",
+          "total_matching": 0
+        },
+        "disjoint_no_gap": true,
+        "sum_matches_month": true,
+        "interpretation": "Query consistency check across surviving records; not immutable historical truth."
+      },
+      "inclusive_boundary": {
+        "exercised": false,
+        "reason": "month_had_no_reviews"
+      },
+      "pages_successful": 1
+    },
+    {
+      "appid": 1054550,
+      "baseline_status": "not_attempted",
+      "status": "checks_passed",
+      "period_utc": {
+        "start": "2026-09-01T00:00:00.000Z",
+        "end_inclusive": "2026-09-30T23:59:59.000Z"
+      },
+      "pages_attempted": 2,
+      "returned_reviews": 2,
+      "unique_reviews": 2,
+      "duplicate_reviews": 0,
+      "total_matching_first": 2,
+      "total_matching_stable": true,
+      "terminal_empty_page_seen": true,
+      "complete": true,
+      "pagination_stop": "terminal_empty_page",
+      "partition": {
+        "left": {
+          "start_utc": "2026-09-01T00:00:00.000Z",
+          "end_inclusive_utc": "2026-09-15T23:59:59.000Z",
+          "total_matching": 1
+        },
+        "right": {
+          "start_utc": "2026-09-16T00:00:00.000Z",
+          "end_inclusive_utc": "2026-09-30T23:59:59.000Z",
+          "total_matching": 1
+        },
+        "disjoint_no_gap": true,
+        "sum_matches_month": true,
+        "interpretation": "Query consistency check across surviving records; not immutable historical truth."
+      },
+      "inclusive_boundary": {
+        "timestamp_utc": "2026-09-30T19:17:34.000Z",
+        "total_matching": 1,
+        "returned_count": 1,
+        "all_returned_equal_boundary": true,
+        "exercised": true
+      },
+      "pages_successful": 2
+    },
+    {
+      "appid": 1706090,
+      "baseline_status": "not_attempted",
+      "status": "checks_passed",
+      "period_utc": {
+        "start": "2026-09-01T00:00:00.000Z",
+        "end_inclusive": "2026-09-30T23:59:59.000Z"
+      },
+      "pages_attempted": 2,
+      "returned_reviews": 2,
+      "unique_reviews": 2,
+      "duplicate_reviews": 0,
+      "total_matching_first": 2,
+      "total_matching_stable": true,
+      "terminal_empty_page_seen": true,
+      "complete": true,
+      "pagination_stop": "terminal_empty_page",
+      "partition": {
+        "left": {
+          "start_utc": "2026-09-01T00:00:00.000Z",
+          "end_inclusive_utc": "2026-09-15T23:59:59.000Z",
+          "total_matching": 0
+        },
+        "right": {
+          "start_utc": "2026-09-16T00:00:00.000Z",
+          "end_inclusive_utc": "2026-09-30T23:59:59.000Z",
+          "total_matching": 2
+        },
+        "disjoint_no_gap": true,
+        "sum_matches_month": true,
+        "interpretation": "Query consistency check across surviving records; not immutable historical truth."
+      },
+      "inclusive_boundary": {
+        "timestamp_utc": "2026-09-26T19:59:07.000Z",
+        "total_matching": 1,
+        "returned_count": 1,
+        "all_returned_equal_boundary": true,
+        "exercised": true
+      },
+      "pages_successful": 2
+    },
+    {
+      "appid": 916350,
+      "baseline_status": "not_attempted",
+      "status": "checks_passed",
+      "period_utc": {
+        "start": "2026-09-01T00:00:00.000Z",
+        "end_inclusive": "2026-09-30T23:59:59.000Z"
+      },
+      "pages_attempted": 2,
+      "returned_reviews": 2,
+      "unique_reviews": 2,
+      "duplicate_reviews": 0,
+      "total_matching_first": 2,
+      "total_matching_stable": true,
+      "terminal_empty_page_seen": true,
+      "complete": true,
+      "pagination_stop": "terminal_empty_page",
+      "partition": {
+        "left": {
+          "start_utc": "2026-09-01T00:00:00.000Z",
+          "end_inclusive_utc": "2026-09-15T23:59:59.000Z",
+          "total_matching": 2
+        },
+        "right": {
+          "start_utc": "2026-09-16T00:00:00.000Z",
+          "end_inclusive_utc": "2026-09-30T23:59:59.000Z",
+          "total_matching": 0
+        },
+        "disjoint_no_gap": true,
+        "sum_matches_month": true,
+        "interpretation": "Query consistency check across surviving records; not immutable historical truth."
+      },
+      "inclusive_boundary": {
+        "timestamp_utc": "2026-09-05T04:56:37.000Z",
+        "total_matching": 1,
+        "returned_count": 1,
+        "all_returned_equal_boundary": true,
+        "exercised": true
+      },
+      "pages_successful": 2
+    },
+    {
+      "appid": 693580,
+      "baseline_status": "not_attempted",
+      "status": "inconclusive",
+      "period_utc": {
+        "start": "2026-09-01T00:00:00.000Z",
+        "end_inclusive": "2026-09-30T23:59:59.000Z"
+      },
+      "pages_attempted": 1,
+      "returned_reviews": 0,
+      "unique_reviews": 0,
+      "duplicate_reviews": 0,
+      "total_matching_first": 0,
+      "total_matching_stable": true,
+      "terminal_empty_page_seen": true,
+      "complete": true,
+      "pagination_stop": "terminal_empty_page",
+      "partition": {
+        "left": {
+          "start_utc": "2026-09-01T00:00:00.000Z",
+          "end_inclusive_utc": "2026-09-15T23:59:59.000Z",
+          "total_matching": 0
+        },
+        "right": {
+          "start_utc": "2026-09-16T00:00:00.000Z",
+          "end_inclusive_utc": "2026-09-30T23:59:59.000Z",
+          "total_matching": 0
+        },
+        "disjoint_no_gap": true,
+        "sum_matches_month": true,
+        "interpretation": "Query consistency check across surviving records; not immutable historical truth."
+      },
+      "inclusive_boundary": {
+        "exercised": false,
+        "reason": "month_had_no_reviews"
+      },
+      "pages_successful": 1
+    },
+    {
+      "appid": 1368410,
+      "baseline_status": "not_attempted",
+      "status": "inconclusive",
+      "period_utc": {
+        "start": "2026-09-01T00:00:00.000Z",
+        "end_inclusive": "2026-09-30T23:59:59.000Z"
+      },
+      "pages_attempted": 1,
+      "returned_reviews": 0,
+      "unique_reviews": 0,
+      "duplicate_reviews": 0,
+      "total_matching_first": 0,
+      "total_matching_stable": true,
+      "terminal_empty_page_seen": true,
+      "complete": true,
+      "pagination_stop": "terminal_empty_page",
+      "partition": {
+        "left": {
+          "start_utc": "2026-09-01T00:00:00.000Z",
+          "end_inclusive_utc": "2026-09-15T23:59:59.000Z",
+          "total_matching": 0
+        },
+        "right": {
+          "start_utc": "2026-09-16T00:00:00.000Z",
+          "end_inclusive_utc": "2026-09-30T23:59:59.000Z",
+          "total_matching": 0
+        },
+        "disjoint_no_gap": true,
+        "sum_matches_month": true,
+        "interpretation": "Query consistency check across surviving records; not immutable historical truth."
+      },
+      "inclusive_boundary": {
+        "exercised": false,
+        "reason": "month_had_no_reviews"
+      },
+      "pages_successful": 1
+    }
+  ],
+  "targets": [
+    {
+      "appid": 413150,
+      "name": "Stardew Valley",
+      "cohort": "original_30",
+      "editorial_group": "Farming / life simulation",
+      "selection_review_band": "high_10000_plus",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 413150,
+      "name": "Stardew Valley",
+      "cohort": "original_30",
+      "editorial_group": "Farming / life simulation",
+      "selection_review_band": "high_10000_plus",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1472660,
+      "name": "No Place Like Home",
+      "cohort": "original_30",
+      "editorial_group": "Farming / life simulation",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1472660,
+      "name": "No Place Like Home",
+      "cohort": "original_30",
+      "editorial_group": "Farming / life simulation",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 894940,
+      "name": "Littlewood",
+      "cohort": "original_30",
+      "editorial_group": "Farming / life simulation",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 894940,
+      "name": "Littlewood",
+      "cohort": "original_30",
+      "editorial_group": "Farming / life simulation",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 730050,
+      "name": "Verdant Skies",
+      "cohort": "original_30",
+      "editorial_group": "Farming / life simulation",
+      "selection_review_band": "low_under_1000",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 730050,
+      "name": "Verdant Skies",
+      "cohort": "original_30",
+      "editorial_group": "Farming / life simulation",
+      "selection_review_band": "low_under_1000",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 432010,
+      "name": "World's Dawn",
+      "cohort": "original_30",
+      "editorial_group": "Farming / life simulation",
+      "selection_review_band": "low_under_1000",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 432010,
+      "name": "World's Dawn",
+      "cohort": "original_30",
+      "editorial_group": "Farming / life simulation",
+      "selection_review_band": "low_under_1000",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 646570,
+      "name": "Slay the Spire",
+      "cohort": "original_30",
+      "editorial_group": "Roguelike deckbuilder",
+      "selection_review_band": "high_10000_plus",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 646570,
+      "name": "Slay the Spire",
+      "cohort": "original_30",
+      "editorial_group": "Roguelike deckbuilder",
+      "selection_review_band": "high_10000_plus",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1102190,
+      "name": "Monster Train",
+      "cohort": "original_30",
+      "editorial_group": "Roguelike deckbuilder",
+      "selection_review_band": "high_10000_plus",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1102190,
+      "name": "Monster Train",
+      "cohort": "original_30",
+      "editorial_group": "Roguelike deckbuilder",
+      "selection_review_band": "high_10000_plus",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 2179850,
+      "name": "Cobalt Core",
+      "cohort": "original_30",
+      "editorial_group": "Roguelike deckbuilder",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 2179850,
+      "name": "Cobalt Core",
+      "cohort": "original_30",
+      "editorial_group": "Roguelike deckbuilder",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1054550,
+      "name": "Phantom Rose",
+      "cohort": "original_30",
+      "editorial_group": "Roguelike deckbuilder",
+      "selection_review_band": "low_under_1000",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1054550,
+      "name": "Phantom Rose",
+      "cohort": "original_30",
+      "editorial_group": "Roguelike deckbuilder",
+      "selection_review_band": "low_under_1000",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1127610,
+      "name": "Iris and the Giant",
+      "cohort": "original_30",
+      "editorial_group": "Roguelike deckbuilder",
+      "selection_review_band": "low_under_1000",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1127610,
+      "name": "Iris and the Giant",
+      "cohort": "original_30",
+      "editorial_group": "Roguelike deckbuilder",
+      "selection_review_band": "low_under_1000",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 736260,
+      "name": "Baba Is You",
+      "cohort": "original_30",
+      "editorial_group": "Puzzle",
+      "selection_review_band": "high_10000_plus",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 736260,
+      "name": "Baba Is You",
+      "cohort": "original_30",
+      "editorial_group": "Puzzle",
+      "selection_review_band": "high_10000_plus",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1260520,
+      "name": "Patrick's Parabox",
+      "cohort": "original_30",
+      "editorial_group": "Puzzle",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1260520,
+      "name": "Patrick's Parabox",
+      "cohort": "original_30",
+      "editorial_group": "Puzzle",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1147890,
+      "name": "Bonfire Peaks",
+      "cohort": "original_30",
+      "editorial_group": "Puzzle",
+      "selection_review_band": "low_under_1000",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1147890,
+      "name": "Bonfire Peaks",
+      "cohort": "original_30",
+      "editorial_group": "Puzzle",
+      "selection_review_band": "low_under_1000",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1052990,
+      "name": "A Monster's Expedition",
+      "cohort": "original_30",
+      "editorial_group": "Puzzle",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1052990,
+      "name": "A Monster's Expedition",
+      "cohort": "original_30",
+      "editorial_group": "Puzzle",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1706090,
+      "name": "Bean and Nothingness",
+      "cohort": "original_30",
+      "editorial_group": "Puzzle",
+      "selection_review_band": "low_under_1000",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1706090,
+      "name": "Bean and Nothingness",
+      "cohort": "original_30",
+      "editorial_group": "Puzzle",
+      "selection_review_band": "low_under_1000",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1562430,
+      "name": "DREDGE",
+      "cohort": "original_30",
+      "editorial_group": "Horror / exploration",
+      "selection_review_band": "high_10000_plus",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1562430,
+      "name": "DREDGE",
+      "cohort": "original_30",
+      "editorial_group": "Horror / exploration",
+      "selection_review_band": "high_10000_plus",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1262350,
+      "name": "SIGNALIS",
+      "cohort": "original_30",
+      "editorial_group": "Horror / exploration",
+      "selection_review_band": "high_10000_plus",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1262350,
+      "name": "SIGNALIS",
+      "cohort": "original_30",
+      "editorial_group": "Horror / exploration",
+      "selection_review_band": "high_10000_plus",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 274520,
+      "name": "Darkwood",
+      "cohort": "original_30",
+      "editorial_group": "Horror / exploration",
+      "selection_review_band": "high_10000_plus",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 274520,
+      "name": "Darkwood",
+      "cohort": "original_30",
+      "editorial_group": "Horror / exploration",
+      "selection_review_band": "high_10000_plus",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 720350,
+      "name": "Mundaun",
+      "cohort": "original_30",
+      "editorial_group": "Horror / exploration",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 720350,
+      "name": "Mundaun",
+      "cohort": "original_30",
+      "editorial_group": "Horror / exploration",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "reviews_all_time",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 916350,
+      "name": "Saturnalia",
+      "cohort": "original_30",
+      "editorial_group": "Horror / exploration",
+      "selection_review_band": "low_under_1000",
+      "method": "current_players",
+      "baseline_status": "success",
+      "baseline_category": "baseline_success_recheck",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 916350,
+      "name": "Saturnalia",
+      "cohort": "original_30",
+      "editorial_group": "Horror / exploration",
+      "selection_review_band": "low_under_1000",
+      "method": "reviews_all_time",
+      "baseline_status": "network_proxy_refusal",
+      "baseline_category": "previous_failed_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 294100,
+      "name": "RimWorld",
+      "cohort": "original_30",
+      "editorial_group": "Colony / settlement simulation",
+      "selection_review_band": "high_10000_plus",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 294100,
+      "name": "RimWorld",
+      "cohort": "original_30",
+      "editorial_group": "Colony / settlement simulation",
+      "selection_review_band": "high_10000_plus",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1336490,
+      "name": "Against the Storm",
+      "cohort": "original_30",
+      "editorial_group": "Colony / settlement simulation",
+      "selection_review_band": "high_10000_plus",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1336490,
+      "name": "Against the Storm",
+      "cohort": "original_30",
+      "editorial_group": "Colony / settlement simulation",
+      "selection_review_band": "high_10000_plus",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1700870,
+      "name": "Clanfolk",
+      "cohort": "original_30",
+      "editorial_group": "Colony / settlement simulation",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1700870,
+      "name": "Clanfolk",
+      "cohort": "original_30",
+      "editorial_group": "Colony / settlement simulation",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1380910,
+      "name": "Stardeus",
+      "cohort": "original_30",
+      "editorial_group": "Colony / settlement simulation",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1380910,
+      "name": "Stardeus",
+      "cohort": "original_30",
+      "editorial_group": "Colony / settlement simulation",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 693580,
+      "name": "Goblins of Elderstone",
+      "cohort": "original_30",
+      "editorial_group": "Colony / settlement simulation",
+      "selection_review_band": "low_under_1000",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 693580,
+      "name": "Goblins of Elderstone",
+      "cohort": "original_30",
+      "editorial_group": "Colony / settlement simulation",
+      "selection_review_band": "low_under_1000",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 504230,
+      "name": "Celeste",
+      "cohort": "original_30",
+      "editorial_group": "Platformer / metroidvania",
+      "selection_review_band": "high_10000_plus",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 504230,
+      "name": "Celeste",
+      "cohort": "original_30",
+      "editorial_group": "Platformer / metroidvania",
+      "selection_review_band": "high_10000_plus",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 332200,
+      "name": "Axiom Verge",
+      "cohort": "original_30",
+      "editorial_group": "Platformer / metroidvania",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 332200,
+      "name": "Axiom Verge",
+      "cohort": "original_30",
+      "editorial_group": "Platformer / metroidvania",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 350070,
+      "name": "Environmental Station Alpha",
+      "cohort": "original_30",
+      "editorial_group": "Platformer / metroidvania",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 350070,
+      "name": "Environmental Station Alpha",
+      "cohort": "original_30",
+      "editorial_group": "Platformer / metroidvania",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1231880,
+      "name": "Haiku, the Robot",
+      "cohort": "original_30",
+      "editorial_group": "Platformer / metroidvania",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1231880,
+      "name": "Haiku, the Robot",
+      "cohort": "original_30",
+      "editorial_group": "Platformer / metroidvania",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1368410,
+      "name": "PSYCRON",
+      "cohort": "original_30",
+      "editorial_group": "Platformer / metroidvania",
+      "selection_review_band": "low_under_1000",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1368410,
+      "name": "PSYCRON",
+      "cohort": "original_30",
+      "editorial_group": "Platformer / metroidvania",
+      "selection_review_band": "low_under_1000",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "original_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 2379780,
+      "name": "Balatro",
+      "cohort": "recent_6",
+      "editorial_group": "Roguelike deckbuilder",
+      "selection_review_band": "high_10000_plus",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "supplement_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 2379780,
+      "name": "Balatro",
+      "cohort": "recent_6",
+      "editorial_group": "Roguelike deckbuilder",
+      "selection_review_band": "high_10000_plus",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "supplement_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1569580,
+      "name": "Blue Prince",
+      "cohort": "recent_6",
+      "editorial_group": "Puzzle",
+      "selection_review_band": "high_10000_plus",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "supplement_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1569580,
+      "name": "Blue Prince",
+      "cohort": "recent_6",
+      "editorial_group": "Puzzle",
+      "selection_review_band": "high_10000_plus",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "supplement_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 2142790,
+      "name": "Fields of Mistria",
+      "cohort": "recent_6",
+      "editorial_group": "Farming / life simulation",
+      "selection_review_band": "high_10000_plus",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "supplement_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 2142790,
+      "name": "Fields of Mistria",
+      "cohort": "recent_6",
+      "editorial_group": "Farming / life simulation",
+      "selection_review_band": "high_10000_plus",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "supplement_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 2198150,
+      "name": "Tiny Glade",
+      "cohort": "recent_6",
+      "editorial_group": "Cozy building toy",
+      "selection_review_band": "high_10000_plus",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "supplement_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 2198150,
+      "name": "Tiny Glade",
+      "cohort": "recent_6",
+      "editorial_group": "Cozy building toy",
+      "selection_review_band": "high_10000_plus",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "supplement_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 813230,
+      "name": "ANIMAL WELL",
+      "cohort": "recent_6",
+      "editorial_group": "Platformer / metroidvania",
+      "selection_review_band": "high_10000_plus",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "supplement_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 813230,
+      "name": "ANIMAL WELL",
+      "cohort": "recent_6",
+      "editorial_group": "Platformer / metroidvania",
+      "selection_review_band": "high_10000_plus",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "supplement_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1996010,
+      "name": "Crow Country",
+      "cohort": "recent_6",
+      "editorial_group": "Horror / exploration",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "current_players",
+      "baseline_status": "not_attempted",
+      "baseline_category": "supplement_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    },
+    {
+      "appid": 1996010,
+      "name": "Crow Country",
+      "cohort": "recent_6",
+      "editorial_group": "Horror / exploration",
+      "selection_review_band": "mid_1000_to_9999",
+      "method": "reviews_all_time",
+      "baseline_status": "not_attempted",
+      "baseline_category": "supplement_unattempted_target",
+      "status": "not_attempted",
+      "sequence": null
+    }
+  ],
+  "coverage": [
+    {
+      "axis": "all",
+      "value": "all",
+      "total_games": 36,
+      "current_players_success": 0,
+      "reviews_all_time_success": 0,
+      "current_players_percent": 0,
+      "reviews_all_time_percent": 0
+    },
+    {
+      "axis": "cohort",
+      "value": "original_30",
+      "total_games": 30,
+      "current_players_success": 0,
+      "reviews_all_time_success": 0,
+      "current_players_percent": 0,
+      "reviews_all_time_percent": 0
+    },
+    {
+      "axis": "editorial_group",
+      "value": "Farming / life simulation",
+      "total_games": 6,
+      "current_players_success": 0,
+      "reviews_all_time_success": 0,
+      "current_players_percent": 0,
+      "reviews_all_time_percent": 0
+    },
+    {
+      "axis": "selection_review_band",
+      "value": "high_10000_plus",
+      "total_games": 15,
+      "current_players_success": 0,
+      "reviews_all_time_success": 0,
+      "current_players_percent": 0,
+      "reviews_all_time_percent": 0
+    },
+    {
+      "axis": "selection_review_band",
+      "value": "mid_1000_to_9999",
+      "total_games": 12,
+      "current_players_success": 0,
+      "reviews_all_time_success": 0,
+      "current_players_percent": 0,
+      "reviews_all_time_percent": 0
+    },
+    {
+      "axis": "selection_review_band",
+      "value": "low_under_1000",
+      "total_games": 9,
+      "current_players_success": 0,
+      "reviews_all_time_success": 0,
+      "current_players_percent": 0,
+      "reviews_all_time_percent": 0
+    },
+    {
+      "axis": "editorial_group",
+      "value": "Roguelike deckbuilder",
+      "total_games": 6,
+      "current_players_success": 0,
+      "reviews_all_time_success": 0,
+      "current_players_percent": 0,
+      "reviews_all_time_percent": 0
+    },
+    {
+      "axis": "editorial_group",
+      "value": "Puzzle",
+      "total_games": 6,
+      "current_players_success": 0,
+      "reviews_all_time_success": 0,
+      "current_players_percent": 0,
+      "reviews_all_time_percent": 0
+    },
+    {
+      "axis": "editorial_group",
+      "value": "Horror / exploration",
+      "total_games": 6,
+      "current_players_success": 0,
+      "reviews_all_time_success": 0,
+      "current_players_percent": 0,
+      "reviews_all_time_percent": 0
+    },
+    {
+      "axis": "editorial_group",
+      "value": "Colony / settlement simulation",
+      "total_games": 5,
+      "current_players_success": 0,
+      "reviews_all_time_success": 0,
+      "current_players_percent": 0,
+      "reviews_all_time_percent": 0
+    },
+    {
+      "axis": "editorial_group",
+      "value": "Platformer / metroidvania",
+      "total_games": 6,
+      "current_players_success": 0,
+      "reviews_all_time_success": 0,
+      "current_players_percent": 0,
+      "reviews_all_time_percent": 0
+    },
+    {
+      "axis": "cohort",
+      "value": "recent_6",
+      "total_games": 6,
+      "current_players_success": 0,
+      "reviews_all_time_success": 0,
+      "current_players_percent": 0,
+      "reviews_all_time_percent": 0
+    },
+    {
+      "axis": "editorial_group",
+      "value": "Cozy building toy",
+      "total_games": 1,
+      "current_players_success": 0,
+      "reviews_all_time_success": 0,
+      "current_players_percent": 0,
+      "reviews_all_time_percent": 0
+    }
+  ],
+  "stop_reason": null,
+  "prior_current_cohort_proof": {
+    "run_id": "cohort-20261010T175523563Z-8f965f5a-0ea4-44ce-9337-012c9b72172b",
+    "started_at": "2026-10-10T17:55:23.565Z",
+    "finished_at": "2026-10-10T17:56:43.197Z",
+    "accepted_current_player_games": 36,
+    "accepted_review_games": 36,
+    "prior_failure_reclassified": false,
+    "prior_stop_reason": "invalid_reviews_schema",
+    "report_sha256": "7f590ce7969cd4b638b8c23d45dcaa829debfde9e5afd9651f0936a7bcc3b944"
+  },
+  "date_probe_targets": [
+    {
+      "appid": 730050,
+      "baseline_status": "not_attempted",
+      "status": "inconclusive"
+    },
+    {
+      "appid": 1054550,
+      "baseline_status": "not_attempted",
+      "status": "checks_passed"
+    },
+    {
+      "appid": 1706090,
+      "baseline_status": "not_attempted",
+      "status": "checks_passed"
+    },
+    {
+      "appid": 916350,
+      "baseline_status": "not_attempted",
+      "status": "checks_passed"
+    },
+    {
+      "appid": 693580,
+      "baseline_status": "not_attempted",
+      "status": "inconclusive"
+    },
+    {
+      "appid": 1368410,
+      "baseline_status": "not_attempted",
+      "status": "inconclusive"
+    }
+  ],
+  "baseline_category_counts": [
+    {
+      "category": "previous_failed_target",
+      "total": 1,
+      "success": 0,
+      "failed": 0,
+      "not_attempted": 1
+    },
+    {
+      "category": "original_unattempted_target",
+      "total": 20,
+      "success": 0,
+      "failed": 0,
+      "not_attempted": 20
+    },
+    {
+      "category": "supplement_unattempted_target",
+      "total": 12,
+      "success": 0,
+      "failed": 0,
+      "not_attempted": 12
+    },
+    {
+      "category": "baseline_success_recheck",
+      "total": 39,
+      "success": 0,
+      "failed": 0,
+      "not_attempted": 39
+    }
+  ],
+  "review_window_verdict": "inconclusive_or_incomplete",
+  "wall_time_ms": 25599
+}

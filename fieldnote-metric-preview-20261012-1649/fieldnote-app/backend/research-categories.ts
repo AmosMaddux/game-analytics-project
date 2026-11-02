@@ -1,0 +1,30 @@
+import type {D1Database} from './db.ts';
+import type {ResearchCategorySource,ResearchWindow} from '../src/research-types.ts';
+import {latestResearchCatalog,type BroadCatalogRecord} from './research-catalog.ts';
+import {selectSourcePcDate} from './pc-release-policy.mjs';
+export const categorySources:Record<ResearchCategorySource,string>={igdb_genre:'IGDB genres',igdb_theme:'IGDB themes',steam_tag:'Saved Steam community tags',editorial:'Legacy editorial genres'};
+export interface CategoryEvidence {appid:number;name:string;sourceId:number|null;sourceUrl:string|null;collectedAt:string|null;method:string}
+export interface PcEvidence {appid:number;sourceId:number;date:string|null;precision:string;region:string|null;status:string|null;sourceUrl:string|null;collectedAt:string|null;dateFormat?:{id:number;format?:string|null}|null;year?:number|null;month?:number|null}
+export function jsonObject(value:string|null):Record<string,unknown>{try{const parsed=JSON.parse(value??'{}');return parsed&&typeof parsed==='object'&&!Array.isArray(parsed)?parsed:{};}catch{return {};}}
+const before=(value:string|null,asOf:string)=>value!==null&&Number.isFinite(Date.parse(value))&&Date.parse(value)<=Date.parse(asOf);
+async function preferredVersions(db:D1Database,asOf:string,versions?:Map<number,BroadCatalogRecord>){
+ const current=versions??await latestResearchCatalog(db,asOf),baseline=await db.prepare('SELECT appid,collected_at FROM catalog_games').all<{appid:number;collected_at:string|null}>();
+ const newer=new Set(baseline.results.filter(row=>before(row.collected_at,asOf)&&current.has(row.appid)&&Date.parse(row.collected_at!)>Date.parse(current.get(row.appid)!.fetchedAt)).map(row=>row.appid));
+ return new Map([...current].filter(([appid,row])=>before(row.fetchedAt,asOf)&&!newer.has(appid)));
+}
+export async function readCategoryEvidence(db:D1Database,source:ResearchCategorySource,asOf:string,versions?:Map<number,BroadCatalogRecord>):Promise<CategoryEvidence[]>{
+ if(source==='editorial')return [];
+ if(source==='steam_tag'){const rows=await db.prepare('SELECT appid,tag,source_url,collected_at,method_version FROM steam_tags ORDER BY appid,position').all<{appid:number;tag:string;source_url:string|null;collected_at:string|null;method_version:string}>();return rows.results.filter(row=>before(row.collected_at,asOf)&&row.tag.trim()).map(row=>({appid:row.appid,name:row.tag,sourceId:null,sourceUrl:row.source_url,collectedAt:row.collected_at,method:row.method_version}));}
+ const current=await preferredVersions(db,asOf,versions),field=source==='igdb_theme'?'themes':'genres';
+ const rows=await db.prepare('SELECT l.appid,l.name,l.source_id,c.source_url,c.collected_at FROM catalog_labels l JOIN catalog_games c ON c.appid=l.appid WHERE l.collection=? ORDER BY l.appid,l.position').bind(field).all<{appid:number;name:string|null;source_id:number;source_url:string|null;collected_at:string|null}>();
+ const result:CategoryEvidence[]=rows.results.filter(row=>before(row.collected_at,asOf)&&row.name?.trim()&&!current.has(row.appid)).map(row=>({appid:row.appid,name:row.name!,sourceId:row.source_id,sourceUrl:row.source_url,collectedAt:row.collected_at,method:'raw-igdb-labels-v1'}));
+ for(const row of current.values())for(const label of row[field])if(label.name?.trim())result.push({appid:row.appid,name:label.name,sourceId:label.id,sourceUrl:row.sourceUrl,collectedAt:row.fetchedAt,method:'versioned-broad-igdb-labels-v1'});return result;
+}
+export async function readPcEvidence(db:D1Database,asOf=new Date().toISOString(),versions?:Map<number,BroadCatalogRecord>):Promise<PcEvidence[]>{
+ const current=await preferredVersions(db,asOf,versions);
+ const rows=await db.prepare('SELECT r.*,c.source_url,c.collected_at FROM catalog_releases r JOIN catalog_games c ON c.appid=r.appid WHERE r.platform_id=6 ORDER BY r.appid,r.position').all<{appid:number;source_id:number;release_at:string|null;date_format_json:string|null;region_json:string|null;status_json:string|null;source_url:string|null;collected_at:string|null;detail_json:string}>();
+ const result:PcEvidence[]=rows.results.filter(row=>before(row.collected_at,asOf)&&!current.has(row.appid)).map(row=>{const format=jsonObject(row.date_format_json),detail=jsonObject(row.detail_json);return {appid:row.appid,sourceId:row.source_id,date:row.release_at?.slice(0,10)??null,precision:format.id===0?'day':'imprecise',dateFormat:typeof format.id==='number'?{id:format.id,format:typeof format.format==='string'?format.format:format.id===0?'YYYYMMDD':null}:null,year:typeof detail.year==='number'?detail.year:null,month:typeof detail.month==='number'?detail.month:null,region:String(jsonObject(row.region_json).region??'')||null,status:String(jsonObject(row.status_json).name??'')||null,sourceUrl:row.source_url,collectedAt:row.collected_at};});
+ for(const row of current.values())for(const release of row.releaseDates)if(release.platform?.id===6)result.push({appid:row.appid,sourceId:release.id,date:release.date?.slice(0,10)??null,precision:release.dateFormat?.id===0?'day':'imprecise',dateFormat:release.dateFormat,year:release.year,month:release.month,region:release.region?.region??null,status:release.status?.name??null,sourceUrl:row.sourceUrl,collectedAt:row.fetchedAt});return result;
+}
+export function resolvePcDate(rows:PcEvidence[],asOf:string):{date:string|null;reason:string|null;rows:PcEvidence[]}{const visible=rows.filter(row=>before(row.collectedAt,asOf));const result=selectSourcePcDate(visible.map(row=>({id:row.sourceId,date:row.date?`${row.date}T00:00:00.000Z`:null,year:row.year,month:row.month,platform:{id:6},dateFormat:row.dateFormat??(row.precision==='day'?{id:0,format:'YYYYMMDD'}:null),status:row.status?{name:row.status}:null})),asOf);return {date:result.date,reason:result.date?null:result.reason,rows:visible};}
+export function customReviewWindow(asOf:string,startDate:string,endDate:string,release:ResearchWindow):ResearchWindow{return {...release,kind:'review_activity',definition:{preset:'custom',startDate,endDate},asOf};}

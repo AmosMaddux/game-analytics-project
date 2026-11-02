@@ -1,0 +1,482 @@
+{
+  "verified_at": "2026-10-11T17:56:01.697721+00:00",
+  "original_database_all_rows_unchanged": true,
+  "original_source_hashes_unchanged": true,
+  "pre_pilot_database_all_rows_unchanged": true,
+  "pilot_preserves_all_previous_rows": true,
+  "counts": {
+    "games": 334,
+    "metric_observations": 1661,
+    "collection_jobs": 7,
+    "research_application_evidence": 5,
+    "research_release_evidence": 5,
+    "research_evidence_imports": 1,
+    "research_evidence_assertions": 17
+  },
+  "enabled_schedules": 0,
+  "integrity": "ok",
+  "foreign_key_violations": 0,
+  "live_pid": 53368,
+  "live_database": "/workspaces/codespaces-blank/fieldnote-redesign-stage-20261011/pilot-20261011-1746/pilot-evidence.sqlite",
+  "health": {
+    "status": "ok",
+    "schemaVersion": 3,
+    "gameCount": 334,
+    "mode": "private_bounded_collection_cache",
+    "liveCollectionEnabled": false,
+    "boundedLocalCollectionAvailable": true,
+    "backgroundCollectionEnabled": false
+  },
+  "queries": [
+    {
+      "preset": "custom",
+      "basis": "first_playable",
+      "cohort": {
+        "eligibleCount": 3,
+        "excludedCount": 331,
+        "exclusionCounts": {
+          "unverified_application_type": 329,
+          "missing_release_date": 2
+        },
+        "unclassifiedAppIds": []
+      },
+      "population": {
+        "id": "tracked",
+        "label": "Current tracked inventory",
+        "inventoryCount": 334,
+        "selectedCount": 334,
+        "typeEligibleCount": 5,
+        "typeExcludedCount": 329,
+        "unresolvedGenreCount": 6,
+        "missingReleaseEvidenceCount": 331,
+        "taxonomyVersions": [
+          "editorial-cohort-1.0",
+          "editorial-expanded-1.1"
+        ],
+        "note": "Existing saved sample only. No 300-game panel or all-Steam release census has been allocated. Verified game-type evidence is required; demos, DLC, tools, soundtracks, unknown and conflicting types are excluded before cohort statistics."
+      },
+      "observations": {
+        "id": "[\"players\",\"metrics-14107c42-52a4-4b41-8c03-25b0cd3f9150\",\"steam-aggregate-2.0\",\"Steam-connected concurrent players at collection time; not owners, sales, daily average or historical peak.\",\"concurrent_players\"]",
+        "metric": "players",
+        "runId": "metrics-14107c42-52a4-4b41-8c03-25b0cd3f9150",
+        "methodVersion": "steam-aggregate-2.0",
+        "scope": "Steam-connected concurrent players at collection time; not owners, sales, daily average or historical peak.",
+        "collectedStart": "2026-10-10T19:28:49.253Z",
+        "collectedEnd": "2026-10-10T19:40:01.560Z",
+        "rowCount": 325
+      },
+      "included": [
+        {
+          "appid": 1336490,
+          "name": "Against the Storm",
+          "genre": "Colony / settlement simulation",
+          "savedCohort": "original_30",
+          "appType": "game",
+          "eligible": true,
+          "reasons": [],
+          "releaseDate": "2022-11-01",
+          "legacyDisplayDate": "Dec 8, 2023",
+          "igdbFirstReleaseDate": "2023-12-08T00:00:00.000Z",
+          "evidence": [
+            {
+              "basis": "first_playable",
+              "date": "2022-11-01",
+              "precision": "day",
+              "verified": true,
+              "status": "released",
+              "phase": "early_access",
+              "source": "https://store.steampowered.com/app/1336490/Against_the_Storm/",
+              "retrievedAt": "2026-10-11T17:30:00Z",
+              "note": "{\"assertionId\":\"storm-first-playable\",\"confidence\":\"reviewed_primary_corroborated\",\"firstPlayablePolicy\":\"same-steam-appid-public-ea-release-v1\",\"method\":\"steam_ea_same_app_first_playable_v1\",\"note\":\"Explicit Steam EA date interpreted as first public release of this same Steam AppID. Separate demos/playtests and closed betas are excluded; no claim of exhaustive historical beta or Advance Access research.\",\"observationTimeRule\":\"latest supporting retrieval interval end; not an invented exact fetch time\",\"policy\":\"reviewed-steam-release-pilot-v1\",\"supportingObservations\":[{\"id\":\"storm-ea-date\",\"publicationDate\":null,\"retrieved\":{\"end\":\"2026-10-11T17:30:00Z\",\"precision\":\"interval\",\"start\":\"2026-10-11T17:25:00Z\"},\"role\":\"steam_ea_date\",\"url\":\"https://store.steampowered.com/app/1336490/Against_the_Storm/\"},{\"id\":\"storm-state\",\"publicationDate\":null,\"retrieved\":{\"end\":\"2026-10-11T17:30:00Z\",\"precision\":\"interval\",\"start\":\"2026-10-11T17:25:00Z\"},\"role\":\"current_state\",\"url\":\"https://store.steampowered.com/app/1336490/Against_the_Storm/\"}]}"
+            },
+            {
+              "basis": "full_release",
+              "date": "2023-12-08",
+              "precision": "day",
+              "verified": true,
+              "status": "released",
+              "phase": "full_release",
+              "source": "https://store.steampowered.com/app/1336490/Against_the_Storm/",
+              "retrievedAt": "2026-10-11T17:30:00Z",
+              "note": "{\"assertionId\":\"storm-full-release\",\"confidence\":\"reviewed_primary_corroborated\",\"firstPlayablePolicy\":null,\"method\":\"steam_full_release_corroborated_v1\",\"note\":\"Steam event date 2023-12-08 plus actual 1.0 availability statement. The developer post publication date 2023-12-30 is preserved separately, not used as the release day. IGDB beta dates do not establish Steam playability.\",\"observationTimeRule\":\"latest supporting retrieval interval end; not an invented exact fetch time\",\"policy\":\"reviewed-steam-release-pilot-v1\",\"supportingObservations\":[{\"id\":\"storm-display\",\"publicationDate\":null,\"retrieved\":{\"end\":\"2026-10-11T17:30:00Z\",\"precision\":\"interval\",\"start\":\"2026-10-11T17:25:00Z\"},\"role\":\"steam_display_date\",\"url\":\"https://store.steampowered.com/app/1336490/Against_the_Storm/\"},{\"id\":\"storm-full-available\",\"publicationDate\":\"2023-12-30\",\"retrieved\":{\"end\":\"2026-10-11T17:30:00Z\",\"precision\":\"interval\",\"start\":\"2026-10-11T17:25:00Z\"},\"role\":\"full_release_available\",\"url\":\"https://eremitegames.com/1-0-available/\"}]}"
+            }
+          ],
+          "observation": {
+            "value": 1846,
+            "missingReason": null,
+            "collectedAt": "2026-10-10T19:29:31.406Z",
+            "measuredAt": null,
+            "sourceUrl": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?appid=1336490"
+          }
+        },
+        {
+          "appid": 2142790,
+          "name": "Fields of Mistria",
+          "genre": "Farming / life simulation",
+          "savedCohort": "recent_6",
+          "appType": "game",
+          "eligible": true,
+          "reasons": [],
+          "releaseDate": "2024-08-05",
+          "legacyDisplayDate": "Aug 5, 2026",
+          "igdbFirstReleaseDate": "2026-08-05T00:00:00.000Z",
+          "evidence": [
+            {
+              "basis": "first_playable",
+              "date": "2024-08-05",
+              "precision": "day",
+              "verified": true,
+              "status": "released",
+              "phase": "early_access",
+              "source": "https://store.steampowered.com/app/2142790/Fields_of_Mistria/?l=english",
+              "retrievedAt": "2026-10-11T17:30:00Z",
+              "note": "{\"assertionId\":\"mistria-first-playable\",\"confidence\":\"reviewed_primary_corroborated\",\"firstPlayablePolicy\":\"same-steam-appid-public-ea-release-v1\",\"method\":\"steam_ea_same_app_first_playable_v1\",\"note\":\"Explicit Steam EA date interpreted as first public release of this same Steam AppID. Separate demos/playtests and closed betas are excluded; no claim of exhaustive historical beta or Advance Access research.\",\"observationTimeRule\":\"latest supporting retrieval interval end; not an invented exact fetch time\",\"policy\":\"reviewed-steam-release-pilot-v1\",\"supportingObservations\":[{\"id\":\"mistria-ea-date\",\"publicationDate\":null,\"retrieved\":{\"end\":\"2026-10-11T17:30:00Z\",\"precision\":\"interval\",\"start\":\"2026-10-11T17:25:00Z\"},\"role\":\"steam_ea_date\",\"url\":\"https://store.steampowered.com/app/2142790/Fields_of_Mistria/?l=english\"},{\"id\":\"mistria-state\",\"publicationDate\":null,\"retrieved\":{\"end\":\"2026-10-11T17:30:00Z\",\"precision\":\"interval\",\"start\":\"2026-10-11T17:25:00Z\"},\"role\":\"current_state\",\"url\":\"https://store.steampowered.com/app/2142790/Fields_of_Mistria/?l=english\"},{\"id\":\"mistria-ea-available\",\"publicationDate\":\"2024-08-05\",\"retrieved\":{\"end\":\"2026-10-11T17:30:00Z\",\"precision\":\"interval\",\"start\":\"2026-10-11T17:25:00Z\"},\"role\":\"ea_available\",\"url\":\"https://www.fieldsofmistria.com/post/fields-of-mistria-early-access-roadmap-have-arrived\"}]}"
+            },
+            {
+              "basis": "full_release",
+              "date": "2026-08-05",
+              "precision": "day",
+              "verified": true,
+              "status": "released",
+              "phase": "full_release",
+              "source": "https://store.steampowered.com/app/2142790/Fields_of_Mistria/?l=english",
+              "retrievedAt": "2026-10-11T17:30:00Z",
+              "note": "{\"assertionId\":\"mistria-full-release\",\"confidence\":\"reviewed_primary_corroborated\",\"firstPlayablePolicy\":null,\"method\":\"steam_full_release_corroborated_v1\",\"note\":\"Steam exact date and actual full-release post support 2026-08-05. The actual post heading says Aug 5 without a year; the year is corroborated by Steam and the planned-date announcement. The earlier plan is context only, not a separate accepted release row. No publication year is fabricated.\",\"observationTimeRule\":\"latest supporting retrieval interval end; not an invented exact fetch time\",\"policy\":\"reviewed-steam-release-pilot-v1\",\"supportingObservations\":[{\"id\":\"mistria-display\",\"publicationDate\":null,\"retrieved\":{\"end\":\"2026-10-11T17:30:00Z\",\"precision\":\"interval\",\"start\":\"2026-10-11T17:25:00Z\"},\"role\":\"steam_display_date\",\"url\":\"https://store.steampowered.com/app/2142790/Fields_of_Mistria/?l=english\"},{\"id\":\"mistria-full-available\",\"publicationDate\":null,\"retrieved\":{\"end\":\"2026-10-11T17:30:00Z\",\"precision\":\"interval\",\"start\":\"2026-10-11T17:25:00Z\"},\"role\":\"full_release_available\",\"url\":\"https://www.fieldsofmistria.com/post/fields-of-mistria-s-1-0-update-patch-notes-are-here\"},{\"id\":\"mistria-plan\",\"publicationDate\":null,\"retrieved\":{\"end\":\"2026-10-11T17:30:00Z\",\"precision\":\"interval\",\"start\":\"2026-10-11T17:25:00Z\"},\"role\":\"planned_full_release\",\"url\":\"https://www.fieldsofmistria.com/post/fields-of-mistria-1-0-release-date-announcement\"}]}"
+            }
+          ],
+          "observation": {
+            "value": 7956,
+            "missingReason": null,
+            "collectedAt": "2026-10-10T19:29:53.751Z",
+            "measuredAt": null,
+            "sourceUrl": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?appid=2142790"
+          }
+        },
+        {
+          "appid": 2784470,
+          "name": "9 Kings",
+          "genre": "Colony / settlement simulation",
+          "savedCohort": "m3_discovery",
+          "appType": "game",
+          "eligible": true,
+          "reasons": [],
+          "releaseDate": "2025-05-23",
+          "legacyDisplayDate": null,
+          "igdbFirstReleaseDate": "2025-05-23T00:00:00.000Z",
+          "evidence": [
+            {
+              "basis": "first_playable",
+              "date": "2025-05-23",
+              "precision": "day",
+              "verified": true,
+              "status": "released",
+              "phase": "early_access",
+              "source": "https://store.steampowered.com/app/2784470/9_Kings/",
+              "retrievedAt": "2026-10-11T17:30:00Z",
+              "note": "{\"assertionId\":\"kings-first-playable\",\"confidence\":\"reviewed_primary_corroborated\",\"firstPlayablePolicy\":\"same-steam-appid-public-ea-release-v1\",\"method\":\"steam_ea_same_app_first_playable_v1\",\"note\":\"Explicit Steam EA date interpreted as first public release of this same Steam AppID. Separate demos/playtests and closed betas are excluded; no claim of exhaustive historical beta or Advance Access research.\",\"observationTimeRule\":\"latest supporting retrieval interval end; not an invented exact fetch time\",\"policy\":\"reviewed-steam-release-pilot-v1\",\"supportingObservations\":[{\"id\":\"kings-ea-date\",\"publicationDate\":null,\"retrieved\":{\"end\":\"2026-10-11T17:30:00Z\",\"precision\":\"interval\",\"start\":\"2026-10-11T17:25:00Z\"},\"role\":\"steam_ea_date\",\"url\":\"https://store.steampowered.com/app/2784470/9_Kings/\"},{\"id\":\"kings-state\",\"publicationDate\":null,\"retrieved\":{\"end\":\"2026-10-11T17:30:00Z\",\"precision\":\"interval\",\"start\":\"2026-10-11T17:25:00Z\"},\"role\":\"current_state\",\"url\":\"https://store.steampowered.com/app/2784470/9_Kings/\"}]}"
+            }
+          ],
+          "observation": {
+            "value": 1443,
+            "missingReason": null,
+            "collectedAt": "2026-10-10T19:36:39.427Z",
+            "measuredAt": null,
+            "sourceUrl": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?appid=2784470"
+          }
+        }
+      ]
+    },
+    {
+      "preset": "custom",
+      "basis": "full_release",
+      "cohort": {
+        "eligibleCount": 2,
+        "excludedCount": 332,
+        "exclusionCounts": {
+          "unverified_application_type": 329,
+          "missing_release_date": 3
+        },
+        "unclassifiedAppIds": []
+      },
+      "population": {
+        "id": "tracked",
+        "label": "Current tracked inventory",
+        "inventoryCount": 334,
+        "selectedCount": 334,
+        "typeEligibleCount": 5,
+        "typeExcludedCount": 329,
+        "unresolvedGenreCount": 6,
+        "missingReleaseEvidenceCount": 332,
+        "taxonomyVersions": [
+          "editorial-cohort-1.0",
+          "editorial-expanded-1.1"
+        ],
+        "note": "Existing saved sample only. No 300-game panel or all-Steam release census has been allocated. Verified game-type evidence is required; demos, DLC, tools, soundtracks, unknown and conflicting types are excluded before cohort statistics."
+      },
+      "observations": {
+        "id": "[\"players\",\"metrics-14107c42-52a4-4b41-8c03-25b0cd3f9150\",\"steam-aggregate-2.0\",\"Steam-connected concurrent players at collection time; not owners, sales, daily average or historical peak.\",\"concurrent_players\"]",
+        "metric": "players",
+        "runId": "metrics-14107c42-52a4-4b41-8c03-25b0cd3f9150",
+        "methodVersion": "steam-aggregate-2.0",
+        "scope": "Steam-connected concurrent players at collection time; not owners, sales, daily average or historical peak.",
+        "collectedStart": "2026-10-10T19:28:49.253Z",
+        "collectedEnd": "2026-10-10T19:40:01.560Z",
+        "rowCount": 325
+      },
+      "included": [
+        {
+          "appid": 1336490,
+          "name": "Against the Storm",
+          "genre": "Colony / settlement simulation",
+          "savedCohort": "original_30",
+          "appType": "game",
+          "eligible": true,
+          "reasons": [],
+          "releaseDate": "2023-12-08",
+          "legacyDisplayDate": "Dec 8, 2023",
+          "igdbFirstReleaseDate": "2023-12-08T00:00:00.000Z",
+          "evidence": [
+            {
+              "basis": "first_playable",
+              "date": "2022-11-01",
+              "precision": "day",
+              "verified": true,
+              "status": "released",
+              "phase": "early_access",
+              "source": "https://store.steampowered.com/app/1336490/Against_the_Storm/",
+              "retrievedAt": "2026-10-11T17:30:00Z",
+              "note": "{\"assertionId\":\"storm-first-playable\",\"confidence\":\"reviewed_primary_corroborated\",\"firstPlayablePolicy\":\"same-steam-appid-public-ea-release-v1\",\"method\":\"steam_ea_same_app_first_playable_v1\",\"note\":\"Explicit Steam EA date interpreted as first public release of this same Steam AppID. Separate demos/playtests and closed betas are excluded; no claim of exhaustive historical beta or Advance Access research.\",\"observationTimeRule\":\"latest supporting retrieval interval end; not an invented exact fetch time\",\"policy\":\"reviewed-steam-release-pilot-v1\",\"supportingObservations\":[{\"id\":\"storm-ea-date\",\"publicationDate\":null,\"retrieved\":{\"end\":\"2026-10-11T17:30:00Z\",\"precision\":\"interval\",\"start\":\"2026-10-11T17:25:00Z\"},\"role\":\"steam_ea_date\",\"url\":\"https://store.steampowered.com/app/1336490/Against_the_Storm/\"},{\"id\":\"storm-state\",\"publicationDate\":null,\"retrieved\":{\"end\":\"2026-10-11T17:30:00Z\",\"precision\":\"interval\",\"start\":\"2026-10-11T17:25:00Z\"},\"role\":\"current_state\",\"url\":\"https://store.steampowered.com/app/1336490/Against_the_Storm/\"}]}"
+            },
+            {
+              "basis": "full_release",
+              "date": "2023-12-08",
+              "precision": "day",
+              "verified": true,
+              "status": "released",
+              "phase": "full_release",
+              "source": "https://store.steampowered.com/app/1336490/Against_the_Storm/",
+              "retrievedAt": "2026-10-11T17:30:00Z",
+              "note": "{\"assertionId\":\"storm-full-release\",\"confidence\":\"reviewed_primary_corroborated\",\"firstPlayablePolicy\":null,\"method\":\"steam_full_release_corroborated_v1\",\"note\":\"Steam event date 2023-12-08 plus actual 1.0 availability statement. The developer post publication date 2023-12-30 is preserved separately, not used as the release day. IGDB beta dates do not establish Steam playability.\",\"observationTimeRule\":\"latest supporting retrieval interval end; not an invented exact fetch time\",\"policy\":\"reviewed-steam-release-pilot-v1\",\"supportingObservations\":[{\"id\":\"storm-display\",\"publicationDate\":null,\"retrieved\":{\"end\":\"2026-10-11T17:30:00Z\",\"precision\":\"interval\",\"start\":\"2026-10-11T17:25:00Z\"},\"role\":\"steam_display_date\",\"url\":\"https://store.steampowered.com/app/1336490/Against_the_Storm/\"},{\"id\":\"storm-full-available\",\"publicationDate\":\"2023-12-30\",\"retrieved\":{\"end\":\"2026-10-11T17:30:00Z\",\"precision\":\"interval\",\"start\":\"2026-10-11T17:25:00Z\"},\"role\":\"full_release_available\",\"url\":\"https://eremitegames.com/1-0-available/\"}]}"
+            }
+          ],
+          "observation": {
+            "value": 1846,
+            "missingReason": null,
+            "collectedAt": "2026-10-10T19:29:31.406Z",
+            "measuredAt": null,
+            "sourceUrl": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?appid=1336490"
+          }
+        },
+        {
+          "appid": 2142790,
+          "name": "Fields of Mistria",
+          "genre": "Farming / life simulation",
+          "savedCohort": "recent_6",
+          "appType": "game",
+          "eligible": true,
+          "reasons": [],
+          "releaseDate": "2026-08-05",
+          "legacyDisplayDate": "Aug 5, 2026",
+          "igdbFirstReleaseDate": "2026-08-05T00:00:00.000Z",
+          "evidence": [
+            {
+              "basis": "first_playable",
+              "date": "2024-08-05",
+              "precision": "day",
+              "verified": true,
+              "status": "released",
+              "phase": "early_access",
+              "source": "https://store.steampowered.com/app/2142790/Fields_of_Mistria/?l=english",
+              "retrievedAt": "2026-10-11T17:30:00Z",
+              "note": "{\"assertionId\":\"mistria-first-playable\",\"confidence\":\"reviewed_primary_corroborated\",\"firstPlayablePolicy\":\"same-steam-appid-public-ea-release-v1\",\"method\":\"steam_ea_same_app_first_playable_v1\",\"note\":\"Explicit Steam EA date interpreted as first public release of this same Steam AppID. Separate demos/playtests and closed betas are excluded; no claim of exhaustive historical beta or Advance Access research.\",\"observationTimeRule\":\"latest supporting retrieval interval end; not an invented exact fetch time\",\"policy\":\"reviewed-steam-release-pilot-v1\",\"supportingObservations\":[{\"id\":\"mistria-ea-date\",\"publicationDate\":null,\"retrieved\":{\"end\":\"2026-10-11T17:30:00Z\",\"precision\":\"interval\",\"start\":\"2026-10-11T17:25:00Z\"},\"role\":\"steam_ea_date\",\"url\":\"https://store.steampowered.com/app/2142790/Fields_of_Mistria/?l=english\"},{\"id\":\"mistria-state\",\"publicationDate\":null,\"retrieved\":{\"end\":\"2026-10-11T17:30:00Z\",\"precision\":\"interval\",\"start\":\"2026-10-11T17:25:00Z\"},\"role\":\"current_state\",\"url\":\"https://store.steampowered.com/app/2142790/Fields_of_Mistria/?l=english\"},{\"id\":\"mistria-ea-available\",\"publicationDate\":\"2024-08-05\",\"retrieved\":{\"end\":\"2026-10-11T17:30:00Z\",\"precision\":\"interval\",\"start\":\"2026-10-11T17:25:00Z\"},\"role\":\"ea_available\",\"url\":\"https://www.fieldsofmistria.com/post/fields-of-mistria-early-access-roadmap-have-arrived\"}]}"
+            },
+            {
+              "basis": "full_release",
+              "date": "2026-08-05",
+              "precision": "day",
+              "verified": true,
+              "status": "released",
+              "phase": "full_release",
+              "source": "https://store.steampowered.com/app/2142790/Fields_of_Mistria/?l=english",
+              "retrievedAt": "2026-10-11T17:30:00Z",
+              "note": "{\"assertionId\":\"mistria-full-release\",\"confidence\":\"reviewed_primary_corroborated\",\"firstPlayablePolicy\":null,\"method\":\"steam_full_release_corroborated_v1\",\"note\":\"Steam exact date and actual full-release post support 2026-08-05. The actual post heading says Aug 5 without a year; the year is corroborated by Steam and the planned-date announcement. The earlier plan is context only, not a separate accepted release row. No publication year is fabricated.\",\"observationTimeRule\":\"latest supporting retrieval interval end; not an invented exact fetch time\",\"policy\":\"reviewed-steam-release-pilot-v1\",\"supportingObservations\":[{\"id\":\"mistria-display\",\"publicationDate\":null,\"retrieved\":{\"end\":\"2026-10-11T17:30:00Z\",\"precision\":\"interval\",\"start\":\"2026-10-11T17:25:00Z\"},\"role\":\"steam_display_date\",\"url\":\"https://store.steampowered.com/app/2142790/Fields_of_Mistria/?l=english\"},{\"id\":\"mistria-full-available\",\"publicationDate\":null,\"retrieved\":{\"end\":\"2026-10-11T17:30:00Z\",\"precision\":\"interval\",\"start\":\"2026-10-11T17:25:00Z\"},\"role\":\"full_release_available\",\"url\":\"https://www.fieldsofmistria.com/post/fields-of-mistria-s-1-0-update-patch-notes-are-here\"},{\"id\":\"mistria-plan\",\"publicationDate\":null,\"retrieved\":{\"end\":\"2026-10-11T17:30:00Z\",\"precision\":\"interval\",\"start\":\"2026-10-11T17:25:00Z\"},\"role\":\"planned_full_release\",\"url\":\"https://www.fieldsofmistria.com/post/fields-of-mistria-1-0-release-date-announcement\"}]}"
+            }
+          ],
+          "observation": {
+            "value": 7956,
+            "missingReason": null,
+            "collectedAt": "2026-10-10T19:29:53.751Z",
+            "measuredAt": null,
+            "sourceUrl": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?appid=2142790"
+          }
+        }
+      ]
+    },
+    {
+      "preset": "1m",
+      "basis": "first_playable",
+      "cohort": {
+        "eligibleCount": 0,
+        "excludedCount": 334,
+        "exclusionCounts": {
+          "unverified_application_type": 329,
+          "missing_release_date": 2,
+          "outside_release_window": 3
+        },
+        "unclassifiedAppIds": []
+      },
+      "population": {
+        "id": "tracked",
+        "label": "Current tracked inventory",
+        "inventoryCount": 334,
+        "selectedCount": 334,
+        "typeEligibleCount": 5,
+        "typeExcludedCount": 329,
+        "unresolvedGenreCount": 6,
+        "missingReleaseEvidenceCount": 331,
+        "taxonomyVersions": [
+          "editorial-cohort-1.0",
+          "editorial-expanded-1.1"
+        ],
+        "note": "Existing saved sample only. No 300-game panel or all-Steam release census has been allocated. Verified game-type evidence is required; demos, DLC, tools, soundtracks, unknown and conflicting types are excluded before cohort statistics."
+      },
+      "observations": {
+        "id": "[\"players\",\"metrics-14107c42-52a4-4b41-8c03-25b0cd3f9150\",\"steam-aggregate-2.0\",\"Steam-connected concurrent players at collection time; not owners, sales, daily average or historical peak.\",\"concurrent_players\"]",
+        "metric": "players",
+        "runId": "metrics-14107c42-52a4-4b41-8c03-25b0cd3f9150",
+        "methodVersion": "steam-aggregate-2.0",
+        "scope": "Steam-connected concurrent players at collection time; not owners, sales, daily average or historical peak.",
+        "collectedStart": "2026-10-10T19:28:49.253Z",
+        "collectedEnd": "2026-10-10T19:40:01.560Z",
+        "rowCount": 325
+      },
+      "included": []
+    },
+    {
+      "preset": "1m",
+      "basis": "full_release",
+      "cohort": {
+        "eligibleCount": 0,
+        "excludedCount": 334,
+        "exclusionCounts": {
+          "unverified_application_type": 329,
+          "missing_release_date": 3,
+          "outside_release_window": 2
+        },
+        "unclassifiedAppIds": []
+      },
+      "population": {
+        "id": "tracked",
+        "label": "Current tracked inventory",
+        "inventoryCount": 334,
+        "selectedCount": 334,
+        "typeEligibleCount": 5,
+        "typeExcludedCount": 329,
+        "unresolvedGenreCount": 6,
+        "missingReleaseEvidenceCount": 332,
+        "taxonomyVersions": [
+          "editorial-cohort-1.0",
+          "editorial-expanded-1.1"
+        ],
+        "note": "Existing saved sample only. No 300-game panel or all-Steam release census has been allocated. Verified game-type evidence is required; demos, DLC, tools, soundtracks, unknown and conflicting types are excluded before cohort statistics."
+      },
+      "observations": {
+        "id": "[\"players\",\"metrics-14107c42-52a4-4b41-8c03-25b0cd3f9150\",\"steam-aggregate-2.0\",\"Steam-connected concurrent players at collection time; not owners, sales, daily average or historical peak.\",\"concurrent_players\"]",
+        "metric": "players",
+        "runId": "metrics-14107c42-52a4-4b41-8c03-25b0cd3f9150",
+        "methodVersion": "steam-aggregate-2.0",
+        "scope": "Steam-connected concurrent players at collection time; not owners, sales, daily average or historical peak.",
+        "collectedStart": "2026-10-10T19:28:49.253Z",
+        "collectedEnd": "2026-10-10T19:40:01.560Z",
+        "rowCount": 325
+      },
+      "included": []
+    },
+    {
+      "preset": "3m",
+      "basis": "full_release",
+      "cohort": {
+        "eligibleCount": 1,
+        "excludedCount": 333,
+        "exclusionCounts": {
+          "unverified_application_type": 329,
+          "missing_release_date": 3,
+          "outside_release_window": 1
+        },
+        "unclassifiedAppIds": []
+      },
+      "population": {
+        "id": "tracked",
+        "label": "Current tracked inventory",
+        "inventoryCount": 334,
+        "selectedCount": 334,
+        "typeEligibleCount": 5,
+        "typeExcludedCount": 329,
+        "unresolvedGenreCount": 6,
+        "missingReleaseEvidenceCount": 332,
+        "taxonomyVersions": [
+          "editorial-cohort-1.0",
+          "editorial-expanded-1.1"
+        ],
+        "note": "Existing saved sample only. No 300-game panel or all-Steam release census has been allocated. Verified game-type evidence is required; demos, DLC, tools, soundtracks, unknown and conflicting types are excluded before cohort statistics."
+      },
+      "observations": {
+        "id": "[\"players\",\"metrics-14107c42-52a4-4b41-8c03-25b0cd3f9150\",\"steam-aggregate-2.0\",\"Steam-connected concurrent players at collection time; not owners, sales, daily average or historical peak.\",\"concurrent_players\"]",
+        "metric": "players",
+        "runId": "metrics-14107c42-52a4-4b41-8c03-25b0cd3f9150",
+        "methodVersion": "steam-aggregate-2.0",
+        "scope": "Steam-connected concurrent players at collection time; not owners, sales, daily average or historical peak.",
+        "collectedStart": "2026-10-10T19:28:49.253Z",
+        "collectedEnd": "2026-10-10T19:40:01.560Z",
+        "rowCount": 325
+      },
+      "included": [
+        {
+          "appid": 2142790,
+          "name": "Fields of Mistria",
+          "genre": "Farming / life simulation",
+          "savedCohort": "recent_6",
+          "appType": "game",
+          "eligible": true,
+          "reasons": [],
+          "releaseDate": "2026-08-05",
+          "legacyDisplayDate": "Aug 5, 2026",
+          "igdbFirstReleaseDate": "2026-08-05T00:00:00.000Z",
+          "evidence": [
+            {
+              "basis": "first_playable",
+              "date": "2024-08-05",
+              "precision": "day",
+              "verified": true,
+              "status": "released",
+              "phase": "early_access",
+              "source": "https://store.steampowered.com/app/2142790/Fields_of_Mistria/?l=english",
+              "retrievedAt": "2026-10-11T17:30:00Z",
+              "note": "{\"assertionId\":\"mistria-first-playable\",\"confidence\":\"reviewed_primary_corroborated\",\"firstPlayablePolicy\":\"same-steam-appid-public-ea-release-v1\",\"method\":\"steam_ea_same_app_first_playable_v1\",\"note\":\"Explicit Steam EA date interpreted as first public release of this same Steam AppID. Separate demos/playtests and closed betas are excluded; no claim of exhaustive historical beta or Advance Access research.\",\"observationTimeRule\":\"latest supporting retrieval interval end; not an invented exact fetch time\",\"policy\":\"reviewed-steam-release-pilot-v1\",\"supportingObservations\":[{\"id\":\"mistria-ea-date\",\"publicationDate\":null,\"retrieved\":{\"end\":\"2026-10-11T17:30:00Z\",\"precision\":\"interval\",\"start\":\"2026-10-11T17:25:00Z\"},\"role\":\"steam_ea_date\",\"url\":\"https://store.steampowered.com/app/2142790/Fields_of_Mistria/?l=english\"},{\"id\":\"mistria-state\",\"publicationDate\":null,\"retrieved\":{\"end\":\"2026-10-11T17:30:00Z\",\"precision\":\"interval\",\"start\":\"2026-10-11T17:25:00Z\"},\"role\":\"current_state\",\"url\":\"https://store.steampowered.com/app/2142790/Fields_of_Mistria/?l=english\"},{\"id\":\"mistria-ea-available\",\"publicationDate\":\"2024-08-05\",\"retrieved\":{\"end\":\"2026-10-11T17:30:00Z\",\"precision\":\"interval\",\"start\":\"2026-10-11T17:25:00Z\"},\"role\":\"ea_available\",\"url\":\"https://www.fieldsofmistria.com/post/fields-of-mistria-early-access-roadmap-have-arrived\"}]}"
+            },
+            {
+              "basis": "full_release",
+              "date": "2026-08-05",
+              "precision": "day",
+              "verified": true,
+              "status": "released",
+              "phase": "full_release",
+              "source": "https://store.steampowered.com/app/2142790/Fields_of_Mistria/?l=english",
+              "retrievedAt": "2026-10-11T17:30:00Z",
+              "note": "{\"assertionId\":\"mistria-full-release\",\"confidence\":\"reviewed_primary_corroborated\",\"firstPlayablePolicy\":null,\"method\":\"steam_full_release_corroborated_v1\",\"note\":\"Steam exact date and actual full-release post support 2026-08-05. The actual post heading says Aug 5 without a year; the year is corroborated by Steam and the planned-date announcement. The earlier plan is context only, not a separate accepted release row. No publication year is fabricated.\",\"observationTimeRule\":\"latest supporting retrieval interval end; not an invented exact fetch time\",\"policy\":\"reviewed-steam-release-pilot-v1\",\"supportingObservations\":[{\"id\":\"mistria-display\",\"publicationDate\":null,\"retrieved\":{\"end\":\"2026-10-11T17:30:00Z\",\"precision\":\"interval\",\"start\":\"2026-10-11T17:25:00Z\"},\"role\":\"steam_display_date\",\"url\":\"https://store.steampowered.com/app/2142790/Fields_of_Mistria/?l=english\"},{\"id\":\"mistria-full-available\",\"publicationDate\":null,\"retrieved\":{\"end\":\"2026-10-11T17:30:00Z\",\"precision\":\"interval\",\"start\":\"2026-10-11T17:25:00Z\"},\"role\":\"full_release_available\",\"url\":\"https://www.fieldsofmistria.com/post/fields-of-mistria-s-1-0-update-patch-notes-are-here\"},{\"id\":\"mistria-plan\",\"publicationDate\":null,\"retrieved\":{\"end\":\"2026-10-11T17:30:00Z\",\"precision\":\"interval\",\"start\":\"2026-10-11T17:25:00Z\"},\"role\":\"planned_full_release\",\"url\":\"https://www.fieldsofmistria.com/post/fields-of-mistria-1-0-release-date-announcement\"}]}"
+            }
+          ],
+          "observation": {
+            "value": 7956,
+            "missingReason": null,
+            "collectedAt": "2026-10-10T19:29:53.751Z",
+            "measuredAt": null,
+            "sourceUrl": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?appid=2142790"
+          }
+        }
+      ]
+    }
+  ],
+  "transfer_backup_sha256": "4b3648e204d1606193b884a0b7278b789daeb7df78f4a8b6350130110f15d2aa",
+  "transfer_backup_all_rows_equal": true
+}

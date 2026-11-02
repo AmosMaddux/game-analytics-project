@@ -1,0 +1,62 @@
+{
+  "verified_at": "2026-10-11T17:24:06.694699+00:00",
+  "health": {
+    "status": "ok",
+    "schemaVersion": 3,
+    "gameCount": 334,
+    "mode": "private_bounded_collection_cache",
+    "liveCollectionEnabled": false,
+    "boundedLocalCollectionAvailable": true,
+    "backgroundCollectionEnabled": false
+  },
+  "snapshot_games": 334,
+  "cohort_checks": [
+    {
+      "population": "tracked",
+      "basis": "first_playable",
+      "selected": 334,
+      "eligible": 0,
+      "missingReleaseEvidence": 334
+    },
+    {
+      "population": "tracked",
+      "basis": "full_release",
+      "selected": 334,
+      "eligible": 0,
+      "missingReleaseEvidence": 334
+    },
+    {
+      "population": "legacy36",
+      "basis": "first_playable",
+      "selected": 36,
+      "eligible": 0,
+      "missingReleaseEvidence": 36
+    },
+    {
+      "population": "legacy36",
+      "basis": "full_release",
+      "selected": 36,
+      "eligible": 0,
+      "missingReleaseEvidence": 36
+    },
+    {
+      "population": "discovery",
+      "basis": "first_playable",
+      "selected": 298,
+      "eligible": 0,
+      "missingReleaseEvidence": 298
+    },
+    {
+      "population": "discovery",
+      "basis": "full_release",
+      "selected": 298,
+      "eligible": 0,
+      "missingReleaseEvidence": 298
+    }
+  ],
+  "reviews7d": "unavailable",
+  "invalid_range_status": 400,
+  "original_and_staged_legacy_facts_unchanged_after_browser_and_API": true,
+  "collection_jobs_unchanged": true,
+  "enabled_schedules": 0
+}

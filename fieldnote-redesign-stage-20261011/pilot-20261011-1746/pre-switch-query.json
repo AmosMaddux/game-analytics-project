@@ -1,0 +1,75 @@
+[
+  {
+    "preset": "custom",
+    "basis": "first_playable",
+    "eligible": 3,
+    "games": [
+      {
+        "appid": 1336490,
+        "name": "Against the Storm",
+        "releaseDate": "2022-11-01"
+      },
+      {
+        "appid": 2142790,
+        "name": "Fields of Mistria",
+        "releaseDate": "2024-08-05"
+      },
+      {
+        "appid": 2784470,
+        "name": "9 Kings",
+        "releaseDate": "2025-05-23"
+      }
+    ],
+    "typeEligible": 5,
+    "missingRelease": 331
+  },
+  {
+    "preset": "custom",
+    "basis": "full_release",
+    "eligible": 2,
+    "games": [
+      {
+        "appid": 1336490,
+        "name": "Against the Storm",
+        "releaseDate": "2023-12-08"
+      },
+      {
+        "appid": 2142790,
+        "name": "Fields of Mistria",
+        "releaseDate": "2026-08-05"
+      }
+    ],
+    "typeEligible": 5,
+    "missingRelease": 332
+  },
+  {
+    "preset": "1m",
+    "basis": "first_playable",
+    "eligible": 0,
+    "games": [],
+    "typeEligible": 5,
+    "missingRelease": 331
+  },
+  {
+    "preset": "1m",
+    "basis": "full_release",
+    "eligible": 0,
+    "games": [],
+    "typeEligible": 5,
+    "missingRelease": 332
+  },
+  {
+    "preset": "3m",
+    "basis": "full_release",
+    "eligible": 1,
+    "games": [
+      {
+        "appid": 2142790,
+        "name": "Fields of Mistria",
+        "releaseDate": "2026-08-05"
+      }
+    ],
+    "typeEligible": 5,
+    "missingRelease": 332
+  }
+]

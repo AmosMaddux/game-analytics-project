@@ -1,0 +1,89 @@
+{
+  "mode": "offline_plan_only",
+  "version": "fieldnote-population-discovery-1.0",
+  "plan": {
+    "version": "fieldnote-population-discovery-1.0",
+    "asOf": "2026-10-11T00:00:00.000Z",
+    "limits": {
+      "candidates": 1000,
+      "discoveryPages": 40,
+      "igdbPages": 60,
+      "steamPages": 12,
+      "pageSize": 100,
+      "requests": 180,
+      "retries": 2,
+      "igdbBytes": 67108864,
+      "steamBytes": 67108864,
+      "igdbResponseBytes": 2097152,
+      "steamResponseBytes": 16777216,
+      "tokenResponseBytes": 16384,
+      "runtimeMs": 720000,
+      "requestTimeoutMs": 20000,
+      "steamTimeoutMs": 30000,
+      "minIntervalMs": 1000,
+      "concurrency": 1
+    },
+    "selection": "population_first_id_ascending_bounded_not_representative",
+    "streams": [
+      {
+        "id": "recent_pc_90_days",
+        "kind": "releases",
+        "start": 1783900800,
+        "end": 1791676800,
+        "target": 400,
+        "maxPages": 16
+      },
+      {
+        "id": "older_pc_2021",
+        "kind": "releases",
+        "start": 1609459200,
+        "end": 1640995200,
+        "target": 100,
+        "maxPages": 4
+      },
+      {
+        "id": "older_pc_2022",
+        "kind": "releases",
+        "start": 1640995200,
+        "end": 1672531200,
+        "target": 100,
+        "maxPages": 4
+      },
+      {
+        "id": "older_pc_2023",
+        "kind": "releases",
+        "start": 1672531200,
+        "end": 1704067200,
+        "target": 100,
+        "maxPages": 4
+      },
+      {
+        "id": "older_pc_2024",
+        "kind": "releases",
+        "start": 1704067200,
+        "end": 1735689600,
+        "target": 100,
+        "maxPages": 4
+      },
+      {
+        "id": "older_pc_2025",
+        "kind": "releases",
+        "start": 1735689600,
+        "end": 1767225600,
+        "target": 100,
+        "maxPages": 4
+      },
+      {
+        "id": "broad_desktop",
+        "kind": "games",
+        "start": null,
+        "end": null,
+        "target": 100,
+        "maxPages": 4
+      }
+    ]
+  },
+  "credentialsRead": false,
+  "networkRequests": 0,
+  "databaseWrites": 0
+}

@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "artifact_type": "igdb_catalog_import_summary",
+  "run_id": "53d21826-6369-4818-88bb-5c651091d0f3",
+  "started_at": "2026-10-10T17:10:17.650Z",
+  "fetched_at": "2026-10-10T17:10:28.546Z",
+  "status": "complete",
+  "steam_source": {
+    "id": 1,
+    "name": "Steam"
+  },
+  "summary": {
+    "cohort": 36,
+    "matched": 36,
+    "unmatched": 0,
+    "ambiguous": 0,
+    "quarantined": 0,
+    "unattempted": 0,
+    "coverage": {
+      "name": {
+        "covered": 36,
+        "cohort_denominator": 36,
+        "matched_denominator": 36,
+        "cohort_percent": 100,
+        "matched_percent": 100
+      },
+      "summary": {
+        "covered": 36,
+        "cohort_denominator": 36,
+        "matched_denominator": 36,
+        "cohort_percent": 100,
+        "matched_percent": 100
+      },
+      "platforms": {
+        "covered": 36,
+        "cohort_denominator": 36,
+        "matched_denominator": 36,
+        "cohort_percent": 100,
+        "matched_percent": 100
+      },
+      "platform_release": {
+        "covered": 36,
+        "cohort_denominator": 36,
+        "matched_denominator": 36,
+        "cohort_percent": 100,
+        "matched_percent": 100
+      },
+      "developer": {
+        "covered": 35,
+        "cohort_denominator": 36,
+        "matched_denominator": 36,
+        "cohort_percent": 97.22222222222223,
+        "matched_percent": 97.22222222222223
+      },
+      "publisher": {
+        "covered": 35,
+        "cohort_denominator": 36,
+        "matched_denominator": 36,
+        "cohort_percent": 97.22222222222223,
+        "matched_percent": 97.22222222222223
+      },
+      "official_website": {
+        "covered": 0,
+        "cohort_denominator": 36,
+        "matched_denominator": 36,
+        "cohort_percent": 0,
+        "matched_percent": 0
+      },
+      "genres": {
+        "covered": 36,
+        "cohort_denominator": 36,
+        "matched_denominator": 36,
+        "cohort_percent": 100,
+        "matched_percent": 100
+      },
+      "themes": {
+        "covered": 32,
+        "cohort_denominator": 36,
+        "matched_denominator": 36,
+        "cohort_percent": 88.88888888888889,
+        "matched_percent": 88.88888888888889
+      },
+      "keywords": {
+        "covered": 34,
+        "cohort_denominator": 36,
+        "matched_denominator": 36,
+        "cohort_percent": 94.44444444444444,
+        "matched_percent": 94.44444444444444
+      }
+    },
+    "by_cohort": {
+      "core": {
+        "cohort": 30,
+        "matched": 30
+      },
+      "recent": {
+        "cohort": 6,
+        "matched": 6
+      }
+    },
+    "by_editorial_group": {
+      "Farming / life simulation": {
+        "cohort": 6,
+        "matched": 6
+      },
+      "Roguelike deckbuilder": {
+        "cohort": 6,
+        "matched": 6
+      },
+      "Puzzle": {
+        "cohort": 6,
+        "matched": 6
+      },
+      "Horror / exploration": {
+        "cohort": 6,
+        "matched": 6
+      },
+      "Colony / settlement simulation": {
+        "cohort": 5,
+        "matched": 5
+      },
+      "Platformer / metroidvania": {
+        "cohort": 6,
+        "matched": 6
+      },
+      "Cozy building toy": {
+        "cohort": 1,
+        "matched": 1
+      }
+    },
+    "by_saved_review_band": {
+      "high_10000_plus": {
+        "cohort": 15,
+        "matched": 15
+      },
+      "mid_1000_to_9999": {
+        "cohort": 12,
+        "matched": 12
+      },
+      "low_under_1000": {
+        "cohort": 9,
+        "matched": 9
+      }
+    },
+    "requests_attempted": 8,
+    "requests_successful": 8,
+    "payload_bytes": 369727,
+    "errors": [],
+    "gates": {
+      "G0": "rights_and_production_use_pending",
+      "G1": "coverage_target_met_review_ledger_required",
+      "G2": "coverage_targets_met",
+      "G3": "field_provenance_recorded_manual_conflict_review_pending",
+      "G4": "Steam_tags_unchanged_not_recollected",
+      "G5": "catalog_only_no_new_Steam_metrics_or_history",
+      "G6": "remaining_Steam_validation_pending",
+      "G7": "private_pilot_only_production_not_promoted"
+    },
+    "unresolved_steam_appids": []
+  }
+}

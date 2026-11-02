@@ -1,0 +1,123 @@
+{
+  "schemaVersion": "fieldnote-reconstructed-addendum-package-1.0",
+  "createdAt": "2026-10-12T15:47:43.321920+00:00",
+  "scope": "Only the independently reviewed160-ID pending-identity qualification addendum; no panel transition approval",
+  "planCanonicalSha256": "abe3776ccf43334ed8baba98603629551d304db734b544cf2105a6801a3fe66f",
+  "tests": {
+    "total": 61,
+    "passed": 61,
+    "liveCalls": 0
+  },
+  "files": [
+    {
+      "path": "collect-review-campaign.mjs",
+      "bytes": 32685,
+      "sha256": "f362de16661541b16158783c7b48365f5d1716d9b7525f83cc07c857e76d14cc"
+    },
+    {
+      "path": "qualification-campaign.mjs",
+      "bytes": 18492,
+      "sha256": "42135601c3ec972a0157eb0b11a27e6fbd35ceaad58b7b30009f77ee058fb229"
+    },
+    {
+      "path": "campaign-exports.mjs",
+      "bytes": 4071,
+      "sha256": "c25631b221452734545268a68a555afee3287d9ca024848ba45f02720216e425"
+    },
+    {
+      "path": "qualification-addendum.mjs",
+      "bytes": 8443,
+      "sha256": "14eb73231f4bed762a1fa860299e5042e0d431c22c6fa16704af923460e1f291"
+    },
+    {
+      "path": "qualification-campaign.test.mjs",
+      "bytes": 15209,
+      "sha256": "fc08b9e95487f104beceb6277fe971f232f78778dfadd461d8b64d4ace049c8b"
+    },
+    {
+      "path": "collect-review-campaign.regression.test.mjs",
+      "bytes": 18573,
+      "sha256": "884a4697cab3469c0772b8a2c2e4a88d8a0e2cc11d8c5c9ae8a4802f0bbd7b53"
+    },
+    {
+      "path": "collect-panel-metrics.mjs",
+      "bytes": 37950,
+      "sha256": "57d472ec100971fd9f8a3f4095f3c282e04e898e15ef1445c3076c11d00dcb17"
+    },
+    {
+      "path": "join-qualified-candidates.mjs",
+      "bytes": 5028,
+      "sha256": "bfba48043f2e50a3d9a340132df4569f4392f3c0d4a44fbaa175540c4449446d"
+    },
+    {
+      "path": "validate-reviews.mjs",
+      "bytes": 21395,
+      "sha256": "b8dd20609af67841c0f6449cef1c94ea50930670f79d6c52118022e0d004357c"
+    },
+    {
+      "path": "validate-reviews.test.mjs",
+      "bytes": 11284,
+      "sha256": "c9ae6b2afc1a9f71b68be5c10afe1fa4a684603c3f41aff38c3b3f3cce4ae691"
+    },
+    {
+      "path": "passed-sentinel-evidence.json",
+      "bytes": 11475,
+      "sha256": "a8efd1423272343178ed1813ad03660a18e74169f032c0e06fceb90bd2e40b6f"
+    },
+    {
+      "path": "run-reviewed-addendum.sh",
+      "bytes": 1112,
+      "sha256": "e250c858b51f4e026150cf20bcb08748fe0702c047ee40a6c265ee2dc71c8eee"
+    },
+    {
+      "path": "approved-addendum-plan.json",
+      "bytes": 3795,
+      "sha256": "0d032227d0e8fadc1a4750a633084f18c670a5b5e86bc27580c022c57ab2105f"
+    },
+    {
+      "path": "ADDENDUM-RUNBOOK.md",
+      "bytes": 6458,
+      "sha256": "36efcd67b159b39ee202647ce00cde19e9b938fef3107a3e82862c4b6b0189c8"
+    },
+    {
+      "path": "reconstruction-offline-tests.log",
+      "bytes": 5478,
+      "sha256": "babfe0d92f5ab28da38ffe8ef794d78f7402d3fbe95c0e097ef5e350dfd2dd57"
+    },
+    {
+      "path": "live-budget-preflight-154037.json",
+      "bytes": 3342,
+      "sha256": "a942aa8656e97c0b9e0a93984f866f353413de7e93c6364606185785a0cdd086"
+    },
+    {
+      "path": "campaign-fixtures/ledger.json",
+      "bytes": 349327,
+      "sha256": "d3ecb4525c6836638bf4a4304df6ebfb27d6dcd4320733048233123f331fd8e0"
+    },
+    {
+      "path": "campaign-fixtures/previous-candidates.json",
+      "bytes": 3648558,
+      "sha256": "db69bb4688fe30d7d23710b21c86513693214b4576d9f611b69e6c4a21661de2"
+    },
+    {
+      "path": "campaign-fixtures/previous-source-report.json",
+      "bytes": 3268777,
+      "sha256": "cdd2278bea3fa218f987d08a7d0f71090c668cab9b74cea15f5910b322eff80f"
+    },
+    {
+      "path": "campaign-fixtures/previous-source-checkpoint.json",
+      "bytes": 3380740,
+      "sha256": "7327d3ee4f06de3ab8f0eebd58c99fb02eb522708da2e13847511282acea9f57"
+    },
+    {
+      "path": "campaign-fixtures/resumed-candidates.json",
+      "bytes": 3726890,
+      "sha256": "c6c5a8c61f9f8cbbd7bf24bfce2deb92a089cf40c6f90a78759a814769d28a42"
+    },
+    {
+      "path": "campaign-fixtures/resumed-checkpoint.json",
+      "bytes": 3522237,
+      "sha256": "93432f4a6dc65abacf77da484a436b89d04ba682dbbde13bdc8e2bc2cf9fa659"
+    }
+  ]
+}

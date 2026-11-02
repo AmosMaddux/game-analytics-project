@@ -1,0 +1,364 @@
+{
+  "version": "steam-review-shape-diagnostic-1.0",
+  "startedAt": "2026-10-11T18:11:41.087Z",
+  "status": "completed_shape_only",
+  "filters": {
+    "filter": 1,
+    "languages": [
+      "all"
+    ],
+    "review_type": 0,
+    "purchase_type": 0,
+    "filter_offtopic_activity": true,
+    "display_language": "english"
+  },
+  "caps": {
+    "maxRequests": 3,
+    "maxRetries": 0,
+    "retriesPerRequest": 0,
+    "minIntervalMs": 2000,
+    "requestTimeoutMs": 20000,
+    "maxRuntimeMs": 120000,
+    "maxResponseBytes": 1048576,
+    "maxBytes": 3145728,
+    "maxEnumerationPages": 3
+  },
+  "priorSentinelRequests": 2,
+  "cases": [
+    {
+      "label": "failed_verdant_7d",
+      "appid": 730050,
+      "window": {
+        "start": 1791072000,
+        "endExclusive": 1791676800
+      },
+      "observedAt": "2026-10-11T18:11:41.165Z",
+      "shape": {
+        "topLevelType": "object",
+        "responseWrapper": {
+          "present": true,
+          "type": "object"
+        },
+        "topLevelKeyCount": 1,
+        "responseType": "object",
+        "responseKeyCount": 3,
+        "fields": {
+          "total_matching": {
+            "present": true,
+            "type": "number"
+          },
+          "query_summary": {
+            "present": true,
+            "type": "object"
+          },
+          "reviews": {
+            "present": false,
+            "type": "undefined"
+          },
+          "cursor": {
+            "present": true,
+            "type": "string"
+          },
+          "day_range_used": {
+            "present": false,
+            "type": "undefined"
+          },
+          "success": {
+            "present": false,
+            "type": "undefined"
+          },
+          "error": {
+            "present": false,
+            "type": "undefined"
+          },
+          "message": {
+            "present": false,
+            "type": "undefined"
+          }
+        },
+        "totalMatching": {
+          "present": true,
+          "type": "number",
+          "value": 0
+        },
+        "reviewArrayLength": null,
+        "firstReviewType": "undefined",
+        "firstReviewFieldTypes": {
+          "recommendationid": {
+            "present": false,
+            "type": "undefined"
+          },
+          "timestamp_created": {
+            "present": false,
+            "type": "undefined"
+          },
+          "timestamp_updated": {
+            "present": false,
+            "type": "undefined"
+          },
+          "author": {
+            "present": false,
+            "type": "undefined"
+          },
+          "review": {
+            "present": false,
+            "type": "undefined"
+          }
+        },
+        "summary": {
+          "num_reviews": {
+            "present": true,
+            "type": "number",
+            "value": 0
+          },
+          "total_reviews": {
+            "present": true,
+            "type": "number",
+            "value": 0
+          },
+          "total_positive": {
+            "present": true,
+            "type": "number",
+            "value": 0
+          },
+          "total_negative": {
+            "present": true,
+            "type": "number",
+            "value": 0
+          },
+          "review_score": {
+            "present": true,
+            "type": "number",
+            "value": 0
+          }
+        }
+      }
+    },
+    {
+      "label": "known_empty_verdant",
+      "appid": 730050,
+      "window": {
+        "start": 0,
+        "endExclusive": 86400
+      },
+      "observedAt": "2026-10-11T18:11:43.314Z",
+      "shape": {
+        "topLevelType": "object",
+        "responseWrapper": {
+          "present": true,
+          "type": "object"
+        },
+        "topLevelKeyCount": 1,
+        "responseType": "object",
+        "responseKeyCount": 4,
+        "fields": {
+          "total_matching": {
+            "present": true,
+            "type": "number"
+          },
+          "query_summary": {
+            "present": true,
+            "type": "object"
+          },
+          "reviews": {
+            "present": true,
+            "type": "array"
+          },
+          "cursor": {
+            "present": true,
+            "type": "string"
+          },
+          "day_range_used": {
+            "present": false,
+            "type": "undefined"
+          },
+          "success": {
+            "present": false,
+            "type": "undefined"
+          },
+          "error": {
+            "present": false,
+            "type": "undefined"
+          },
+          "message": {
+            "present": false,
+            "type": "undefined"
+          }
+        },
+        "totalMatching": {
+          "present": true,
+          "type": "number",
+          "value": 364
+        },
+        "reviewArrayLength": 1,
+        "firstReviewType": "object",
+        "firstReviewFieldTypes": {
+          "recommendationid": {
+            "present": true,
+            "type": "string"
+          },
+          "timestamp_created": {
+            "present": true,
+            "type": "number"
+          },
+          "timestamp_updated": {
+            "present": true,
+            "type": "number"
+          },
+          "author": {
+            "present": true,
+            "type": "object"
+          },
+          "review": {
+            "present": true,
+            "type": "string"
+          }
+        },
+        "summary": {
+          "num_reviews": {
+            "present": true,
+            "type": "number",
+            "value": 1
+          },
+          "total_reviews": {
+            "present": true,
+            "type": "number",
+            "value": 364
+          },
+          "total_positive": {
+            "present": true,
+            "type": "number",
+            "value": 284
+          },
+          "total_negative": {
+            "present": true,
+            "type": "number",
+            "value": 80
+          },
+          "review_score": {
+            "present": true,
+            "type": "number",
+            "value": 6
+          }
+        }
+      }
+    },
+    {
+      "label": "populated_cs2_7d",
+      "appid": 730,
+      "window": {
+        "start": 1791072000,
+        "endExclusive": 1791676800
+      },
+      "observedAt": "2026-10-11T18:11:45.496Z",
+      "shape": {
+        "topLevelType": "object",
+        "responseWrapper": {
+          "present": true,
+          "type": "object"
+        },
+        "topLevelKeyCount": 1,
+        "responseType": "object",
+        "responseKeyCount": 4,
+        "fields": {
+          "total_matching": {
+            "present": true,
+            "type": "number"
+          },
+          "query_summary": {
+            "present": true,
+            "type": "object"
+          },
+          "reviews": {
+            "present": true,
+            "type": "array"
+          },
+          "cursor": {
+            "present": true,
+            "type": "string"
+          },
+          "day_range_used": {
+            "present": false,
+            "type": "undefined"
+          },
+          "success": {
+            "present": false,
+            "type": "undefined"
+          },
+          "error": {
+            "present": false,
+            "type": "undefined"
+          },
+          "message": {
+            "present": false,
+            "type": "undefined"
+          }
+        },
+        "totalMatching": {
+          "present": true,
+          "type": "number",
+          "value": 11190
+        },
+        "reviewArrayLength": 1,
+        "firstReviewType": "object",
+        "firstReviewFieldTypes": {
+          "recommendationid": {
+            "present": true,
+            "type": "string"
+          },
+          "timestamp_created": {
+            "present": true,
+            "type": "number"
+          },
+          "timestamp_updated": {
+            "present": true,
+            "type": "number"
+          },
+          "author": {
+            "present": true,
+            "type": "object"
+          },
+          "review": {
+            "present": true,
+            "type": "string"
+          }
+        },
+        "summary": {
+          "num_reviews": {
+            "present": true,
+            "type": "number",
+            "value": 1
+          },
+          "total_reviews": {
+            "present": true,
+            "type": "number",
+            "value": 11190
+          },
+          "total_positive": {
+            "present": true,
+            "type": "number",
+            "value": 8471
+          },
+          "total_negative": {
+            "present": true,
+            "type": "number",
+            "value": 2719
+          },
+          "review_score": {
+            "present": true,
+            "type": "number",
+            "value": 6
+          }
+        }
+      }
+    }
+  ],
+  "counters": {
+    "requests": 3,
+    "retries": 0,
+    "bytes": 2936,
+    "elapsedMs": 4409
+  },
+  "finishedAt": "2026-10-11T18:11:45.496Z",
+  "interpretation": "Structure-only diagnosis. Does not establish that any missing value is zero or that the review-window validation passed."
+}

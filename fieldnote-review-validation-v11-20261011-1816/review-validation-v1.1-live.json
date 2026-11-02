@@ -1,0 +1,443 @@
+{
+  "version": "steam-review-window-sentinels-1.1",
+  "endPolicy": "frozen_start_of_current_UTC_day_unless_explicit_as_of",
+  "windows": {
+    "seven": {
+      "start": 1791072000,
+      "endExclusive": 1791676800
+    },
+    "thirty": {
+      "start": 1789084800,
+      "endExclusive": 1791676800
+    }
+  },
+  "sentinels": [
+    {
+      "appid": 730050,
+      "name": "Verdant Skies",
+      "role": "prior_empty_boundary_missing"
+    },
+    {
+      "appid": 693580,
+      "name": "Goblins of Elderstone",
+      "role": "prior_empty_boundary_missing"
+    },
+    {
+      "appid": 1368410,
+      "name": "Psycron",
+      "role": "prior_empty_boundary_missing"
+    },
+    {
+      "appid": 1054550,
+      "name": "Phantom Rose",
+      "role": "prior_positive_boundary_reused"
+    },
+    {
+      "appid": 730,
+      "name": "Counter-Strike 2",
+      "role": "high_volume"
+    }
+  ],
+  "filters": {
+    "filter": 1,
+    "languages": [
+      "all"
+    ],
+    "review_type": 0,
+    "purchase_type": 0,
+    "filter_offtopic_activity": true,
+    "display_language": "english"
+  },
+  "limits": {
+    "maxRequests": 60,
+    "maxRetries": 4,
+    "retriesPerRequest": 1,
+    "minIntervalMs": 2000,
+    "requestTimeoutMs": 20000,
+    "maxRuntimeMs": 720000,
+    "maxResponseBytes": 1048576,
+    "maxBytes": 16777216,
+    "maxEnumerationPages": 3
+  },
+  "priorEvidence": {
+    "runId": "dates-20261010T180331650Z-2d32a062-1960-469e-8624-ae14ea485d4b",
+    "acceptedRequests": 24,
+    "completeEnumerations": 6,
+    "consistentPartitions": 6,
+    "positiveBoundaryAppids": [
+      1054550,
+      1706090,
+      916350
+    ],
+    "note": "Prior positive boundary checks are reused, not repeated. A zero window cannot supply a positive boundary timestamp."
+  },
+  "intendedChecks": [
+    "five lifetime + 7/30-day counts",
+    "five timestamped CCU observations",
+    "three prior-empty sentinels: pre-review-era empty window and exact live positive boundary",
+    "high-volume boundary enumeration and 7-day plus preceding23-day partition"
+  ],
+  "nominalRequests": 36,
+  "writesDatabase": false,
+  "credentialsRead": false,
+  "reviewBodiesPersisted": false,
+  "effectiveRunCaps": {
+    "maxRequests": 55,
+    "maxRetries": 4,
+    "retriesPerRequest": 1,
+    "minIntervalMs": 2000,
+    "requestTimeoutMs": 20000,
+    "maxRuntimeMs": 713353,
+    "maxResponseBytes": 1048576,
+    "maxBytes": 16772096,
+    "maxEnumerationPages": 3
+  },
+  "priorCampaignCounters": {
+    "requests": 5,
+    "retries": 0,
+    "bytes": 5120,
+    "elapsedMs": 6647
+  },
+  "runId": "sentinels-03e6a35c-ea91-4e3e-aebf-ba735b1720aa",
+  "startedAt": "2026-10-11T18:17:05.107Z",
+  "status": "passed",
+  "games": [
+    {
+      "appid": 730050,
+      "name": "Verdant Skies",
+      "role": "prior_empty_boundary_missing",
+      "observations": {
+        "lifetime": {
+          "value": 364,
+          "observedAt": "2026-10-11T18:17:05.453Z",
+          "window": null,
+          "unit": "surviving_matching_review_count",
+          "sourceReported": true
+        },
+        "reviews7d": {
+          "value": 0,
+          "observedAt": "2026-10-11T18:17:07.308Z",
+          "window": {
+            "start": 1791072000,
+            "endExclusive": 1791676800
+          },
+          "unit": "surviving_matching_review_count",
+          "sourceReported": true
+        },
+        "reviews30d": {
+          "value": 0,
+          "observedAt": "2026-10-11T18:17:09.531Z",
+          "window": {
+            "start": 1789084800,
+            "endExclusive": 1791676800
+          },
+          "unit": "surviving_matching_review_count",
+          "sourceReported": true
+        },
+        "players": {
+          "value": 0,
+          "observedAt": "2026-10-11T18:17:11.173Z",
+          "unit": "current_online_players"
+        }
+      },
+      "lifetimeSummary": {
+        "total": 364,
+        "positive": 284,
+        "negative": 80
+      }
+    },
+    {
+      "appid": 693580,
+      "name": "Goblins of Elderstone",
+      "role": "prior_empty_boundary_missing",
+      "observations": {
+        "lifetime": {
+          "value": 305,
+          "observedAt": "2026-10-11T18:17:21.419Z",
+          "window": null,
+          "unit": "surviving_matching_review_count",
+          "sourceReported": true
+        },
+        "reviews7d": {
+          "value": 0,
+          "observedAt": "2026-10-11T18:17:23.339Z",
+          "window": {
+            "start": 1791072000,
+            "endExclusive": 1791676800
+          },
+          "unit": "surviving_matching_review_count",
+          "sourceReported": true
+        },
+        "reviews30d": {
+          "value": 0,
+          "observedAt": "2026-10-11T18:17:25.417Z",
+          "window": {
+            "start": 1789084800,
+            "endExclusive": 1791676800
+          },
+          "unit": "surviving_matching_review_count",
+          "sourceReported": true
+        },
+        "players": {
+          "value": 2,
+          "observedAt": "2026-10-11T18:17:27.199Z",
+          "unit": "current_online_players"
+        }
+      },
+      "lifetimeSummary": {
+        "total": 305,
+        "positive": 212,
+        "negative": 93
+      }
+    },
+    {
+      "appid": 1368410,
+      "name": "Psycron",
+      "role": "prior_empty_boundary_missing",
+      "observations": {
+        "lifetime": {
+          "value": 105,
+          "observedAt": "2026-10-11T18:17:37.371Z",
+          "window": null,
+          "unit": "surviving_matching_review_count",
+          "sourceReported": true
+        },
+        "reviews7d": {
+          "value": 0,
+          "observedAt": "2026-10-11T18:17:39.457Z",
+          "window": {
+            "start": 1791072000,
+            "endExclusive": 1791676800
+          },
+          "unit": "surviving_matching_review_count",
+          "sourceReported": true
+        },
+        "reviews30d": {
+          "value": 0,
+          "observedAt": "2026-10-11T18:17:41.449Z",
+          "window": {
+            "start": 1789084800,
+            "endExclusive": 1791676800
+          },
+          "unit": "surviving_matching_review_count",
+          "sourceReported": true
+        },
+        "players": {
+          "value": 0,
+          "observedAt": "2026-10-11T18:17:43.243Z",
+          "unit": "current_online_players"
+        }
+      },
+      "lifetimeSummary": {
+        "total": 105,
+        "positive": 98,
+        "negative": 7
+      }
+    },
+    {
+      "appid": 1054550,
+      "name": "Phantom Rose",
+      "role": "prior_positive_boundary_reused",
+      "observations": {
+        "lifetime": {
+          "value": 802,
+          "observedAt": "2026-10-11T18:17:53.466Z",
+          "window": null,
+          "unit": "surviving_matching_review_count",
+          "sourceReported": true
+        },
+        "reviews7d": {
+          "value": 0,
+          "observedAt": "2026-10-11T18:17:55.415Z",
+          "window": {
+            "start": 1791072000,
+            "endExclusive": 1791676800
+          },
+          "unit": "surviving_matching_review_count",
+          "sourceReported": true
+        },
+        "reviews30d": {
+          "value": 1,
+          "observedAt": "2026-10-11T18:17:57.475Z",
+          "window": {
+            "start": 1789084800,
+            "endExclusive": 1791676800
+          },
+          "unit": "surviving_matching_review_count",
+          "sourceReported": true
+        },
+        "players": {
+          "value": 1,
+          "observedAt": "2026-10-11T18:17:59.208Z",
+          "unit": "current_online_players"
+        }
+      },
+      "lifetimeSummary": {
+        "total": 802,
+        "positive": 625,
+        "negative": 177
+      }
+    },
+    {
+      "appid": 730,
+      "name": "Counter-Strike 2",
+      "role": "high_volume",
+      "observations": {
+        "lifetime": {
+          "value": 5304664,
+          "observedAt": "2026-10-11T18:18:01.872Z",
+          "window": null,
+          "unit": "surviving_matching_review_count",
+          "sourceReported": true
+        },
+        "reviews7d": {
+          "value": 11190,
+          "observedAt": "2026-10-11T18:18:03.267Z",
+          "window": {
+            "start": 1791072000,
+            "endExclusive": 1791676800
+          },
+          "unit": "surviving_matching_review_count",
+          "sourceReported": true
+        },
+        "reviews30d": {
+          "value": 49899,
+          "observedAt": "2026-10-11T18:18:05.558Z",
+          "window": {
+            "start": 1789084800,
+            "endExclusive": 1791676800
+          },
+          "unit": "surviving_matching_review_count",
+          "sourceReported": true
+        },
+        "players": {
+          "value": 1174008,
+          "observedAt": "2026-10-11T18:18:07.174Z",
+          "unit": "current_online_players"
+        }
+      },
+      "lifetimeSummary": {
+        "total": 5304664,
+        "positive": 4506624,
+        "negative": 798040
+      }
+    }
+  ],
+  "checks": [
+    {
+      "appid": 730050,
+      "check": "nested_7_30",
+      "status": "pass"
+    },
+    {
+      "appid": 730050,
+      "check": "known_empty",
+      "status": "pass",
+      "total": 0,
+      "window": {
+        "start": 631152000,
+        "endExclusive": 631238400
+      }
+    },
+    {
+      "appid": 730050,
+      "check": "positive_boundary_exact_enumeration",
+      "status": "pass",
+      "anchorSecond": 1787483467,
+      "wholeCount": 1,
+      "leftCount": 0,
+      "rightCount": 1,
+      "enumerationPages": 3
+    },
+    {
+      "appid": 693580,
+      "check": "nested_7_30",
+      "status": "pass"
+    },
+    {
+      "appid": 693580,
+      "check": "known_empty",
+      "status": "pass",
+      "total": 0,
+      "window": {
+        "start": 631152000,
+        "endExclusive": 631238400
+      }
+    },
+    {
+      "appid": 693580,
+      "check": "positive_boundary_exact_enumeration",
+      "status": "pass",
+      "anchorSecond": 1785434857,
+      "wholeCount": 1,
+      "leftCount": 0,
+      "rightCount": 1,
+      "enumerationPages": 3
+    },
+    {
+      "appid": 1368410,
+      "check": "nested_7_30",
+      "status": "pass"
+    },
+    {
+      "appid": 1368410,
+      "check": "known_empty",
+      "status": "pass",
+      "total": 0,
+      "window": {
+        "start": 631152000,
+        "endExclusive": 631238400
+      }
+    },
+    {
+      "appid": 1368410,
+      "check": "positive_boundary_exact_enumeration",
+      "status": "pass",
+      "anchorSecond": 1776163097,
+      "wholeCount": 1,
+      "leftCount": 0,
+      "rightCount": 1,
+      "enumerationPages": 3
+    },
+    {
+      "appid": 1054550,
+      "check": "nested_7_30",
+      "status": "pass"
+    },
+    {
+      "appid": 730,
+      "check": "nested_7_30",
+      "status": "pass"
+    },
+    {
+      "appid": 730,
+      "check": "positive_boundary_exact_enumeration",
+      "status": "pass",
+      "anchorSecond": 1791742561,
+      "wholeCount": 1,
+      "leftCount": 0,
+      "rightCount": 1,
+      "enumerationPages": 3
+    },
+    {
+      "appid": 730,
+      "check": "high_volume_7_plus_23_equals_30",
+      "status": "pass",
+      "preceding23d": 38709
+    }
+  ],
+  "counters": {
+    "requests": 36,
+    "retries": 0,
+    "bytes": 19898,
+    "elapsedMs": 70416
+  },
+  "interpretation": "The documented date-filter/total_matching contract passed these bounded live checks. Counts refer to surviving matching reviews at retrieval, not immutable historic counts. No Steam release dates or popularity score are established.",
+  "finishedAt": "2026-10-11T18:18:15.524Z",
+  "campaignCounters": {
+    "requests": 41,
+    "retries": 0,
+    "bytes": 25018,
+    "elapsedMs": 77063
+  }
+}

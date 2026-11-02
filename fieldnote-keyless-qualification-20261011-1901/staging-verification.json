@@ -1,0 +1,63 @@
+{
+  "verifiedAt": "2026-10-11T19:03:38.402995+00:00",
+  "baselineSha256": "e8d3de391a89d7fb3fe2669cb486f4f4711d4a7eae9b1e2033a9cf97defb7a3d",
+  "usedRequests": 808,
+  "bootstrapAllowance": 2700,
+  "authoritativeLedgerPath": "/workspaces/codespaces-blank/fieldnote-redesign-stage-20261011/pilot-20261011-1746/fieldnote-source-budget-2026-10.json",
+  "ledgerPreviouslyAbsent": true,
+  "enabledSchedules": 0,
+  "entries": [
+    {
+      "id": "catalog-6b737fda-b294-43f9-891a-6219e4ee0479",
+      "source": "igdb",
+      "requests": 30,
+      "evidence": "saved_collection_jobs",
+      "status": "complete"
+    },
+    {
+      "id": "catalog-70c7cb59-72ab-4772-b2f2-c6ec5120603d",
+      "source": "igdb",
+      "requests": 30,
+      "evidence": "saved_collection_jobs",
+      "status": "complete"
+    },
+    {
+      "id": "identity-45947898-5c21-453b-9025-250e4aa348c3",
+      "source": "steam_catalog",
+      "requests": 4,
+      "evidence": "saved_collection_jobs",
+      "status": "complete"
+    },
+    {
+      "id": "identity-56ad9006-e734-473d-b312-9b70d741a1cc",
+      "source": "steam_catalog",
+      "requests": 4,
+      "evidence": "saved_collection_jobs",
+      "status": "complete"
+    },
+    {
+      "id": "metrics-14107c42-52a4-4b41-8c03-25b0cd3f9150",
+      "source": "steam_api",
+      "requests": 668,
+      "evidence": "saved_collection_jobs",
+      "status": "partial"
+    },
+    {
+      "id": "sentinels-03e6a35c-ea91-4e3e-aebf-ba735b1720aa",
+      "source": "source_validation_or_bootstrap",
+      "requests": 41,
+      "reportSha256": "a8efd1423272343178ed1813ad03660a18e74169f032c0e06fceb90bd2e40b6f",
+      "evidence": "passed-sentinel-evidence.json"
+    },
+    {
+      "id": "report-cdd2278bea3fa218f987d08a",
+      "source": "source_validation_or_bootstrap",
+      "requests": 31,
+      "reportSha256": "cdd2278bea3fa218f987d08a7d0f71090c668cab9b74cea15f5910b322eff80f",
+      "evidence": "candidates.json",
+      "checkpointSha256": "7327d3ee4f06de3ab8f0eebd58c99fb02eb522708da2e13847511282acea9f57",
+      "finishedAt": "2026-10-11T18:50:08.567Z"
+    }
+  ],
+  "sourceAndInputHashesVerified": true
+}

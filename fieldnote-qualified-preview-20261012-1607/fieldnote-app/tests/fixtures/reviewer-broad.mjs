@@ -1,0 +1,10 @@
+import {createHash} from 'node:crypto';
+import {selectSourcePcDate} from '../../backend/pc-release-policy.mjs';
+export const REVIEWER_NOW='2026-10-12T15:00:00.000Z';
+export function broadFixture(){
+ const fetchedAt='2026-10-10T00:00:00.000Z',appid=900001,igdbId=900001;
+ const row={appid,igdbId,name:'MDK2',source:'IGDB',sourceUrl:'https://www.igdb.com/games/mdk2',fetchedAt,sourceUpdatedAt:null,firstReleaseDate:null,gameType:{id:0,type:'Main Game'},platforms:[{id:6,name:'PC (Microsoft Windows)',abbreviation:'PC'}],genres:[{id:5,name:'Shooter'},{id:31,name:'Adventure'}],themes:[],keywords:[],gameModes:[],playerPerspectives:[],releaseDates:[{id:1,date:'2026-10-01T00:00:00.000Z',human:'Oct1,2026',year:2026,month:10,platform:{id:6,name:'PC (Microsoft Windows)'},dateFormat:{id:0,format:'YYYYMMDD'},region:null,status:null,source:'IGDB',fetchedAt}],crosswalk:[{id:1,gameId:igdbId,uid:String(appid),sourceId:1,sourceName:'Steam',url:`https://store.steampowered.com/app/${appid}/`,platformId:6,sourceUpdatedAt:null}],identity:{status:'verified',reason:'exact_appid_normalized_title_and_game_only_query',steamName:'MDK 2',steamFetchedAt:fetchedAt,typeBasis:'derived_game_only_query',sourceUrl:'https://api.steampowered.com/IStoreService/GetAppList/v1/'},rejection:null};
+ const asOf='2026-10-11T00:00:00.000Z';row.release=selectSourcePcDate(row.releaseDates,asOf);
+ return {schemaVersion:'fieldnote-population-discovery-1.0',status:'partial',asOf,finishedAt:asOf,sourceContract:{noSteamReleaseClaim:true,allRawGenresRetained:true},steamIdentity:{fullCatalogComplete:false},summary:{identityVerified:1},candidates:[row],panelCandidates:[{appid,name:row.name,source:'IGDB + Steam IStoreService',sourceUrl:row.sourceUrl,retrievedAt:fetchedAt,appType:'game',typeBasis:'derived_game_only_query',releaseDate:row.release.date,releaseBasis:'igdb_pc',releasePrecision:row.release.precision,lifetimeReviews:null,referenceEligible:false,referenceReason:null,genres:row.genres.map(g=>g.name)}]};
+}
+export const encode=value=>{const raw=JSON.stringify(value,null,2)+'\n';return {raw,expectedSha:createHash('sha256').update(raw).digest('hex')};};

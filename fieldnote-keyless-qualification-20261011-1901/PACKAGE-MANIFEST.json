@@ -1,0 +1,92 @@
+{
+  "schemaVersion": "fieldnote-bounded-collection-package-1.0",
+  "createdAt": "2026-10-11T18:48:00.000Z",
+  "files": [
+    {
+      "name": "collect-panel-metrics.mjs",
+      "bytes": 37950,
+      "sha256": "57d472ec100971fd9f8a3f4095f3c282e04e898e15ef1445c3076c11d00dcb17"
+    },
+    {
+      "name": "collect-panel-metrics.test.mjs",
+      "bytes": 18571,
+      "sha256": "ee957b2e2eec7c4922c7d9b17631e3d1e9d49db07b9e43e9975705c95d21ad03"
+    },
+    {
+      "name": "join-qualified-candidates.mjs",
+      "bytes": 5028,
+      "sha256": "bfba48043f2e50a3d9a340132df4569f4392f3c0d4a44fbaa175540c4449446d"
+    },
+    {
+      "name": "validate-reviews.mjs",
+      "bytes": 21395,
+      "sha256": "b8dd20609af67841c0f6449cef1c94ea50930670f79d6c52118022e0d004357c"
+    },
+    {
+      "name": "validate-reviews.test.mjs",
+      "bytes": 11284,
+      "sha256": "c9ae6b2afc1a9f71b68be5c10afe1fa4a684603c3f41aff38c3b3f3cce4ae691"
+    },
+    {
+      "name": "sentinel-plan.json",
+      "bytes": 2141,
+      "sha256": "1ffb30b98d9bdab46650812db07a74a7bc2ba20362b1b95615a31a196e1892d9"
+    },
+    {
+      "name": "validation-campaign-ledger.json",
+      "bytes": 667,
+      "sha256": "572cb391fc4ab6cc908afd707162a57eda4ae38c8918737ee4e7b51f1d4639a6"
+    },
+    {
+      "name": "passed-sentinel-evidence.json",
+      "bytes": 11475,
+      "sha256": "a8efd1423272343178ed1813ad03660a18e74169f032c0e06fceb90bd2e40b6f"
+    },
+    {
+      "name": "prepare-budget-baseline.py",
+      "bytes": 6496,
+      "sha256": "4da1a04f354f49370008231dae4a534d2fcf4a766791ea6e8e9eb474e721153e"
+    },
+    {
+      "name": "prepare-budget-baseline.test.py",
+      "bytes": 3411,
+      "sha256": "f78e4eccd9e7d100c868c99494d5205319c132dfa3d041782124134e6dd9278d"
+    },
+    {
+      "name": "panel-metric-contract.json",
+      "bytes": 2289,
+      "sha256": "572ac2f45a47f51df489e6a80d452c537ee42e4daa0e895d7bcae0f2ecf40b4c"
+    },
+    {
+      "name": "RUNBOOK.md",
+      "bytes": 10701,
+      "sha256": "4f6057c7ab73c084ed2c481e56dfa3516e1fa1fde956f21d72efbc6707cb6e18"
+    },
+    {
+      "name": "SOURCE-DECISIONS.md",
+      "bytes": 18208,
+      "sha256": "e22cb0fec93227af6cd981f6cc3329ee980d2017303532ec136cbd2bb98f9932"
+    },
+    {
+      "name": "VERIFICATION.md",
+      "bytes": 2999,
+      "sha256": "26eeb2debd1eb41230064079ffd76f691f853296486cd94c98c84a9b21fa9599"
+    },
+    {
+      "name": "offline-tests.log",
+      "bytes": 3781,
+      "sha256": "f14731031946b0599e022e3203490b0f8c8c5e438055de63b21afc97d6483002"
+    },
+    {
+      "name": "budget-adapter-tests.log",
+      "bytes": 104,
+      "sha256": "d965122cf9a3687cd862a9bce683521a93ecb3d338b20b4730e4dfb10df64618"
+    }
+  ],
+  "liveValidationReportSha256": "a8efd1423272343178ed1813ad03660a18e74169f032c0e06fceb90bd2e40b6f",
+  "offlineJavaScriptTestsPassed": 45,
+  "offlinePythonTestsPassed": 6,
+  "independentReviewApproved": true,
+  "liveQualificationExecuted": false,
+  "livePanelExecuted": false
+}

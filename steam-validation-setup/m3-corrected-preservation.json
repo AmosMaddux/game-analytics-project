@@ -1,0 +1,288 @@
+{
+  "verifiedAt": "2026-10-10T19:52:28.540Z",
+  "methodVersion": "m2-to-m3-preservation-1.0",
+  "databaseAccess": "read_only_consistent_snapshots",
+  "pass": true,
+  "counts": {
+    "originalGames": 36,
+    "currentGames": 334,
+    "originalObservations": 108,
+    "retainedOriginalObservations": 108,
+    "currentObservations": 1661,
+    "additionalObservations": 1553,
+    "foreignKeyViolations": 0,
+    "duplicateObservationKeys": 0
+  },
+  "checks": {
+    "expectedBaseline36Games108Observations": true,
+    "originalIdentitiesAndEditorialGroups": true,
+    "originalSteamTags": true,
+    "originalMarketing": true,
+    "originalSettings": true,
+    "originalObservations": true,
+    "originalReviewWindows": true,
+    "originalGenresAndCohorts": true,
+    "allOriginalM2RowsExactlyRetained": true,
+    "foreignKeysClean": true,
+    "noDuplicateObservationKeys": true
+  },
+  "preservedFieldsSha256": "52631d882baf6a3b117a5f4e43f880be48e0487e0c3c67eea17102747e7fc3e3",
+  "identities": {
+    "games": {
+      "baselineRows": 36,
+      "currentRows": 334,
+      "unchangedOriginalRows": 36,
+      "missingOriginalRows": 0,
+      "changedOriginalRows": 0,
+      "additionalRows": 298,
+      "preserved": true,
+      "baselineSha256": "ad7e305bec8ad7368cc42cc9e5b89826d2ff4ec7cda664718406ee30ddeae32a",
+      "matchedCurrentSha256": "ad7e305bec8ad7368cc42cc9e5b89826d2ff4ec7cda664718406ee30ddeae32a"
+    },
+    "catalog": {
+      "baselineRows": 36,
+      "currentRows": 334,
+      "unchangedOriginalRows": 36,
+      "missingOriginalRows": 0,
+      "changedOriginalRows": 0,
+      "additionalRows": 298,
+      "preserved": true,
+      "baselineSha256": "e0b3e5b36b499da20bf34338a6ffb86def0adec76fe5b5cffb6044c34e6db365",
+      "matchedCurrentSha256": "e0b3e5b36b499da20bf34338a6ffb86def0adec76fe5b5cffb6044c34e6db365"
+    },
+    "crosswalks": {
+      "baselineRows": 36,
+      "currentRows": 334,
+      "unchangedOriginalRows": 36,
+      "missingOriginalRows": 0,
+      "changedOriginalRows": 0,
+      "additionalRows": 298,
+      "preserved": true,
+      "baselineSha256": "59273dafd43a3cbafbe9ebd974225cdccf59279b71aa42bba0200f773035caea",
+      "matchedCurrentSha256": "59273dafd43a3cbafbe9ebd974225cdccf59279b71aa42bba0200f773035caea"
+    }
+  },
+  "exactRows": {
+    "foundation_schema": {
+      "baselineRows": 2,
+      "currentRows": 3,
+      "unchangedOriginalRows": 2,
+      "missingOriginalRows": 0,
+      "changedOriginalRows": 0,
+      "additionalRows": 1,
+      "preserved": true,
+      "baselineSha256": "05900cdaf8a89fe1e62a6598497c589cc032284efcd6c1430949924429a80c5e",
+      "matchedCurrentSha256": "05900cdaf8a89fe1e62a6598497c589cc032284efcd6c1430949924429a80c5e"
+    },
+    "snapshot_metadata": {
+      "baselineRows": 14,
+      "currentRows": 14,
+      "unchangedOriginalRows": 14,
+      "missingOriginalRows": 0,
+      "changedOriginalRows": 0,
+      "additionalRows": 0,
+      "preserved": true,
+      "baselineSha256": "8614dabc8018835f0518f3f51706f0729e8999d585cb6b9245dfba4c34226baf",
+      "matchedCurrentSha256": "8614dabc8018835f0518f3f51706f0729e8999d585cb6b9245dfba4c34226baf"
+    },
+    "genres": {
+      "baselineRows": 7,
+      "currentRows": 13,
+      "unchangedOriginalRows": 7,
+      "missingOriginalRows": 0,
+      "changedOriginalRows": 0,
+      "additionalRows": 6,
+      "preserved": true,
+      "baselineSha256": "5c86e39b5254b6c962557a969903d1b233935337995b10d79b3ef6c26c1d39f6",
+      "matchedCurrentSha256": "5c86e39b5254b6c962557a969903d1b233935337995b10d79b3ef6c26c1d39f6"
+    },
+    "cohorts": {
+      "baselineRows": 2,
+      "currentRows": 3,
+      "unchangedOriginalRows": 2,
+      "missingOriginalRows": 0,
+      "changedOriginalRows": 0,
+      "additionalRows": 1,
+      "preserved": true,
+      "baselineSha256": "dc49548c262d4b9f3252900027f496d150836ab41e5bac5cf49a3544908b8f76",
+      "matchedCurrentSha256": "dc49548c262d4b9f3252900027f496d150836ab41e5bac5cf49a3544908b8f76"
+    },
+    "games": {
+      "baselineRows": 36,
+      "currentRows": 334,
+      "unchangedOriginalRows": 36,
+      "missingOriginalRows": 0,
+      "changedOriginalRows": 0,
+      "additionalRows": 298,
+      "preserved": true,
+      "baselineSha256": "abd461949fd39979d7580daeaf6c77bf47235ce8d24e685d3a066f96eb9e035d",
+      "matchedCurrentSha256": "abd461949fd39979d7580daeaf6c77bf47235ce8d24e685d3a066f96eb9e035d"
+    },
+    "steam_tags": {
+      "baselineRows": 701,
+      "currentRows": 701,
+      "unchangedOriginalRows": 701,
+      "missingOriginalRows": 0,
+      "changedOriginalRows": 0,
+      "additionalRows": 0,
+      "preserved": true,
+      "baselineSha256": "9ef6dfc0fef7a0a9fe570d170deed682d88b7b612b5941ccd3576f802be3a0b6",
+      "matchedCurrentSha256": "9ef6dfc0fef7a0a9fe570d170deed682d88b7b612b5941ccd3576f802be3a0b6"
+    },
+    "metric_observations": {
+      "baselineRows": 108,
+      "currentRows": 1661,
+      "unchangedOriginalRows": 108,
+      "missingOriginalRows": 0,
+      "changedOriginalRows": 0,
+      "additionalRows": 1553,
+      "preserved": true,
+      "baselineSha256": "248199472f0551aa9d9e30bc98fc1c3e58db7758cb854796b6d8b86f46bdb0d8",
+      "matchedCurrentSha256": "248199472f0551aa9d9e30bc98fc1c3e58db7758cb854796b6d8b86f46bdb0d8"
+    },
+    "catalog_games": {
+      "baselineRows": 36,
+      "currentRows": 334,
+      "unchangedOriginalRows": 36,
+      "missingOriginalRows": 0,
+      "changedOriginalRows": 0,
+      "additionalRows": 298,
+      "preserved": true,
+      "baselineSha256": "2bb731442caac221800472df532c75e84b130959fda6a5561d76d2f702a39dce",
+      "matchedCurrentSha256": "2bb731442caac221800472df532c75e84b130959fda6a5561d76d2f702a39dce"
+    },
+    "identity_crosswalks": {
+      "baselineRows": 36,
+      "currentRows": 334,
+      "unchangedOriginalRows": 36,
+      "missingOriginalRows": 0,
+      "changedOriginalRows": 0,
+      "additionalRows": 298,
+      "preserved": true,
+      "baselineSha256": "aeb88c566d888311e0c224b4929191ad260bd807131cd1d1ee2bc04a1a61126c",
+      "matchedCurrentSha256": "aeb88c566d888311e0c224b4929191ad260bd807131cd1d1ee2bc04a1a61126c"
+    },
+    "catalog_platforms": {
+      "baselineRows": 177,
+      "currentRows": 1129,
+      "unchangedOriginalRows": 177,
+      "missingOriginalRows": 0,
+      "changedOriginalRows": 0,
+      "additionalRows": 952,
+      "preserved": true,
+      "baselineSha256": "250ddfff82060267da6463ed9db8fbf1bb9017f23cbbd6988a850b93e3ecd5c6",
+      "matchedCurrentSha256": "250ddfff82060267da6463ed9db8fbf1bb9017f23cbbd6988a850b93e3ecd5c6"
+    },
+    "catalog_company_roles": {
+      "baselineRows": 161,
+      "currentRows": 1714,
+      "unchangedOriginalRows": 161,
+      "missingOriginalRows": 0,
+      "changedOriginalRows": 0,
+      "additionalRows": 1553,
+      "preserved": true,
+      "baselineSha256": "4576f14daed667b096050570b4268ba18553d780f485f370e1a40631d6b18772",
+      "matchedCurrentSha256": "4576f14daed667b096050570b4268ba18553d780f485f370e1a40631d6b18772"
+    },
+    "catalog_labels": {
+      "baselineRows": 581,
+      "currentRows": 9765,
+      "unchangedOriginalRows": 581,
+      "missingOriginalRows": 0,
+      "changedOriginalRows": 0,
+      "additionalRows": 9184,
+      "preserved": true,
+      "baselineSha256": "63f8741808c66ae2c454b57b92e3483c4ff90f006bb62828fdb9a6a310ba05d1",
+      "matchedCurrentSha256": "63f8741808c66ae2c454b57b92e3483c4ff90f006bb62828fdb9a6a310ba05d1"
+    },
+    "catalog_links": {
+      "baselineRows": 422,
+      "currentRows": 2691,
+      "unchangedOriginalRows": 422,
+      "missingOriginalRows": 0,
+      "changedOriginalRows": 0,
+      "additionalRows": 2269,
+      "preserved": true,
+      "baselineSha256": "0293472ad193d6885b9803d3cee00c4e8dd232a37199b7e68f5f6e826c10810e",
+      "matchedCurrentSha256": "0293472ad193d6885b9803d3cee00c4e8dd232a37199b7e68f5f6e826c10810e"
+    },
+    "catalog_releases": {
+      "baselineRows": 198,
+      "currentRows": 1605,
+      "unchangedOriginalRows": 198,
+      "missingOriginalRows": 0,
+      "changedOriginalRows": 0,
+      "additionalRows": 1407,
+      "preserved": true,
+      "baselineSha256": "13cf25b2622475807d0ad344970d7db4fc1ff37fa8a5951d1ba363a2596dfe8a",
+      "matchedCurrentSha256": "13cf25b2622475807d0ad344970d7db4fc1ff37fa8a5951d1ba363a2596dfe8a"
+    },
+    "catalog_field_provenance": {
+      "baselineRows": 468,
+      "currentRows": 5236,
+      "unchangedOriginalRows": 468,
+      "missingOriginalRows": 0,
+      "changedOriginalRows": 0,
+      "additionalRows": 4768,
+      "preserved": true,
+      "baselineSha256": "35ec681a346b78d8af3416d4cb4eefa6ba7e2c0df7f9d7c0b1c059179db00499",
+      "matchedCurrentSha256": "35ec681a346b78d8af3416d4cb4eefa6ba7e2c0df7f9d7c0b1c059179db00499"
+    },
+    "catalog_conflicts": {
+      "baselineRows": 40,
+      "currentRows": 40,
+      "unchangedOriginalRows": 40,
+      "missingOriginalRows": 0,
+      "changedOriginalRows": 0,
+      "additionalRows": 0,
+      "preserved": true,
+      "baselineSha256": "afd386ca3d5c39c408dddaccfc33a632b117ac52441ae5e987c9efedcd484b67",
+      "matchedCurrentSha256": "afd386ca3d5c39c408dddaccfc33a632b117ac52441ae5e987c9efedcd484b67"
+    },
+    "marketing_profiles": {
+      "baselineRows": 36,
+      "currentRows": 334,
+      "unchangedOriginalRows": 36,
+      "missingOriginalRows": 0,
+      "changedOriginalRows": 0,
+      "additionalRows": 298,
+      "preserved": true,
+      "baselineSha256": "3a35804f435fc892912e5e05048be8ae750b2f2769fbed40a8824688eab49ab4",
+      "matchedCurrentSha256": "3a35804f435fc892912e5e05048be8ae750b2f2769fbed40a8824688eab49ab4"
+    },
+    "marketing_events": {
+      "baselineRows": 13,
+      "currentRows": 13,
+      "unchangedOriginalRows": 13,
+      "missingOriginalRows": 0,
+      "changedOriginalRows": 0,
+      "additionalRows": 0,
+      "preserved": true,
+      "baselineSha256": "928d0d71b65401f67bcb2dd2301638f4ba964e657fe9f28f02f9811e501bb97d",
+      "matchedCurrentSha256": "928d0d71b65401f67bcb2dd2301638f4ba964e657fe9f28f02f9811e501bb97d"
+    },
+    "ui_settings": {
+      "baselineRows": 1,
+      "currentRows": 1,
+      "unchangedOriginalRows": 1,
+      "missingOriginalRows": 0,
+      "changedOriginalRows": 0,
+      "additionalRows": 0,
+      "preserved": true,
+      "baselineSha256": "c15d6ecf60e74f49c3dff8824f9dd96ea215be6c092d0f67cdd4a7e6509bde79",
+      "matchedCurrentSha256": "c15d6ecf60e74f49c3dff8824f9dd96ea215be6c092d0f67cdd4a7e6509bde79"
+    },
+    "review_windows": {
+      "baselineRows": 6,
+      "currentRows": 6,
+      "unchangedOriginalRows": 6,
+      "missingOriginalRows": 0,
+      "changedOriginalRows": 0,
+      "additionalRows": 0,
+      "preserved": true,
+      "baselineSha256": "084751bec19f145633ac57104cfa8d1a00e311d50d0eec3fcf38f63d822fbeb2",
+      "matchedCurrentSha256": "084751bec19f145633ac57104cfa8d1a00e311d50d0eec3fcf38f63d822fbeb2"
+    }
+  },
+  "note": "Additional games and observations are allowed. Refreshable catalog metadata and global snapshot metadata have separate exact-row diagnostics; legitimate metadata changes do not fail the required preservation gate. No row contents, paths, credentials or environment values are emitted."
+}

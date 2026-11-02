@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-10-12T16:31:08.363811+00:00",
+  "status": "approved294_preview_running",
+  "pid": 41490,
+  "port": 4174,
+  "app": "/workspaces/codespaces-blank/fieldnote-qualified-preview-20261012-1607/fieldnote-app",
+  "database": "/workspaces/codespaces-blank/fieldnote-qualified-preview-20261012-1607/runtime-approved294.sqlite",
+  "health": {
+    "status": "ok",
+    "schemaVersion": 3,
+    "gameCount": 1080,
+    "mode": "private_bounded_collection_cache",
+    "liveCollectionEnabled": false,
+    "boundedLocalCollectionAvailable": true,
+    "backgroundCollectionEnabled": false
+  },
+  "panel": 294,
+  "panelGenres": 21,
+  "shortfall": 6,
+  "oldPilotPreserved": true,
+  "runtimeRowsAndSchemaUnchanged": true,
+  "rollbackDatabase": "/workspaces/codespaces-blank/fieldnote-redesign-stage-20261011/pilot-20261011-1746/pilot-evidence.sqlite",
+  "rollbackApp": "/workspaces/codespaces-blank/fieldnote-redesign-stage-20261011/fieldnote-app",
+  "rollbackBackup": "/workspaces/codespaces-blank/fieldnote-qualified-preview-20261012-1607/rollback-pilot-before-switch.sqlite",
+  "stoppedPilotPid": 11147,
+  "stoppedTemporaryPid": 37821
+}

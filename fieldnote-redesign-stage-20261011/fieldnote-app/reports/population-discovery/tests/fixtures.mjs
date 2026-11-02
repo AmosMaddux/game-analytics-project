@@ -1,0 +1,4 @@
+export const AS_OF='2026-10-11T00:00:00.000Z';
+export function game(id=100,appid=id+100000,extra={}) {
+  return {id,name:`Synthetic game ${id}`,url:`https://www.igdb.com/games/synthetic-${id}`,game_type:{id:0,type:'Main Game'},platforms:[{id:6,name:'PC (Microsoft Windows)'}],genres:[{id:34,name:'Visual Novel'},{id:35,name:'Card & Board Game'}],themes:[{id:9001,name:'Synthetic unclassified theme'}],keywords:[{id:9002,name:'Synthetic unknown mechanic'}],game_modes:[{id:1,name:'Single player'},{id:2,name:'Multiplayer'}],player_perspectives:[{id:4,name:'Side view'}],release_dates:[{id:id+700000,date:Date.parse('2026-09-01T00:00:00.000Z')/1000,platform:{id:6,name:'PC (Microsoft Windows)'},date_format:{id:0,format:'YYYYMMDD'},status:{id:6,name:'Full Release'}}],external_games:[{id:id+200000,game:id,uid:String(appid),url:`https://store.steampowered.com/app/${appid}/`,platform:6,external_game_source:{id:1,name:'Steam'}}],...extra};
+}

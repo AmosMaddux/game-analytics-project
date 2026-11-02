@@ -1,0 +1,480 @@
+{
+  "schema_version": "1.0",
+  "baseline_date": "2026-10-09",
+  "baseline_immutable": true,
+  "baseline_source_sha256": {
+    "cohort.json": "ca971b9b127f6a6670672db143ebfaa108b288bffdffcabd2cc751242faf3764",
+    "cohort_recent.json": "84f37f67d6e06d32857d593730526717862c8ebf423b1ed5b9509bcd2f8e6f49",
+    "per_game_test_status.json": "035528955d55265ff37b75705dd1ee4f2f15ecfdaedad9aaffb292bdd75d8050",
+    "api_observations.json": "ff1b66c6efaf908b96191799c34f37ff8609227791fabdca31090efe14e0e9fc",
+    "api_recent_observations.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "review_date_observations.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "final_test_summary.json": "dd039ddd01ac4b84cba55e6cae16bf338410a0df3918da4d8364cff4ca26c9f4"
+  },
+  "baseline_counts": {
+    "cohort_games": 36,
+    "store_tag_snapshots": 36,
+    "current_players_successful_games": 20,
+    "reviews_successful_games": 19,
+    "original_requests_unattempted": 20,
+    "supplemental_requests_unattempted": 12,
+    "previous_failed_review_targets": [
+      916350
+    ],
+    "date_probes_unattempted": 6
+  },
+  "pilot_appids": [
+    1472660,
+    916350,
+    2379780
+  ],
+  "pilot_rationale": "Mid-band No Place Like Home checks the preserved identity correction; low-band Saturnalia checks the separately tracked previous review failure; high-band Balatro checks the supplementary cohort. Bands are historical selection labels, not current popularity.",
+  "original_date_probe_appids": [
+    730050,
+    1054550,
+    1706090,
+    916350,
+    693580,
+    1368410
+  ],
+  "original_date_window": {
+    "start": 1788220800,
+    "end": 1790812799,
+    "start_utc": "2026-09-01T00:00:00.000Z",
+    "end_utc": "2026-09-30T23:59:59.000Z"
+  },
+  "targets": [
+    {
+      "appid": 413150,
+      "name": "Stardew Valley",
+      "cohort": "original_30",
+      "editorial_group": "Farming / life simulation",
+      "selection_review_band": "high_10000_plus",
+      "baseline_store_observed_at": "2026-10-09T18:57:01.825932+00:00",
+      "baseline_status": {
+        "current_players": "success",
+        "reviews_all_time": "success"
+      }
+    },
+    {
+      "appid": 1472660,
+      "name": "No Place Like Home",
+      "cohort": "original_30",
+      "editorial_group": "Farming / life simulation",
+      "selection_review_band": "mid_1000_to_9999",
+      "baseline_store_observed_at": "2026-10-09T18:57:06.104118+00:00",
+      "baseline_status": {
+        "current_players": "success",
+        "reviews_all_time": "success"
+      }
+    },
+    {
+      "appid": 894940,
+      "name": "Littlewood",
+      "cohort": "original_30",
+      "editorial_group": "Farming / life simulation",
+      "selection_review_band": "mid_1000_to_9999",
+      "baseline_store_observed_at": "2026-10-09T18:57:09.920163+00:00",
+      "baseline_status": {
+        "current_players": "success",
+        "reviews_all_time": "success"
+      }
+    },
+    {
+      "appid": 730050,
+      "name": "Verdant Skies",
+      "cohort": "original_30",
+      "editorial_group": "Farming / life simulation",
+      "selection_review_band": "low_under_1000",
+      "baseline_store_observed_at": "2026-10-09T18:57:13.709493+00:00",
+      "baseline_status": {
+        "current_players": "success",
+        "reviews_all_time": "success"
+      }
+    },
+    {
+      "appid": 432010,
+      "name": "World's Dawn",
+      "cohort": "original_30",
+      "editorial_group": "Farming / life simulation",
+      "selection_review_band": "low_under_1000",
+      "baseline_store_observed_at": "2026-10-09T18:57:17.589055+00:00",
+      "baseline_status": {
+        "current_players": "success",
+        "reviews_all_time": "success"
+      }
+    },
+    {
+      "appid": 646570,
+      "name": "Slay the Spire",
+      "cohort": "original_30",
+      "editorial_group": "Roguelike deckbuilder",
+      "selection_review_band": "high_10000_plus",
+      "baseline_store_observed_at": "2026-10-09T18:57:21.990677+00:00",
+      "baseline_status": {
+        "current_players": "success",
+        "reviews_all_time": "success"
+      }
+    },
+    {
+      "appid": 1102190,
+      "name": "Monster Train",
+      "cohort": "original_30",
+      "editorial_group": "Roguelike deckbuilder",
+      "selection_review_band": "high_10000_plus",
+      "baseline_store_observed_at": "2026-10-09T18:57:26.054220+00:00",
+      "baseline_status": {
+        "current_players": "success",
+        "reviews_all_time": "success"
+      }
+    },
+    {
+      "appid": 2179850,
+      "name": "Cobalt Core",
+      "cohort": "original_30",
+      "editorial_group": "Roguelike deckbuilder",
+      "selection_review_band": "mid_1000_to_9999",
+      "baseline_store_observed_at": "2026-10-09T18:57:29.881683+00:00",
+      "baseline_status": {
+        "current_players": "success",
+        "reviews_all_time": "success"
+      }
+    },
+    {
+      "appid": 1054550,
+      "name": "Phantom Rose",
+      "cohort": "original_30",
+      "editorial_group": "Roguelike deckbuilder",
+      "selection_review_band": "low_under_1000",
+      "baseline_store_observed_at": "2026-10-09T18:57:33.821489+00:00",
+      "baseline_status": {
+        "current_players": "success",
+        "reviews_all_time": "success"
+      }
+    },
+    {
+      "appid": 1127610,
+      "name": "Iris and the Giant",
+      "cohort": "original_30",
+      "editorial_group": "Roguelike deckbuilder",
+      "selection_review_band": "low_under_1000",
+      "baseline_store_observed_at": "2026-10-09T18:57:38.121723+00:00",
+      "baseline_status": {
+        "current_players": "success",
+        "reviews_all_time": "success"
+      }
+    },
+    {
+      "appid": 736260,
+      "name": "Baba Is You",
+      "cohort": "original_30",
+      "editorial_group": "Puzzle",
+      "selection_review_band": "high_10000_plus",
+      "baseline_store_observed_at": "2026-10-09T18:57:41.954269+00:00",
+      "baseline_status": {
+        "current_players": "success",
+        "reviews_all_time": "success"
+      }
+    },
+    {
+      "appid": 1260520,
+      "name": "Patrick's Parabox",
+      "cohort": "original_30",
+      "editorial_group": "Puzzle",
+      "selection_review_band": "mid_1000_to_9999",
+      "baseline_store_observed_at": "2026-10-09T18:57:45.731689+00:00",
+      "baseline_status": {
+        "current_players": "success",
+        "reviews_all_time": "success"
+      }
+    },
+    {
+      "appid": 1147890,
+      "name": "Bonfire Peaks",
+      "cohort": "original_30",
+      "editorial_group": "Puzzle",
+      "selection_review_band": "low_under_1000",
+      "baseline_store_observed_at": "2026-10-09T18:57:49.428321+00:00",
+      "baseline_status": {
+        "current_players": "success",
+        "reviews_all_time": "success"
+      }
+    },
+    {
+      "appid": 1052990,
+      "name": "A Monster's Expedition",
+      "cohort": "original_30",
+      "editorial_group": "Puzzle",
+      "selection_review_band": "mid_1000_to_9999",
+      "baseline_store_observed_at": "2026-10-09T18:57:53.248679+00:00",
+      "baseline_status": {
+        "current_players": "success",
+        "reviews_all_time": "success"
+      }
+    },
+    {
+      "appid": 1706090,
+      "name": "Bean and Nothingness",
+      "cohort": "original_30",
+      "editorial_group": "Puzzle",
+      "selection_review_band": "low_under_1000",
+      "baseline_store_observed_at": "2026-10-09T18:57:57.000174+00:00",
+      "baseline_status": {
+        "current_players": "success",
+        "reviews_all_time": "success"
+      }
+    },
+    {
+      "appid": 1562430,
+      "name": "DREDGE",
+      "cohort": "original_30",
+      "editorial_group": "Horror / exploration",
+      "selection_review_band": "high_10000_plus",
+      "baseline_store_observed_at": "2026-10-09T18:58:00.996320+00:00",
+      "baseline_status": {
+        "current_players": "success",
+        "reviews_all_time": "success"
+      }
+    },
+    {
+      "appid": 1262350,
+      "name": "SIGNALIS",
+      "cohort": "original_30",
+      "editorial_group": "Horror / exploration",
+      "selection_review_band": "high_10000_plus",
+      "baseline_store_observed_at": "2026-10-09T18:58:06.606052+00:00",
+      "baseline_status": {
+        "current_players": "success",
+        "reviews_all_time": "success"
+      }
+    },
+    {
+      "appid": 274520,
+      "name": "Darkwood",
+      "cohort": "original_30",
+      "editorial_group": "Horror / exploration",
+      "selection_review_band": "high_10000_plus",
+      "baseline_store_observed_at": "2026-10-09T18:58:10.258110+00:00",
+      "baseline_status": {
+        "current_players": "success",
+        "reviews_all_time": "success"
+      }
+    },
+    {
+      "appid": 720350,
+      "name": "Mundaun",
+      "cohort": "original_30",
+      "editorial_group": "Horror / exploration",
+      "selection_review_band": "mid_1000_to_9999",
+      "baseline_store_observed_at": "2026-10-09T18:58:14.190459+00:00",
+      "baseline_status": {
+        "current_players": "success",
+        "reviews_all_time": "success"
+      }
+    },
+    {
+      "appid": 916350,
+      "name": "Saturnalia",
+      "cohort": "original_30",
+      "editorial_group": "Horror / exploration",
+      "selection_review_band": "low_under_1000",
+      "baseline_store_observed_at": "2026-10-09T18:58:17.978787+00:00",
+      "baseline_status": {
+        "current_players": "success",
+        "reviews_all_time": "network_proxy_refusal"
+      }
+    },
+    {
+      "appid": 294100,
+      "name": "RimWorld",
+      "cohort": "original_30",
+      "editorial_group": "Colony / settlement simulation",
+      "selection_review_band": "high_10000_plus",
+      "baseline_store_observed_at": "2026-10-09T18:58:22.013775+00:00",
+      "baseline_status": {
+        "current_players": "not_attempted",
+        "reviews_all_time": "not_attempted"
+      }
+    },
+    {
+      "appid": 1336490,
+      "name": "Against the Storm",
+      "cohort": "original_30",
+      "editorial_group": "Colony / settlement simulation",
+      "selection_review_band": "high_10000_plus",
+      "baseline_store_observed_at": "2026-10-09T18:58:25.958734+00:00",
+      "baseline_status": {
+        "current_players": "not_attempted",
+        "reviews_all_time": "not_attempted"
+      }
+    },
+    {
+      "appid": 1700870,
+      "name": "Clanfolk",
+      "cohort": "original_30",
+      "editorial_group": "Colony / settlement simulation",
+      "selection_review_band": "mid_1000_to_9999",
+      "baseline_store_observed_at": "2026-10-09T18:58:29.992675+00:00",
+      "baseline_status": {
+        "current_players": "not_attempted",
+        "reviews_all_time": "not_attempted"
+      }
+    },
+    {
+      "appid": 1380910,
+      "name": "Stardeus",
+      "cohort": "original_30",
+      "editorial_group": "Colony / settlement simulation",
+      "selection_review_band": "mid_1000_to_9999",
+      "baseline_store_observed_at": "2026-10-09T18:58:34.513945+00:00",
+      "baseline_status": {
+        "current_players": "not_attempted",
+        "reviews_all_time": "not_attempted"
+      }
+    },
+    {
+      "appid": 693580,
+      "name": "Goblins of Elderstone",
+      "cohort": "original_30",
+      "editorial_group": "Colony / settlement simulation",
+      "selection_review_band": "low_under_1000",
+      "baseline_store_observed_at": "2026-10-09T18:58:38.445007+00:00",
+      "baseline_status": {
+        "current_players": "not_attempted",
+        "reviews_all_time": "not_attempted"
+      }
+    },
+    {
+      "appid": 504230,
+      "name": "Celeste",
+      "cohort": "original_30",
+      "editorial_group": "Platformer / metroidvania",
+      "selection_review_band": "high_10000_plus",
+      "baseline_store_observed_at": "2026-10-09T18:58:42.209106+00:00",
+      "baseline_status": {
+        "current_players": "not_attempted",
+        "reviews_all_time": "not_attempted"
+      }
+    },
+    {
+      "appid": 332200,
+      "name": "Axiom Verge",
+      "cohort": "original_30",
+      "editorial_group": "Platformer / metroidvania",
+      "selection_review_band": "mid_1000_to_9999",
+      "baseline_store_observed_at": "2026-10-09T18:58:45.972072+00:00",
+      "baseline_status": {
+        "current_players": "not_attempted",
+        "reviews_all_time": "not_attempted"
+      }
+    },
+    {
+      "appid": 350070,
+      "name": "Environmental Station Alpha",
+      "cohort": "original_30",
+      "editorial_group": "Platformer / metroidvania",
+      "selection_review_band": "mid_1000_to_9999",
+      "baseline_store_observed_at": "2026-10-09T18:58:50.121814+00:00",
+      "baseline_status": {
+        "current_players": "not_attempted",
+        "reviews_all_time": "not_attempted"
+      }
+    },
+    {
+      "appid": 1231880,
+      "name": "Haiku, the Robot",
+      "cohort": "original_30",
+      "editorial_group": "Platformer / metroidvania",
+      "selection_review_band": "mid_1000_to_9999",
+      "baseline_store_observed_at": "2026-10-09T18:58:54.073467+00:00",
+      "baseline_status": {
+        "current_players": "not_attempted",
+        "reviews_all_time": "not_attempted"
+      }
+    },
+    {
+      "appid": 1368410,
+      "name": "PSYCRON",
+      "cohort": "original_30",
+      "editorial_group": "Platformer / metroidvania",
+      "selection_review_band": "low_under_1000",
+      "baseline_store_observed_at": "2026-10-09T18:59:01.437252+00:00",
+      "baseline_status": {
+        "current_players": "not_attempted",
+        "reviews_all_time": "not_attempted"
+      }
+    },
+    {
+      "appid": 2379780,
+      "name": "Balatro",
+      "cohort": "recent_6",
+      "editorial_group": "Roguelike deckbuilder",
+      "selection_review_band": "high_10000_plus",
+      "baseline_store_observed_at": "2026-10-09T19:00:08.633582+00:00",
+      "baseline_status": {
+        "current_players": "not_attempted",
+        "reviews_all_time": "not_attempted"
+      }
+    },
+    {
+      "appid": 1569580,
+      "name": "Blue Prince",
+      "cohort": "recent_6",
+      "editorial_group": "Puzzle",
+      "selection_review_band": "high_10000_plus",
+      "baseline_store_observed_at": "2026-10-09T19:00:13.441018+00:00",
+      "baseline_status": {
+        "current_players": "not_attempted",
+        "reviews_all_time": "not_attempted"
+      }
+    },
+    {
+      "appid": 2142790,
+      "name": "Fields of Mistria",
+      "cohort": "recent_6",
+      "editorial_group": "Farming / life simulation",
+      "selection_review_band": "high_10000_plus",
+      "baseline_store_observed_at": "2026-10-09T19:00:17.483092+00:00",
+      "baseline_status": {
+        "current_players": "not_attempted",
+        "reviews_all_time": "not_attempted"
+      }
+    },
+    {
+      "appid": 2198150,
+      "name": "Tiny Glade",
+      "cohort": "recent_6",
+      "editorial_group": "Cozy building toy",
+      "selection_review_band": "high_10000_plus",
+      "baseline_store_observed_at": "2026-10-09T19:00:22.769129+00:00",
+      "baseline_status": {
+        "current_players": "not_attempted",
+        "reviews_all_time": "not_attempted"
+      }
+    },
+    {
+      "appid": 813230,
+      "name": "ANIMAL WELL",
+      "cohort": "recent_6",
+      "editorial_group": "Platformer / metroidvania",
+      "selection_review_band": "high_10000_plus",
+      "baseline_store_observed_at": "2026-10-09T19:00:28.229855+00:00",
+      "baseline_status": {
+        "current_players": "not_attempted",
+        "reviews_all_time": "not_attempted"
+      }
+    },
+    {
+      "appid": 1996010,
+      "name": "Crow Country",
+      "cohort": "recent_6",
+      "editorial_group": "Horror / exploration",
+      "selection_review_band": "mid_1000_to_9999",
+      "baseline_store_observed_at": "2026-10-09T19:00:31.988666+00:00",
+      "baseline_status": {
+        "current_players": "not_attempted",
+        "reviews_all_time": "not_attempted"
+      }
+    }
+  ]
+}

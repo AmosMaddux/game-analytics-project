@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-12T15:53:47.406571+00:00",
+  "status": "staged_offline_verified_no_live_run",
+  "stage": "/workspaces/codespaces-blank/fieldnote-keyless-addendum-20261012-1545",
+  "archiveSha256": "c9a82242bd7e35923bb09ee2297c747aafd9d6b05d9eef6ede9ec1ec95ebbc1f",
+  "manifestSha256": "9be91b93131e8d2daf5edcb1dfae6141812cae0fe8166941f7b159e112158eea",
+  "payloadFiles": 22,
+  "offlineTestsPassed": 61,
+  "offlinePlan": {
+    "status": "planned_offline",
+    "planSha256": "abe3776ccf43334ed8baba98603629551d304db734b544cf2105a6801a3fe66f",
+    "addedIdsSha256": "dd8db9e5f320ef3ce306688eba2427149ab7092de57b293091844b5584d12752",
+    "candidateSha256": "c6c5a8c61f9f8cbbd7bf24bfce2deb92a089cf40c6f90a78759a814769d28a42",
+    "addedCount": 160,
+    "sourceDelta": 1,
+    "maximumAttempts": 170,
+    "monthlyAfterSource": 1434,
+    "bootstrapAfterSource": 626
+  },
+  "authoritativeLedgerSha256": "d3ecb4525c6836638bf4a4304df6ebfb27d6dcd4320733048233123f331fd8e0",
+  "authoritativeLedgerUnchanged": true,
+  "liveCalls": 0
+}

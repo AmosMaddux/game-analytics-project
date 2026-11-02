@@ -1,0 +1,27 @@
+✔ frozen 7/30 day half-open windows become inclusive API seconds (2.365574ms)
+✔ invalid/zero-length date windows and non-sentinels fail (0.4571ms)
+✔ zero count is real zero, absent count is invalid (0.294909ms)
+✔ discard review text and author at parser boundary (0.236584ms)
+✔ out-of-window timestamps and duplicate IDs fail closed (0.27254ms)
+✔ caps cannot be relaxed (0.321782ms)
+✔ one-at-a-time spacing and request budget include every attempt (0.622542ms)
+✔ 403 and 429 stop the source with no retry or fallback (0.503835ms)
+✔ transient retry is bounded and counted (0.345785ms)
+✔ aggregate retry allowance cannot be exceeded (0.96345ms)
+✔ a retry blocked before dispatch is not counted as an attempted request (0.326738ms)
+✔ byte and runtime caps stop work (0.382117ms)
+✔ bounded enumeration checks all distinct matching IDs without saving them (0.389423ms)
+✔ enumeration page cap and changing totals cannot report a pass (0.388863ms)
+✔ entire five-sentinel fixture plan passes in 36 calls, sanitized (2.194681ms)
+✔ high-volume proof rejects vacuous and page-sized totals (0.293092ms)
+✔ boundary failure is explicit and never a partial pass (0.504241ms)
+✔ missing CCU does not invent zero or block the unrelated review validation (1.239332ms)
+✔ prior positive evidence is explicitly reused and has no new provenance invented (0.268715ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 96.572866

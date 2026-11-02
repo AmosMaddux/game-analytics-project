@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-10-12T17:53:58.425771+00:00",
+  "status": "final_overview_source_fix_running",
+  "pid": 99546,
+  "port": 4174,
+  "app": "/workspaces/codespaces-blank/fieldnote-overview-preview-20261012-1744/fieldnote-app",
+  "database": "/workspaces/codespaces-blank/fieldnote-final-preview-20261012-1706/runtime-metrics294.sqlite",
+  "sourceSha256": "6c0de350573c19f0f1d4a728aceff32b034890f519a902189a0fdbeb3e171b2d",
+  "sourceTestsPassed": 340,
+  "health": {
+    "status": "ok",
+    "schemaVersion": 3,
+    "gameCount": 1080,
+    "mode": "private_bounded_collection_cache",
+    "liveCollectionEnabled": false,
+    "boundedLocalCollectionAvailable": true,
+    "backgroundCollectionEnabled": false
+  },
+  "panelSummary": {
+    "selectedCount": 294,
+    "igdbGenreCount": 21,
+    "legacyEditorialCount": 28,
+    "asOf": "2026-10-12T17:53:57.341Z"
+  },
+  "runId": "panelmetrics-9a53ddb8-22e8-48f1-b765-e6406c988919",
+  "bundleSha256": "f4c15f5bb0b59d187b4b52af15694ffa4137a735cab8e561e41129db9b858412",
+  "finalLedgerSha256": "cfd908f1983bc87d65ecafd51a66607a486ed4613981e24a137b8b06a185d564",
+  "accepted": 1156,
+  "missing": 20,
+  "sameDatabasePreserved": true,
+  "databaseLogicalSha256": "a85f94134aac8ee39882eae8f26a00fe922d54fa1ffa68794f89b6b54da20c48",
+  "noMetricReimport": true,
+  "stoppedPriorPid": 85303,
+  "stoppedTemporaryPid": 94506,
+  "rollbackApp": "/workspaces/codespaces-blank/fieldnote-final-preview-20261012-1706/fieldnote-app",
+  "rollbackDatabase": "/workspaces/codespaces-blank/fieldnote-final-preview-20261012-1706/runtime-metrics294.sqlite",
+  "rollbackBackup": "/workspaces/codespaces-blank/fieldnote-overview-preview-20261012-1744/pre-source-fix-backup.sqlite",
+  "deepLink": "https://didactic-space-carnival-rw456rp5jqxhp674-4174.app.github.dev/#/releases?population=panel&preset=all&basis=igdb_pc&taxonomy=igdb_genre&metric=reviews7d&reviewAsOf=2026-10-12T00%3A00%3A00Z"
+}

@@ -1,0 +1,39 @@
+{
+  "kind": "offline_cached_identity_analysis",
+  "networkRequests": 0,
+  "credentialReads": 0,
+  "databaseWrites": 0,
+  "sourceCheckpointSha256": "7327d3ee4f06de3ab8f0eebd58c99fb02eb522708da2e13847511282acea9f57",
+  "summary": {
+    "discovered": 1000,
+    "metadataProcessed": 1000,
+    "identityVerified": 625,
+    "identityPending": 184,
+    "quarantined": 191,
+    "pcExactDate": 498,
+    "panelAllocated": 0
+  },
+  "verifiedByDiscoveryStream": {
+    "recent_pc_90_days": 193,
+    "older_pc_2021": 79,
+    "older_pc_2022": 76,
+    "older_pc_2023": 82,
+    "older_pc_2024": 74,
+    "older_pc_2025": 83,
+    "broad_desktop": 39
+  },
+  "priorFailure": "invalid_steam_catalog_page",
+  "counters": {
+    "requests": 31,
+    "retries": 0,
+    "igdbPages": 26,
+    "steamPages": 4,
+    "igdbBytes": 4366491,
+    "steamBytes": 19503394,
+    "elapsedMs": 40836,
+    "pendingReservation": false,
+    "blocked": null
+  },
+  "finishedAt": "2026-10-11T18:50:08.567Z",
+  "sourcePlanHash": "a3ac91e32761b394d88b47208c5d6a7aceae311c51bbd0c82192e671803fd7e7"
+}

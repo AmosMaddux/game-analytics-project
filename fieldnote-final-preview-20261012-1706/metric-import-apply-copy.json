@@ -1,0 +1,12 @@
+{
+  "mode": "applied_to_new_copy",
+  "output": "/workspaces/codespaces-blank/fieldnote-final-preview-20261012-1706/runtime-metrics294.sqlite",
+  "runId": "panelmetrics-9a53ddb8-22e8-48f1-b765-e6406c988919",
+  "accepted": 1156,
+  "missing": 20,
+  "selectedCount": 294,
+  "targetCount": 300,
+  "shortfallCount": 6,
+  "approvalScope": "exact_user_approved_294_manifest",
+  "bundleSha256": "f4c15f5bb0b59d187b4b52af15694ffa4137a735cab8e561e41129db9b858412"
+}

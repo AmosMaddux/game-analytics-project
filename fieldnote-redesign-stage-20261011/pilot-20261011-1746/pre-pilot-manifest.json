@@ -1,0 +1,444 @@
+{
+  "created_at": "2026-10-11T17:46:23.299681+00:00",
+  "staged_app": "/workspaces/codespaces-blank/fieldnote-redesign-stage-20261011/fieldnote-app",
+  "staged_database": "/workspaces/codespaces-blank/fieldnote-redesign-stage-20261011/fieldnote-app/.data/fieldnote.sqlite",
+  "backup_sha256": "71ddfc4f895ef77d269ef6a0647945acd249eceea21eaf75f71a2a369228383c",
+  "source_backup_sha256": "73ed607dc12ac681954366bb21017a56bb969b5ef6d62cf3bbe1b7688af8d8d9",
+  "counts": {
+    "catalog_admissions": 298,
+    "catalog_company_roles": 1714,
+    "catalog_conflicts": 40,
+    "catalog_field_provenance": 5236,
+    "catalog_games": 334,
+    "catalog_labels": 9765,
+    "catalog_links": 2691,
+    "catalog_platforms": 1129,
+    "catalog_releases": 1605,
+    "cohorts": 3,
+    "collection_attempts": 668,
+    "collection_jobs": 7,
+    "collection_rejections": 110,
+    "collection_schedules": 3,
+    "foundation_schema": 3,
+    "games": 334,
+    "genres": 13,
+    "identity_crosswalks": 334,
+    "local_migrations": 4,
+    "marketing_events": 13,
+    "marketing_profiles": 334,
+    "metric_observations": 1661,
+    "research_application_evidence": 0,
+    "research_release_evidence": 0,
+    "review_windows": 6,
+    "snapshot_metadata": 14,
+    "source_health": 4,
+    "steam_tags": 701,
+    "ui_settings": 1
+  },
+  "files": [
+    {
+      "path": "fieldnote-app/.gitignore",
+      "sha256": "700221c0517729086ad026e80e688e7487fee6feaffb5844a7bf071f0cd407e6"
+    },
+    {
+      "path": "fieldnote-app/COLLECTION.md",
+      "sha256": "7bfc207c7e6ad3309e7f7a582a273ed21aef7ae3e633fb850edda5114f12ec8d"
+    },
+    {
+      "path": "fieldnote-app/README.md",
+      "sha256": "230ca6037250cb01c951f461cc292398ce3aae95366748c28d0d721e0364310d"
+    },
+    {
+      "path": "fieldnote-app/REDESIGN-INTEGRATION.md",
+      "sha256": "0b06330b0e16e9670832cada945da5d87063f88be7f318befee107d509d171b3"
+    },
+    {
+      "path": "fieldnote-app/index.html",
+      "sha256": "e82e8f0b074ef175429f0f1e1386c77961c7f816a18e4ac8002299d66bad6063"
+    },
+    {
+      "path": "fieldnote-app/package-lock.json",
+      "sha256": "7878540093959a25537a4191bd04c2840127a0a0a007c5738fabda3d5c8abb36"
+    },
+    {
+      "path": "fieldnote-app/package.json",
+      "sha256": "55ad3e9e6f30b1c8d5bdf79fcd18bd9a58bd4901a13ea596ad54d1070085b26a"
+    },
+    {
+      "path": "fieldnote-app/release-manifest.json",
+      "sha256": "0398293835445243d0051975dc5011437b07e6150a8232409f2d2e256a95877e"
+    },
+    {
+      "path": "fieldnote-app/tsconfig.json",
+      "sha256": "0fb5a2ba7e1a37560e6cf38ca620affdf5d1154f1de5b0803b312a05987b360e"
+    },
+    {
+      "path": "fieldnote-app/wrangler.example.jsonc",
+      "sha256": "ff911ea25d29c5c6bffbf13e946dec95a1fcaacb38ff10215d5e7007169cb472"
+    },
+    {
+      "path": "fieldnote-app/scripts/build.mjs",
+      "sha256": "e77684850a9ee6e8f5792a07485f4a3f822375ef3fc9ef5cde6b0fb7cd1158e4"
+    },
+    {
+      "path": "fieldnote-app/scripts/collect.mjs",
+      "sha256": "fc9cb2404c7dc278c62f50448a88db40db7bcd7dea1e56318617f818a2954450"
+    },
+    {
+      "path": "fieldnote-app/scripts/correct-taxonomy.mjs",
+      "sha256": "892db12df4d01bea25fc5281e2289c2a0562f320d31823debf4b99ccfaa540cd"
+    },
+    {
+      "path": "fieldnote-app/scripts/database.mjs",
+      "sha256": "6a6a4eb5f6af004c479547db1655e1b6968a746d76c9f126819890770ab44f9d"
+    },
+    {
+      "path": "fieldnote-app/scripts/lint.mjs",
+      "sha256": "f9f816c389dbab44442e61b8eb04faf4cd156e76834a8a102021c0fcda50c845"
+    },
+    {
+      "path": "fieldnote-app/scripts/migrate.mjs",
+      "sha256": "38d1c3efab85efc8a45eb13b480ef92bac1e81eb1854a7c47db5c2b572f85776"
+    },
+    {
+      "path": "fieldnote-app/scripts/package.mjs",
+      "sha256": "4d5d25602bd7b92d4ad09502ca0ec13bd9d38f4ec3c7e2b558a69701ab3c36f2"
+    },
+    {
+      "path": "fieldnote-app/scripts/public-input.mjs",
+      "sha256": "dc1fb1466ae2a74d2b20d381405df7101268bf4e7b1436d7ea1e4c508fe12e84"
+    },
+    {
+      "path": "fieldnote-app/scripts/schedule.mjs",
+      "sha256": "3f1a4c81c7a36243aa06cb6e8d54eb2abb78cf407defd87df05a01436da6d2f5"
+    },
+    {
+      "path": "fieldnote-app/scripts/seed-local.mjs",
+      "sha256": "b53273f73e10dadb48d1b2eb5dc0a113e446d05754b1725f91fe44b1fc8a3c8c"
+    },
+    {
+      "path": "fieldnote-app/scripts/serve.mjs",
+      "sha256": "0ac6d4436d6a949bb640cc73172caf2955a8ade68e59bf169a33d16cd5c292d5"
+    },
+    {
+      "path": "fieldnote-app/scripts/verify-catalog.mjs",
+      "sha256": "b4adf241b9aafbc4d988ecbfbbd0dadd42d469d816cc5fedf1e00ac850c333fe"
+    },
+    {
+      "path": "fieldnote-app/public/docs/roadmap.docx",
+      "sha256": "ba7bc4642b424da77d0acfa734e2bc0b5025de2a0098354a2bd2273a876a32c1"
+    },
+    {
+      "path": "fieldnote-app/tests/backend-foundation.test.mjs",
+      "sha256": "9cab084d69d0e30441274c2fd0e0f5a732f4dbe89154b759233fac3346757392"
+    },
+    {
+      "path": "fieldnote-app/tests/collection.test.mjs",
+      "sha256": "412100001f66ca018526428403e76e943722b6c0d3f7b2883f6e381f82389c03"
+    },
+    {
+      "path": "fieldnote-app/tests/foundation.test.mjs",
+      "sha256": "e2063778e3b603543ab4f837c5773f6c73a16dc4c7728e4e415499d658cde9ad"
+    },
+    {
+      "path": "fieldnote-app/tests/igdb-discovery.test.mjs",
+      "sha256": "1084f6f5674214e781e6a1911aba4a337a18f564872ea5a89f2e4cca9ca4f98a"
+    },
+    {
+      "path": "fieldnote-app/tests/model.test.mjs",
+      "sha256": "cc9e55eb65b3047126bdf8dc8e84b50d17af37c840a1a3ee749de7c507d6b6cd"
+    },
+    {
+      "path": "fieldnote-app/tests/release-research-adversarial.test.mjs",
+      "sha256": "47e0a74d33d3263f6c1a5fc69d59f30c1c840338af3a20882ebbbc970dd3484a"
+    },
+    {
+      "path": "fieldnote-app/tests/release-research-render.test.mjs",
+      "sha256": "9338d75f0b9fb624eac52f6dc9dae3866d601b79e8674a6fc4290d65fe089a87"
+    },
+    {
+      "path": "fieldnote-app/tests/release-research.test.mjs",
+      "sha256": "05c0b2ccd226a6fbd528de29a5566f4b55a30086d88b8a42abb53eb1e0016422"
+    },
+    {
+      "path": "fieldnote-app/tests/render.test.mjs",
+      "sha256": "23d4b3b91b7db93700c8aa56ee2cfaa55cefee21a683b4365d41506ff865743c"
+    },
+    {
+      "path": "fieldnote-app/tests/runtime.test.mjs",
+      "sha256": "e2d42d52d0a1c3f96db0b0c503dad19efdf99b3b46d04d56036f383da720a28f"
+    },
+    {
+      "path": "fieldnote-app/tests/scheduler.test.mjs",
+      "sha256": "26714082c0f16de4d877ac8cecaf443f395ac05c9fc8306e4229c50602be7f71"
+    },
+    {
+      "path": "fieldnote-app/tests/source-health-render.test.mjs",
+      "sha256": "dbf04484fc718b5c1fd04ee54a80b23e74b2bbc3b2b632220644a82307ddcd07"
+    },
+    {
+      "path": "fieldnote-app/tests/source-health.test.mjs",
+      "sha256": "43afdfd6a0d259e5f53ff2cd9d0abdb6fea4188e3a0d930d2dbf8256d43d6511"
+    },
+    {
+      "path": "fieldnote-app/tests/taxonomy-correction.test.mjs",
+      "sha256": "ef97441407084c602682995f7c5c21dce2aef0c9d33df667fd27046ae792a2ad"
+    },
+    {
+      "path": "fieldnote-app/tests/unresolved-taxonomy.test.mjs",
+      "sha256": "e0ca2b223aaa4bd371f36bd353c4a48dcefb51c31d4d3876759ec638fb790bd9"
+    },
+    {
+      "path": "fieldnote-app/tests/cohort-foundation/test/analysis.test.mjs",
+      "sha256": "aad8083afaeac257d493ea03d12b91738020bb9fd149f2bda5a0dc474229a6d4"
+    },
+    {
+      "path": "fieldnote-app/tests/cohort-foundation/test/cohort.test.mjs",
+      "sha256": "dd8cbbb51a06b84cf790e6f590940729779848d4426f5120bc288e4dfb1436d7"
+    },
+    {
+      "path": "fieldnote-app/tests/cohort-foundation/test/statistics.test.mjs",
+      "sha256": "d81a0b41d25250457ba4fe666af08804bfff4aade80fa91ac629929c444f84a2"
+    },
+    {
+      "path": "fieldnote-app/tests/cohort-foundation/test/windows.test.mjs",
+      "sha256": "4ba11e94dc7272da4dd6258d46e60774968a99e202ceb800ed0cc5f86a03548c"
+    },
+    {
+      "path": "fieldnote-app/tests/cohort-foundation/review/adversarial.test.mjs",
+      "sha256": "d34a3f339fc91f99a65ea49f2e3d34affa8edf4ef83a7488c84c4df9b35ec140"
+    },
+    {
+      "path": "fieldnote-app/build/collection.mjs",
+      "sha256": "90369cd2d1ea03208c7fd26c79b983ca4a7ad5b096b614bd8188fa32b9e08ecc"
+    },
+    {
+      "path": "fieldnote-app/build/public-manifest.json",
+      "sha256": "398d4b7247424dc43720b706ffd23221de66a227d2f832180b2c92585673e1bf"
+    },
+    {
+      "path": "fieldnote-app/build/seed.mjs",
+      "sha256": "ba7c5ea2494ce755de34bdab4a5e1a8eccbf8841bd87ffe634c7af7c219fe6d6"
+    },
+    {
+      "path": "fieldnote-app/build/worker.mjs",
+      "sha256": "a65f949e36391281158041c90d281019d73c5d8d8e9fbb16dd6e379a6333a697"
+    },
+    {
+      "path": "fieldnote-app/dist/index.html",
+      "sha256": "9a2b6c5b6a2440c8fce1bb498022a3d1530f7ed237e9f7045815479419394988"
+    },
+    {
+      "path": "fieldnote-app/dist/docs/roadmap.docx",
+      "sha256": "ba7bc4642b424da77d0acfa734e2bc0b5025de2a0098354a2bd2273a876a32c1"
+    },
+    {
+      "path": "fieldnote-app/dist/assets/app.css",
+      "sha256": "ad190200e6176e620fd085d443472a285398d00270cd06cb1b3bc3eb1f0b2c7d"
+    },
+    {
+      "path": "fieldnote-app/dist/assets/app.js",
+      "sha256": "667286c1576bb1923fed4fa3b5e50ffed4afd1203e9973f0454c91ac5eea9531"
+    },
+    {
+      "path": "fieldnote-app/src/App.tsx",
+      "sha256": "6084627d13582200a746d07e500bd611bffe64420eed168732c29b88a06d3d63"
+    },
+    {
+      "path": "fieldnote-app/src/Browse.tsx",
+      "sha256": "c43e037cd862d8db5762ecfa1e4fe8c98e6f5119c00155750d725d668f257adb"
+    },
+    {
+      "path": "fieldnote-app/src/GameDetail.tsx",
+      "sha256": "4c684b0f6b9ad24fc44842b0c51687afb0d45e5f9c4dae2fe9db5536e327754c"
+    },
+    {
+      "path": "fieldnote-app/src/Methods.tsx",
+      "sha256": "7fe8139a7a33c06beaae35dca04cc308025cba83cb58fb5b083cc2d1b597053e"
+    },
+    {
+      "path": "fieldnote-app/src/ReleaseResearch.tsx",
+      "sha256": "a6f8fb504c27f98d2b1f89c605a7fa127f9a36b687ec98b5c00bc58f34ca61f1"
+    },
+    {
+      "path": "fieldnote-app/src/Settings.tsx",
+      "sha256": "7a1317bb72eb17861363ba24843d60aa1f766fb2b77f032f2f0adde0a04cba23"
+    },
+    {
+      "path": "fieldnote-app/src/SourceHealth.tsx",
+      "sha256": "cf0dc881912f71b82ef94b1a391b790e8cce819254a696ae67ebf35dd16faac4"
+    },
+    {
+      "path": "fieldnote-app/src/main.tsx",
+      "sha256": "7059ec61701ef5c02339e1f29468ebdbc68fc84f6f8e74377f8202e40757bf87"
+    },
+    {
+      "path": "fieldnote-app/src/model.ts",
+      "sha256": "6418858f6f6a945b858d8c16eb8f94e470554ab7632377ad690a2afbf19826bf"
+    },
+    {
+      "path": "fieldnote-app/src/research-types.ts",
+      "sha256": "def774eaf09d3438877a54047635ea10c51f14968bbd99a5873ba4236b561e72"
+    },
+    {
+      "path": "fieldnote-app/src/style.css",
+      "sha256": "fdfe9b0e1291fd14293f76a44249ec629d4147cf85c1c961e6f47bdde5e73239"
+    },
+    {
+      "path": "fieldnote-app/src/types.ts",
+      "sha256": "f6ed008c0e60fc0f15f2187608fd47cb432162a6ba46a20d7d7f3dc2871292de"
+    },
+    {
+      "path": "fieldnote-app/src/ui.tsx",
+      "sha256": "fd2733dd315062123c4fe4fddae04119320f1556150e1b9d62140bf102b513e5"
+    },
+    {
+      "path": "fieldnote-app/collectors/cli.mjs",
+      "sha256": "d148cee0ae32d470e551ec7a5ac0b2ffe79fce85525b15a97c75a101ae47b164"
+    },
+    {
+      "path": "fieldnote-app/collectors/igdb.mjs",
+      "sha256": "28cd7a93dd51c7b95e3aad3c2a2b7c1baa8aaa078b77d18317e90ae1d668ebcb"
+    },
+    {
+      "path": "fieldnote-app/collectors/io.mjs",
+      "sha256": "7555f872b569f737faeb3887b5fc923ca529d212d9126ac789fa798f3261e489"
+    },
+    {
+      "path": "fieldnote-app/collectors/launch-catalog-probe.mjs",
+      "sha256": "b803ffd59750f52c8f59048b75a1859a90fcd1b2833a18e801404a1e89c84b87"
+    },
+    {
+      "path": "fieldnote-app/collectors/lease.mjs",
+      "sha256": "8088102a389c8dd90ec80b015ceca151b59309beec251ce860054c260c19f48d"
+    },
+    {
+      "path": "fieldnote-app/collectors/persistence.mjs",
+      "sha256": "8bb74f18df3cf3673aac87725ead5bfe098e5f17fcd40ca4e9df8598f3ee974c"
+    },
+    {
+      "path": "fieldnote-app/collectors/scheduler.mjs",
+      "sha256": "2b832f352e731d5923d8e093e12080e28ef2add897ed445601801f2378ea3c50"
+    },
+    {
+      "path": "fieldnote-app/collectors/steam-catalog-probe.mjs",
+      "sha256": "77e0c9e6a69d3876dd6b9d3f3b5a96976e82e9466c41d536955682f63bd7c712"
+    },
+    {
+      "path": "fieldnote-app/collectors/steam-catalog.mjs",
+      "sha256": "475b0c75a1cc1253e0b3034132114e4ea73fcecc678bac0a6b83a4ece64671c6"
+    },
+    {
+      "path": "fieldnote-app/collectors/steam.mjs",
+      "sha256": "beab4845802fe83ce62ae37df2223f0a3e071f34f8a66372d18e7e39af35c68b"
+    },
+    {
+      "path": "fieldnote-app/collectors/taxonomy.mjs",
+      "sha256": "bad8074c55d972b5ffda47e715d34bc05c68b63aa773e316d9cad9a2cfd1187b"
+    },
+    {
+      "path": "fieldnote-app/collectors/transport.mjs",
+      "sha256": "1bd12337d80e514d26c481952cb8f784b135948eef5fa98f2df2a54d7b94f39f"
+    },
+    {
+      "path": "fieldnote-app/migrations/0001_foundation.sql",
+      "sha256": "664eb54e21f21ef326ce0003bd996ef2fc65ed848fec2263ee50fde79a984965"
+    },
+    {
+      "path": "fieldnote-app/migrations/0002_review_windows.sql",
+      "sha256": "8d578ffd0b34398b92ee7777a67809dc5c7399ccdc800b6f08f5728050294887"
+    },
+    {
+      "path": "fieldnote-app/migrations/0003_collection.sql",
+      "sha256": "f37c80d7271459c6e1a1e9b4e3ed6880a386be90d908f24f56cb1bb9302b6d9a"
+    },
+    {
+      "path": "fieldnote-app/migrations/0004_release_research.sql",
+      "sha256": "cc5b348545960a70b23f05e96c261e21b95539dcbfb2e1227f06852c184259cf"
+    },
+    {
+      "path": "fieldnote-app/migrations/rollback/0004_release_research.sql",
+      "sha256": "6c0cc8a89597019a03ec870db57c44316f851759a0b495ba469d8c1f4bd1cf68"
+    },
+    {
+      "path": "fieldnote-app/backend/collection-import.ts",
+      "sha256": "af371e666879c13fe5c6eaf7c7b12ecf5e43bc78656b42ce5c4fcf13c072ea41"
+    },
+    {
+      "path": "fieldnote-app/backend/db.ts",
+      "sha256": "f03c2330b4ef5f0ede7fd6d597cbfe87f81c19e8bb0f63742207558c8e266bc5"
+    },
+    {
+      "path": "fieldnote-app/backend/evidence.ts",
+      "sha256": "3bfe9bf898a95e2363668d4f623714cf5e176ac21e5914dfd5e21a92443e280a"
+    },
+    {
+      "path": "fieldnote-app/backend/records.ts",
+      "sha256": "f73b1b3ec4e987c6049df0f43a73a6dffb44e93babcfb8c4914cc99ccbdbf798"
+    },
+    {
+      "path": "fieldnote-app/backend/release-research.ts",
+      "sha256": "4bdd94b9a0f1abbd053717dfdd3e0acdb5ee915c6e962deb9f4711b897b6e5fa"
+    },
+    {
+      "path": "fieldnote-app/backend/repository.ts",
+      "sha256": "460fa99df6bb3615599bb2d2456d08f47beebb8ddd72fd0bb60f611873c31a4a"
+    },
+    {
+      "path": "fieldnote-app/backend/seed.ts",
+      "sha256": "5e336f989e4e8b266cb214cb9231fb084391c7fc3fd659ab6aeef8c7fcd7d1a4"
+    },
+    {
+      "path": "fieldnote-app/backend/settings.ts",
+      "sha256": "749eede89d97c822322ebb2c950ff726e8313fc0d04643da45753059f7403786"
+    },
+    {
+      "path": "fieldnote-app/backend/source-health.ts",
+      "sha256": "7b6c6b72b0313dd769e03578de3b9531af53e29705879ce632dfcbb99446b194"
+    },
+    {
+      "path": "fieldnote-app/backend/worker.ts",
+      "sha256": "6e8068465746dc7b81f1940aa564a89bc2c1e00da9f26318f258408943708109"
+    },
+    {
+      "path": "fieldnote-app/backend/cohort-foundation/README.md",
+      "sha256": "4f309d3876c64f6d611557ff9c9c438d9fe6e1fc091fc467005de563116a26b8"
+    },
+    {
+      "path": "fieldnote-app/backend/cohort-foundation/VALIDATION.txt",
+      "sha256": "2d0be1bb7d6ad125ba469cc1826d2570a9186454a9917477952e60c194a45a26"
+    },
+    {
+      "path": "fieldnote-app/backend/cohort-foundation/analysis.mjs",
+      "sha256": "477784a70ba639da398504ce64d5de5ac15100e8d0ffcaa25efff015af82e6a1"
+    },
+    {
+      "path": "fieldnote-app/backend/cohort-foundation/index.d.mts",
+      "sha256": "999b8e2dc615b8a38065b6af0e4ff756f37d3c6951e50d0c82d44b37d0175136"
+    },
+    {
+      "path": "fieldnote-app/backend/cohort-foundation/index.mjs",
+      "sha256": "4864587d6cab28266459cd76d64ce2c94914a7db1e2b90b678f33b0a3fdf785f"
+    },
+    {
+      "path": "fieldnote-app/backend/cohort-foundation/releases.mjs",
+      "sha256": "77d2654c3b1fdfc9c4eee73bb4840546f602d46120638731b28d758ce99cd762"
+    },
+    {
+      "path": "fieldnote-app/backend/cohort-foundation/statistics.mjs",
+      "sha256": "07b12395b5c0d80f9fea5bda6a5a0f9477e7b7852a03ba2355f42b66d34ca7d4"
+    },
+    {
+      "path": "fieldnote-app/backend/cohort-foundation/windows.mjs",
+      "sha256": "f1f45b5fc324da39fc259a10b811a5b18496708723a5656aae48dab8e9747b70"
+    },
+    {
+      "path": "fieldnote-app/seed/manifest.json",
+      "sha256": "24907ed63e965b2b719c1d04e711c0b3b63818fed18c84fea8f5efacee20be35"
+    },
+    {
+      "path": "fieldnote-app/seed/snapshot.json",
+      "sha256": "b82ced8fafda2393203ede54e9958c7144058790197a6d17ce7ee9d5cc852630"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "job_id": "metrics-14107c42-52a4-4b41-8c03-25b0cd3f9150",
+  "status": "partial",
+  "counters_json": "{\"requests\":668,\"pages\":0,\"bytes\":421527,\"retries\":0,\"elapsedMs\":673500,\"accepted\":659,\"failed\":9,\"skipped\":0}",
+  "error_code": null
+}

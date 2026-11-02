@@ -1,0 +1,44 @@
+{
+  "savedAt": "2026-10-11T19:40:27.466844+00:00",
+  "baseSourceHashes": {
+    ".gitignore": "0cca18050cbff8b48f4f592761496338b046c19f8e9fe7c250b3b18e2e77784c",
+    "PACKAGE-MANIFEST.json": "af3bfb6a358e039e99717eac046b289fc1b68b7dc23e6cf39ba60e13d73dc786",
+    "README.md": "db66ed5704752383c4df8c55337d154f0b3778b5c0863837b60a1b452b94c51b",
+    "VERIFICATION.md": "464b4a14b88c8a210e2ff0382c4b7701cf379c50103fb57f9ea4082eef26cd67",
+    "cli.mjs": "e19cf2a0cdf760c6447623025f4c9ac960e89137f7bf238049f88725842dac09",
+    "domain.mjs": "ce59c6f8357a69ad024c953e60f03d60129be9aa7a6b125e976d372bc432c449",
+    "io.mjs": "bd4ee258c71f51b36ea12e607a3d06457259314c03a75eb1557a68778127ae61",
+    "launch.mjs": "1f21013dbadb4660b149d4759bb7426fd064c47efceb87366cc09cbeec54fd10",
+    "offline-plan.json": "2bc9e80484a216cfe4ee20004396d665dd8ceb9e5ffe23b1538269f7530c511c",
+    "offline-tests.log": "a2a158a4104defa164cca1bb1129a8cbc9acbf11ea72925211e1c22eaa2927ab",
+    "runner.mjs": "ab6ec494bedb0bda99742e2c73a87c4a04292b56f04fd0f91ebcc53c4cb5f03b",
+    "tests/domain.test.mjs": "b2143d3c90c0136db015bee71541e5aecf3edaaf11ddc80d3b03df12bd0c4117",
+    "tests/fixtures.mjs": "a448e7d61a01c5554eabbe55d367e71bc5e227151e3527a3d0680b6d28e96ccb",
+    "tests/io.test.mjs": "40e20c7b7815ee93cbc6a4ef7f4c3ea78f0b17331dbb310ad032659d6d3e91bd",
+    "tests/runner.test.mjs": "caeb27162ca09c761780ddb891ab79471da38a152c6aa1e47b6353709f919129",
+    "tests/transport.test.mjs": "ccca7e60d538a411aaffda685893b6b8dd46540234b4f7ccce9b6d8567a57f29",
+    "transport.mjs": "bea841c01d8d37ffdee5e0af51c1e42381aa996037bc9817955c81d12cc39c52"
+  },
+  "originalRunHashes": {
+    "checkpoint.json": "7327d3ee4f06de3ab8f0eebd58c99fb02eb522708da2e13847511282acea9f57",
+    "candidates.json": "cdd2278bea3fa218f987d08a7d0f71090c668cab9b74cea15f5910b322eff80f"
+  },
+  "budget": {
+    "requests": 31,
+    "retries": 0,
+    "igdbPages": 26,
+    "steamPages": 4,
+    "igdbBytes": 4366491,
+    "steamBytes": 19503394,
+    "elapsedMs": 40836,
+    "pendingReservation": false,
+    "blocked": null
+  },
+  "steam": {
+    "cursor": 4110900,
+    "pages": 3,
+    "complete": false,
+    "status": "partial"
+  },
+  "metadataCount": 1000
+}

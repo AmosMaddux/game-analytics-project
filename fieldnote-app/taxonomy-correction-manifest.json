@@ -1,0 +1,117 @@
+{
+  "kind": "fieldnote-m3-taxonomy-correction",
+  "baseArchiveSha256": "59d61a94f652733ec435d0d7fa86404d21a41460ce3749a64f44ebaf08db1a12",
+  "reviewedPlanSha256": "154f7e7d0de255a2025138bc3970f9175c95eb2d6f9d06cc043e02167e7b8189",
+  "files": [
+    {
+      "path": "src/GameDetail.tsx",
+      "sha256": "4c684b0f6b9ad24fc44842b0c51687afb0d45e5f9c4dae2fe9db5536e327754c",
+      "bytes": 17383
+    },
+    {
+      "path": "src/SourceHealth.tsx",
+      "sha256": "cf0dc881912f71b82ef94b1a391b790e8cce819254a696ae67ebf35dd16faac4",
+      "bytes": 14249
+    },
+    {
+      "path": "src/model.ts",
+      "sha256": "6418858f6f6a945b858d8c16eb8f94e470554ab7632377ad690a2afbf19826bf",
+      "bytes": 9805
+    },
+    {
+      "path": "src/types.ts",
+      "sha256": "f6ed008c0e60fc0f15f2187608fd47cb432162a6ba46a20d7d7f3dc2871292de",
+      "bytes": 10563
+    },
+    {
+      "path": "backend/repository.ts",
+      "sha256": "460fa99df6bb3615599bb2d2456d08f47beebb8ddd72fd0bb60f611873c31a4a",
+      "bytes": 11541
+    },
+    {
+      "path": "backend/source-health.ts",
+      "sha256": "7b6c6b72b0313dd769e03578de3b9531af53e29705879ce632dfcbb99446b194",
+      "bytes": 16089
+    },
+    {
+      "path": "collectors/cli.mjs",
+      "sha256": "d148cee0ae32d470e551ec7a5ac0b2ffe79fce85525b15a97c75a101ae47b164",
+      "bytes": 9906
+    },
+    {
+      "path": "collectors/igdb.mjs",
+      "sha256": "28cd7a93dd51c7b95e3aad3c2a2b7c1baa8aaa078b77d18317e90ae1d668ebcb",
+      "bytes": 40790
+    },
+    {
+      "path": "collectors/taxonomy.mjs",
+      "sha256": "bad8074c55d972b5ffda47e715d34bc05c68b63aa773e316d9cad9a2cfd1187b",
+      "bytes": 9328
+    },
+    {
+      "path": "scripts/correct-taxonomy.mjs",
+      "sha256": "892db12df4d01bea25fc5281e2289c2a0562f320d31823debf4b99ccfaa540cd",
+      "bytes": 6671
+    },
+    {
+      "path": "scripts/verify-catalog.mjs",
+      "sha256": "b4adf241b9aafbc4d988ecbfbbd0dadd42d469d816cc5fedf1e00ac850c333fe",
+      "bytes": 3955
+    },
+    {
+      "path": "tests/igdb-discovery.test.mjs",
+      "sha256": "1084f6f5674214e781e6a1911aba4a337a18f564872ea5a89f2e4cca9ca4f98a",
+      "bytes": 33126
+    },
+    {
+      "path": "tests/model.test.mjs",
+      "sha256": "cc9e55eb65b3047126bdf8dc8e84b50d17af37c840a1a3ee749de7c507d6b6cd",
+      "bytes": 6324
+    },
+    {
+      "path": "tests/source-health-render.test.mjs",
+      "sha256": "dbf04484fc718b5c1fd04ee54a80b23e74b2bbc3b2b632220644a82307ddcd07",
+      "bytes": 8320
+    },
+    {
+      "path": "tests/taxonomy-correction.test.mjs",
+      "sha256": "ef97441407084c602682995f7c5c21dce2aef0c9d33df667fd27046ae792a2ad",
+      "bytes": 4711
+    },
+    {
+      "path": "tests/unresolved-taxonomy.test.mjs",
+      "sha256": "e0ca2b223aaa4bd371f36bd353c4a48dcefb51c31d4d3876759ec638fb790bd9",
+      "bytes": 5743
+    },
+    {
+      "path": "dist/assets/app.js",
+      "sha256": "01f28a6135605f572223194e9d913c70e2e3fb7cd75f829ce51c7a90b32fa697",
+      "bytes": 307069
+    },
+    {
+      "path": "build/collection.mjs",
+      "sha256": "90369cd2d1ea03208c7fd26c79b983ca4a7ad5b096b614bd8188fa32b9e08ecc",
+      "bytes": 26705
+    },
+    {
+      "path": "build/public-manifest.json",
+      "sha256": "1d8f6552fd873675a23290c937eb885933492dff7f7ea7ef4d93f77e837af729",
+      "bytes": 357
+    },
+    {
+      "path": "build/worker.mjs",
+      "sha256": "1e30bca2b9cf331d10cca605071d66fa181da839699b1822f896b9b4ba205746",
+      "bytes": 38300
+    },
+    {
+      "path": "COLLECTION.md",
+      "sha256": "7bfc207c7e6ad3309e7f7a582a273ed21aef7ae3e633fb850edda5114f12ec8d",
+      "bytes": 12008
+    },
+    {
+      "path": "MILESTONE-3-REPORT.md",
+      "sha256": "c1f663f0c330381e4c94975fa977f9018695ae22dc4c38bc3ba114f530167f7a",
+      "bytes": 14476
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+✔ fixture is the exact stopped ledger and valid historical five-field attempts remain valid (91.333224ms)
+✔ one successful diagnostic saves the explicit count and pauses after this game (553.854405ms)
+✔ diagnostic 404 is one charged attempt and no implicit missing value (371.14909ms)
+✔ diagnostic 500 is one charged attempt and no implicit missing value (345.219722ms)
+✔ diagnostic 401 is one charged attempt and no implicit missing value (399.759496ms)
+✔ diagnostic 403 is one charged attempt and no implicit missing value (345.038111ms)
+✔ diagnostic 429 is one charged attempt and no implicit missing value (394.426824ms)
+✔ diagnostic 302 is one charged attempt and no implicit missing value (401.896031ms)
+✔ diagnostic network is one charged attempt and no implicit missing value (371.395274ms)
+✔ changed state cannot enter this exact one-time diagnostic (242.118555ms)
+✔ numeric status output rejects arbitrary text and out-of-range values on reload (34.051754ms)
+✔ CLI requires the one exact stopped snapshot hash before reading state (0.714056ms)
+✔ new status requires a real response UTC instant within the job and checkpoint bounds (36.238949ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3708.014939

@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "name": "steam-validation-probe",
+  "version": "1.1.0",
+  "built_at_utc": "2026-10-10T18:02:30Z",
+  "live_requests_made_during_build": 0,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 6703,
+      "sha256": "1602a72e6e34987c52a7c1e4efc586d0addb1aa62e0d07db39d60a7e57f3c1b8"
+    },
+    {
+      "path": "SOURCE-NOTES.md",
+      "bytes": 2042,
+      "sha256": "55135133b9dc3c0ecc95184b495d1bde967a2bce5c3dc1b4977342877020b327"
+    },
+    {
+      "path": "data/frozen-targets.json",
+      "bytes": 15709,
+      "sha256": "3c78fa25691cf7a3ec3cf67c03fcbda083318f7e3270372af69c77fd796811ff"
+    },
+    {
+      "path": "data/prior-cohort-report.json",
+      "bytes": 112666,
+      "sha256": "7f590ce7969cd4b638b8c23d45dcaa829debfde9e5afd9651f0936a7bcc3b944"
+    },
+    {
+      "path": "scripts/probe-core.mjs",
+      "bytes": 26913,
+      "sha256": "fd0a2cd5488312912d85afeabec8d82e3d8d0c780dc8ee2b465e5f50fdebfb86"
+    },
+    {
+      "path": "scripts/run-steam-validation.sh",
+      "bytes": 506,
+      "sha256": "9e9978d8591b278683a7fe29f6d7d2252cf67d4da89814f7cf412b40791ae8d8"
+    },
+    {
+      "path": "scripts/launch.mjs",
+      "bytes": 1838,
+      "sha256": "7c66412cd5e047156261ff3402a39b3dd7427d780c96a818fc8e6152171a6c48"
+    },
+    {
+      "path": "scripts/steam-validation.mjs",
+      "bytes": 4481,
+      "sha256": "098a12f4f68a20211ab630f78900add234412f7e6b3d8bbfd2aeb8b5b189ea51"
+    },
+    {
+      "path": "scripts/verify-bundle.mjs",
+      "bytes": 1597,
+      "sha256": "1f83e20b8b143028ea951d711cba289735bfdf0bb2f98b991dfc04643dddc474"
+    },
+    {
+      "path": "tests/probe.test.mjs",
+      "bytes": 20554,
+      "sha256": "1436b45182e8a9a7e32036c3b49ac39966d46bf6e1400158dd1337116eee065f"
+    }
+  ]
+}

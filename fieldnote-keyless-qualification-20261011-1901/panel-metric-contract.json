@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "fieldnote-panel-metrics-1.0",
+  "sourcePolicyVersion": "steam-dated-counts-1.0",
+  "status": "template",
+  "explanation": "Contract template only. The exact v1.1 source proof passed; no live qualification or 300-game panel collection has run.",
+  "runId": null,
+  "validationEvidence": {
+    "reportSha256": "a8efd1423272343178ed1813ad03660a18e74169f032c0e06fceb90bd2e40b6f",
+    "reportRunId": "sentinels-03e6a35c-ea91-4e3e-aebf-ba735b1720aa",
+    "validatedAt": "2026-10-11T18:18:15.524Z"
+  },
+  "panel": {
+    "inputSchemaVersion": "fieldnote-panel-candidates-1.0",
+    "manifestSha256": null,
+    "populationVersion": null,
+    "appids": []
+  },
+  "windows": {
+    "seven": {
+      "start": null,
+      "endExclusive": null
+    },
+    "thirty": {
+      "start": null,
+      "endExclusive": null
+    }
+  },
+  "filters": {
+    "filter": 1,
+    "languages": [
+      "all"
+    ],
+    "review_type": 0,
+    "purchase_type": 0,
+    "filter_offtopic_activity": true,
+    "display_language": "english"
+  },
+  "observations": [],
+  "observationContract": {
+    "observationKey": "stable hash of runId, appid, metric, source policy, filters and exact window",
+    "appid": "positive uint32 from exactly matching panel membership",
+    "metric": [
+      "reviews7d",
+      "reviews30d",
+      "lifetimeReviews",
+      "players"
+    ],
+    "value": "nonnegative safe integer or null",
+    "missingReason": "null for numeric observations; explicit reason for null",
+    "observedAt": "strict UTC ISO retrieval instant",
+    "window": "null for lifetime/CCU; exact {start,endExclusive} Unix seconds for 7/30 days",
+    "sourceUrl": "canonical allowlisted API path without query parameters",
+    "sourceField": [
+      "total_matching",
+      "player_count"
+    ],
+    "unit": [
+      "surviving_matching_review_count",
+      "current_online_players"
+    ],
+    "methodVersion": "steam-dated-counts-1.0"
+  },
+  "importContract": {
+    "completedStates": [
+      "completed",
+      "completed_with_missing"
+    ],
+    "expectedGames": 300,
+    "expectedObservations": 1200,
+    "passedSentinelEvidenceShaRequired": true,
+    "exactPanelMembershipAndHashRequired": true,
+    "arbitraryHistoricCountsMayBeRelabeledCurrent": false,
+    "stoppedOrTemplateImportAllowed": false
+  }
+}

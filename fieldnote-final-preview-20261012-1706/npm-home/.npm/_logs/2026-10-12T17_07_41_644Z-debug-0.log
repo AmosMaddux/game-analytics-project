@@ -1,0 +1,64 @@
+0 verbose cli /usr/local/share/nvm/versions/node/v24.21.0/bin/node /home/codespace/nvm/current/bin/npm
+1 info using npm@11.19.0
+2 info using node@v24.21.0
+3 silly config load:file:/usr/local/share/nvm/versions/node/v24.21.0/lib/node_modules/npm/npmrc
+4 silly config load:file:/workspaces/codespaces-blank/fieldnote-final-preview-20261012-1706/fieldnote-app/.npmrc
+5 silly config load:file:/workspaces/codespaces-blank/fieldnote-final-preview-20261012-1706/npm-home/user.npmrc
+6 silly config load:file:/workspaces/codespaces-blank/fieldnote-final-preview-20261012-1706/npm-home/global.npmrc
+7 verbose title npm ci
+8 verbose argv "ci" "--ignore-scripts" "--no-audit" "--no-fund"
+9 verbose logfile logs-max:10 dir:/workspaces/codespaces-blank/fieldnote-final-preview-20261012-1706/npm-home/.npm/_logs/2026-10-12T17_07_41_644Z-
+10 verbose logfile /workspaces/codespaces-blank/fieldnote-final-preview-20261012-1706/npm-home/.npm/_logs/2026-10-12T17_07_41_644Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:2348810240 maxSize:587202560 maxEntrySize:293601280
+13 silly packumentCache heap:2348810240 maxSize:587202560 maxEntrySize:293601280
+14 silly idealTree buildDeps
+15 silly reify moves {}
+16 http cache scheduler@https://registry.npmjs.org/scheduler/-/scheduler-0.27.0.tgz 1ms (cache hit)
+17 http cache typescript@https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz 0ms (cache hit)
+18 http cache react-dom@https://registry.npmjs.org/react-dom/-/react-dom-19.2.4.tgz 0ms (cache hit)
+19 http cache react@https://registry.npmjs.org/react/-/react-19.2.4.tgz 0ms (cache hit)
+20 http cache esbuild@https://registry.npmjs.org/esbuild/-/esbuild-0.25.12.tgz 0ms (cache hit)
+21 http cache csstype@https://registry.npmjs.org/csstype/-/csstype-3.2.3.tgz 0ms (cache hit)
+22 http cache @types/react-dom@https://registry.npmjs.org/@types/react-dom/-/react-dom-19.2.7.tgz 0ms (cache hit)
+23 http cache @types/react@https://registry.npmjs.org/@types/react/-/react-19.2.18.tgz 0ms (cache hit)
+24 http cache @esbuild/linux-x64@https://registry.npmjs.org/@esbuild/linux-x64/-/linux-x64-0.25.12.tgz 0ms (cache hit)
+25 silly tarball no local data for scheduler@https://registry.npmjs.org/scheduler/-/scheduler-0.27.0.tgz. Extracting by manifest.
+26 silly tarball no local data for typescript@https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz. Extracting by manifest.
+27 silly tarball no local data for react-dom@https://registry.npmjs.org/react-dom/-/react-dom-19.2.4.tgz. Extracting by manifest.
+28 silly tarball no local data for react@https://registry.npmjs.org/react/-/react-19.2.4.tgz. Extracting by manifest.
+29 silly tarball no local data for esbuild@https://registry.npmjs.org/esbuild/-/esbuild-0.25.12.tgz. Extracting by manifest.
+30 silly tarball no local data for csstype@https://registry.npmjs.org/csstype/-/csstype-3.2.3.tgz. Extracting by manifest.
+31 silly tarball no local data for @types/react-dom@https://registry.npmjs.org/@types/react-dom/-/react-dom-19.2.7.tgz. Extracting by manifest.
+32 silly tarball no local data for @types/react@https://registry.npmjs.org/@types/react/-/react-19.2.18.tgz. Extracting by manifest.
+33 silly tarball no local data for @esbuild/linux-x64@https://registry.npmjs.org/@esbuild/linux-x64/-/linux-x64-0.25.12.tgz. Extracting by manifest.
+34 http fetch GET 200 https://registry.npmjs.org/npm 155ms
+35 http fetch GET 200 https://registry.npmjs.org/@types/react-dom/-/react-dom-19.2.7.tgz 319ms (cache miss)
+36 http fetch GET 200 https://registry.npmjs.org/scheduler/-/scheduler-0.27.0.tgz 330ms (cache miss)
+37 http fetch GET 200 https://registry.npmjs.org/esbuild/-/esbuild-0.25.12.tgz 353ms (cache miss)
+38 http fetch GET 200 https://registry.npmjs.org/@types/react/-/react-19.2.18.tgz 412ms (cache miss)
+39 http fetch GET 200 https://registry.npmjs.org/react/-/react-19.2.4.tgz 417ms (cache miss)
+40 http fetch GET 200 https://registry.npmjs.org/csstype/-/csstype-3.2.3.tgz 442ms (cache miss)
+41 http fetch GET 200 https://registry.npmjs.org/react-dom/-/react-dom-19.2.4.tgz 700ms (cache miss)
+42 http fetch GET 200 https://registry.npmjs.org/@esbuild/linux-x64/-/linux-x64-0.25.12.tgz 744ms (cache miss)
+43 http fetch GET 200 https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz 981ms (cache miss)
+44 silly ADD node_modules/typescript
+45 silly ADD node_modules/scheduler
+46 silly ADD node_modules/react-dom
+47 silly ADD node_modules/react
+48 silly ADD node_modules/esbuild
+49 silly ADD node_modules/csstype
+50 silly ADD node_modules/@types/react-dom
+51 silly ADD node_modules/@types/react
+52 silly ADD node_modules/@esbuild/linux-x64
+53 verbose cwd /workspaces/codespaces-blank/fieldnote-final-preview-20261012-1706/fieldnote-app
+54 verbose os Linux 6.8.0-1064-azure
+55 verbose node v24.21.0
+56 verbose npm  v11.19.0
+57 notice
+57 notice New major version of npm available! 11.19.0 -> 12.2.0
+57 notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+57 notice To update run: npm install -g npm@12.2.0
+57 notice  { force: true, Symbol(proc-log.meta): true }
+58 verbose exit 0
+59 info ok

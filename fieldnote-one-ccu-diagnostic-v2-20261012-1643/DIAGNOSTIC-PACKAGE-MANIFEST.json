@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "fieldnote-one-ccu-diagnostic-package-1.0",
+  "scope": "Exactly one charged retry of 917640:players in the existing stopped panel job; then pause or stop. No automatic missing-value conversion.",
+  "expectedLedgerSha256": "0ca45bbca754e1a216f25b254a6c08dd8ad01d6dea57375c389f946add0a6015",
+  "members": [
+    {
+      "path": "collect-review-campaign.mjs",
+      "bytes": 34404,
+      "sha256": "3235e4abbb64641a70313abc32b3d331236ea06b876f1553b98ee2c8e4bdf8af"
+    },
+    {
+      "path": "diagnose-stopped-ccu.mjs",
+      "bytes": 4778,
+      "sha256": "e1b8f8587c8724e0e6838bde6b3ff945c2d81dc3062764866eca40a9a16e1996"
+    },
+    {
+      "path": "qualification-campaign.mjs",
+      "bytes": 18534,
+      "sha256": "ec7e7815a317a9d41f69657d9d09314d3cf16bd4223eb535e1906fa7e074676e"
+    },
+    {
+      "path": "validate-reviews.mjs",
+      "bytes": 21395,
+      "sha256": "b8dd20609af67841c0f6449cef1c94ea50930670f79d6c52118022e0d004357c"
+    },
+    {
+      "path": "passed-sentinel-evidence.json",
+      "bytes": 11475,
+      "sha256": "a8efd1423272343178ed1813ad03660a18e74169f032c0e06fceb90bd2e40b6f"
+    },
+    {
+      "path": "diagnose-stopped-ccu.test.mjs",
+      "bytes": 4559,
+      "sha256": "813f92017d063604175d1ebf32af6aee3215815607a5e715271d75b34aa232a8"
+    },
+    {
+      "path": "stopped-ledger-fixture.json",
+      "bytes": 536994,
+      "sha256": "0ca45bbca754e1a216f25b254a6c08dd8ad01d6dea57375c389f946add0a6015"
+    },
+    {
+      "path": "run-one-ccu-diagnostic.sh",
+      "bytes": 1053,
+      "sha256": "cb1525c98bd33dd78904f034bcec140a921214748a0c509d988c1178a3239afd"
+    }
+  ]
+}

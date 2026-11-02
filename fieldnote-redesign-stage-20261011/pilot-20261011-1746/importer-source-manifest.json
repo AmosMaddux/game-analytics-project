@@ -1,0 +1,54 @@
+{
+  "package": "fieldnote-reviewed-evidence-pilot-source-v1",
+  "purpose": "Source-only bounded offline importer and reviewed five-game manifest. No live application or database included.",
+  "files": [
+    {
+      "path": "scripts/release-evidence-import.mjs",
+      "bytes": 29319,
+      "sha256": "931f21ab4bf21d499830bc25b50534170ce46183f4de3d69949212e64c1493e5",
+      "baseSha256": null
+    },
+    {
+      "path": "scripts/release-evidence-policy.mjs",
+      "bytes": 2299,
+      "sha256": "f8aa044acf11a21af477df4d0a072d9e2e90f62edd5de3377147f18c2d326697",
+      "baseSha256": null
+    },
+    {
+      "path": "evidence/five-game-reviewed-pilot-2026-10-11.json",
+      "bytes": 35323,
+      "sha256": "fb4f8b0cc6426b111652025255ac5d48f1752cc8482377689acdbd9cee9fbf3d",
+      "baseSha256": null
+    },
+    {
+      "path": "tests/release-evidence-import.test.mjs",
+      "bytes": 15298,
+      "sha256": "7805e32f63194d16eeac53380c7b456a3728d44e05596020d4016b1e6e37b305",
+      "baseSha256": null
+    },
+    {
+      "path": "RELEASE-EVIDENCE-IMPORT.md",
+      "bytes": 9196,
+      "sha256": "8de60a4c2a1326c4273381b5d0c0d065cc2bc5e27fee1fe72b4d006e7a88f5eb",
+      "baseSha256": null
+    },
+    {
+      "path": "README.md",
+      "bytes": 13469,
+      "sha256": "b6d369b362b1c908d51ea9ba85f322a99873bd9292f0c1ca4318e6370d51bc06",
+      "baseSha256": "230ca6037250cb01c951f461cc292398ce3aae95366748c28d0d721e0364310d"
+    },
+    {
+      "path": "scripts/package.mjs",
+      "bytes": 2650,
+      "sha256": "7960a8d8640a38f362f15d88547b94649e21337dbec8282ac07289769cbe4c86",
+      "baseSha256": "4d5d25602bd7b92d4ad09502ca0ec13bd9d38f4ec3c7e2b558a69701ab3c36f2"
+    },
+    {
+      "path": "backend/release-research.ts",
+      "bytes": 15277,
+      "sha256": "0cd08295c7a2730735345fd3649309b1656ece19eed757ce346a5ed7ea6d571b",
+      "baseSha256": "4bdd94b9a0f1abbd053717dfdd3e0acdb5ee915c6e962deb9f4711b897b6e5fa"
+    }
+  ]
+}

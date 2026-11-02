@@ -1,0 +1,147 @@
+{
+  "notice": "Synthetic responses only. IDs and coverage are not live observations. Steam source 42 deliberately tests dynamic source discovery.",
+  "cohort": [
+    {
+      "appid": 413150,
+      "name": "Stardew Valley",
+      "cohort_group": "Farming / life simulation",
+      "verified_identity": true,
+      "official_store_url": "https://store.steampowered.com/app/413150/",
+      "source_url": "https://store.steampowered.com/app/413150/?l=english",
+      "fetched_at": "2026-10-09T18:57:01.825932+00:00",
+      "release_date_display": "Feb 26, 2016",
+      "review_volume_band": "high_10000_plus",
+      "cohort_membership": "core",
+      "steam_baseline_source_file": "cohort.json"
+    }
+  ],
+  "sources": [
+    {
+      "id": 42,
+      "name": "Steam"
+    },
+    {
+      "id": 43,
+      "name": "Other"
+    }
+  ],
+  "crosswalk": [
+    {
+      "id": 501,
+      "uid": "413150",
+      "game": 170,
+      "external_game_source": {
+        "id": 42,
+        "name": "Steam"
+      },
+      "url": "https://store.steampowered.com/app/413150/",
+      "platform": 6,
+      "updated_at": 1720000000
+    }
+  ],
+  "games": [
+    {
+      "id": 170,
+      "name": "Stardew Valley",
+      "summary": "A synthetic test summary.",
+      "url": "https://www.igdb.com/games/stardew-valley",
+      "updated_at": 1720000000,
+      "first_release_date": 1456444800,
+      "game_type": {
+        "id": 1,
+        "type": "Main Game"
+      },
+      "platforms": [
+        {
+          "id": 6,
+          "name": "PC (Microsoft Windows)",
+          "abbreviation": "PC"
+        }
+      ],
+      "release_dates": [
+        {
+          "id": 55,
+          "date": 1456444800,
+          "human": "Feb 26, 2016",
+          "y": 2016,
+          "m": 2,
+          "d": 26,
+          "platform": {
+            "id": 6,
+            "name": "PC (Microsoft Windows)",
+            "abbreviation": "PC"
+          },
+          "date_format": {
+            "id": 1,
+            "format": "YYYYMMMMDD"
+          },
+          "release_region": {
+            "id": 8,
+            "region": "worldwide"
+          },
+          "status": {
+            "id": 1,
+            "name": "Released"
+          },
+          "updated_at": 1720000000
+        }
+      ],
+      "involved_companies": [
+        {
+          "id": 30,
+          "company": {
+            "id": 108,
+            "name": "Synthetic Studio"
+          },
+          "developer": true,
+          "publisher": false,
+          "porting": false,
+          "supporting": false
+        }
+      ],
+      "genres": [
+        {
+          "id": 5,
+          "name": "Role-playing (RPG)"
+        }
+      ],
+      "themes": [
+        {
+          "id": 4,
+          "name": "Fantasy"
+        }
+      ],
+      "keywords": [
+        {
+          "id": 10,
+          "name": "synthetic keyword"
+        }
+      ],
+      "websites": [
+        {
+          "id": 9,
+          "url": "https://example.com",
+          "type": {
+            "id": 1,
+            "type": "official"
+          },
+          "trusted": true
+        }
+      ],
+      "external_games": [
+        {
+          "id": 501,
+          "uid": "413150",
+          "game": 170,
+          "external_game_source": {
+            "id": 42,
+            "name": "Steam"
+          },
+          "url": "https://store.steampowered.com/app/413150/",
+          "platform": 6,
+          "updated_at": 1720000000
+        }
+      ]
+    }
+  ]
+}

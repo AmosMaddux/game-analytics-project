@@ -1,0 +1,17 @@
+{
+  // Template only. No deployment or Cloudflare database has been created.
+  // Set up approved private access and confirm source-use gates before deployment.
+  "name": "fieldnote-private-research",
+  "main": "build/worker.mjs",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "fieldnote-research",
+    "database_id": "REQUIRES_SEPARATE_AUTHORIZED_PROVISIONING",
+    "migrations_dir": "migrations"
+  }]
+}

@@ -1,0 +1,12 @@
+{
+  "mode": "read_only_dry_run",
+  "selectedCount": 294,
+  "targetCount": 300,
+  "shortfallCount": 6,
+  "approvalScope": "exact_user_approved_294_manifest",
+  "validationSha256": "a8efd1423272343178ed1813ad03660a18e74169f032c0e06fceb90bd2e40b6f",
+  "contractId": "steam-dated-counts-a8efd1423272343178ed1813",
+  "accepted": 1156,
+  "missing": 20,
+  "runId": "panelmetrics-9a53ddb8-22e8-48f1-b765-e6406c988919"
+}

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "fieldnote-final-private-preview-helpers-1.0",
+  "scope": "Fixed-path source staging, completed-result export, copy-only metric import, guarded private preview promotion and allowlisted recovery checkpoint. No provider dispatch.",
+  "sourcePackageSha256": "5fa78e82f41e965516d6f39c7d82c1e7a7d8cad8d4ad0f9225076f0ec1cb07a4",
+  "sourceTests": 329,
+  "files": [
+    {
+      "path": "stage-final-provenance-source.py",
+      "bytes": 3968,
+      "sha256": "3082253255cd307bf5e847bbc8da15c4bbccad32533220b7684b48e38988e231"
+    },
+    {
+      "path": "export-completed-panel294-ccu404.py",
+      "bytes": 9736,
+      "sha256": "dfc8c789703ef0ab5d64396a54e2cdee813b879d1f375c598176696d6ce20c34"
+    },
+    {
+      "path": "stage-final-metrics-copy.py",
+      "bytes": 10742,
+      "sha256": "a8ac4d682817a61cfde43dba9438ee0452e99e6c826f7c765fe1bdd9d1a1663e"
+    },
+    {
+      "path": "promote-final-metrics-preview.py",
+      "bytes": 6560,
+      "sha256": "8322f02d011601a69594c6b6769b0613413b05bf36d499fb331f30706333b80d"
+    },
+    {
+      "path": "export-final-preview-checkpoint.py",
+      "bytes": 6963,
+      "sha256": "01473ffdd44696566e31c8cb209586bdf9bfd54505d63f7036b8cd242473c434"
+    },
+    {
+      "path": "read-addendum-progress.py",
+      "bytes": 1173,
+      "sha256": "0f703636cdfbd4661f8382be4d3739a474c6e3f5541501a91d78537137dd2c27"
+    },
+    {
+      "path": "FINAL-HELPERS-README.md",
+      "bytes": 2589,
+      "sha256": "c4cad3d3bee0ea6647a694faa39d969573c546dd3d87a3bf92e226c19d360e61"
+    }
+  ]
+}

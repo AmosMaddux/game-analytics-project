@@ -1,0 +1,10 @@
+# Never commit private configuration, credentials, or generated reports.
+.env
+.env.*
+!.env.example
+private/
+secrets/
+credentials*.json
+*.pem
+*.key
+research/milestone-1/igdb-connection-checks/

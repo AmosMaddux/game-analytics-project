@@ -1,0 +1,22 @@
+{
+  "verifiedAt": "2026-10-11T19:30:31.389Z",
+  "runId": "panelmetrics-fad98891-b678-4b1d-9898-d1eee0808e3a",
+  "status": "completed",
+  "startedAt": "2026-10-11T19:04:53.815Z",
+  "finishedAt": "2026-10-11T19:28:42.279Z",
+  "counters": {
+    "requests": 625,
+    "retries": 0,
+    "bytes": 667123,
+    "elapsedMs": 1427941
+  },
+  "observations": 625,
+  "monthlyUsed": 1433,
+  "bootstrapUsed": 625,
+  "bundleSha256": "5ee28cd5f6be9b10f562916fa277a3b50b2bd59550f9ea3ae56814846742cd9d",
+  "ledgerSha256": "d3ecb4525c6836638bf4a4304df6ebfb27d6dcd4320733048233123f331fd8e0",
+  "candidateSha256": "db69bb4688fe30d7d23710b21c86513693214b4576d9f611b69e6c4a21661de2",
+  "sourceProofSha256": "a8efd1423272343178ed1813ad03660a18e74169f032c0e06fceb90bd2e40b6f",
+  "completeBundleMatchesLedger": true,
+  "sanitizationPassed": true
+}

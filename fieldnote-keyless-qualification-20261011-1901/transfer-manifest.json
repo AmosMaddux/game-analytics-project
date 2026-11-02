@@ -1,0 +1,45 @@
+{
+  "originalDatabaseUnchanged": true,
+  "livePilotDatabaseUnchanged": true,
+  "integrity": "ok",
+  "foreignKeyViolations": 0,
+  "enabledSchedules": 0,
+  "files": {
+    "qualification-625-live.json": {
+      "bytes": 329509,
+      "sha256": "5ee28cd5f6be9b10f562916fa277a3b50b2bd59550f9ea3ae56814846742cd9d"
+    },
+    "authoritative-ledger-final.json": {
+      "bytes": 349327,
+      "sha256": "d3ecb4525c6836638bf4a4304df6ebfb27d6dcd4320733048233123f331fd8e0"
+    },
+    "budget-baseline-live.json": {
+      "bytes": 2385,
+      "sha256": "e8d3de391a89d7fb3fe2669cb486f4f4711d4a7eae9b1e2033a9cf97defb7a3d"
+    },
+    "staging-verification.json": {
+      "bytes": 2121,
+      "sha256": "78df45226a44a76707fc2b952115e526ab089af94ee7a7c895e587ec7d494985"
+    },
+    "completion-verification.json": {
+      "bytes": 820,
+      "sha256": "6afc3530e4cab86c7520e4d437058b1547c1ce18373a37f8a45dd815ef15d204"
+    },
+    "codespaces-offline-tests.log": {
+      "bytes": 3781,
+      "sha256": "db67f913e42989df9b31f28a41a79c58c91fc0dc4adceda9a0bfa8048669ef9b"
+    },
+    "codespaces-budget-tests.log": {
+      "bytes": 104,
+      "sha256": "caef9c5422a153ec87d677cf09709f7ce8a230d53647047b352d382c1f5751c8"
+    },
+    "qualification-console.log": {
+      "bytes": 397,
+      "sha256": "cb37e6b330f8086a7eec8aa56e894e343e68dbebff06a9c191174023dd11baa1"
+    },
+    "PACKAGE-MANIFEST.json": {
+      "bytes": 2942,
+      "sha256": "3f99897db1b38e3687cc9b46389bb0fe53249bc80899656be515c4a3e3eaa21e"
+    }
+  }
+}

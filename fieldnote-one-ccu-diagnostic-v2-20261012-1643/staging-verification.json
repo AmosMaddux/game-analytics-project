@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-10-12T16:44:30.312566+00:00",
+  "status": "staged_offline_13_tests_passed_no_live_execution",
+  "stage": "/workspaces/codespaces-blank/fieldnote-one-ccu-diagnostic-v2-20261012-1643",
+  "zipSha256": "fefe17b8a0ba81e80b06528be127bcbf8857dc22dbdbe1b5256cdd7a6941d58f",
+  "liveLedgerSha256": "0ca45bbca754e1a216f25b254a6c08dd8ad01d6dea57375c389f946add0a6015",
+  "liveLedgerUnchanged": true,
+  "requests": 160,
+  "observations": 159,
+  "monthlyUsed": 1754,
+  "bootstrapUsed": 946,
+  "wrapperForSeparatelyApprovedOneCall": "/workspaces/codespaces-blank/fieldnote-one-ccu-diagnostic-v2-20261012-1643/run-one-ccu-diagnostic.sh"
+}

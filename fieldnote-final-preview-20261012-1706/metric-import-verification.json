@@ -1,0 +1,68 @@
+{
+  "checkedAt": "2026-10-12T17:35:13.767Z",
+  "status": "reviewed_metrics_imported_to_new_copy_and_4175_verified_not_promoted",
+  "app": "/workspaces/codespaces-blank/fieldnote-final-preview-20261012-1706/fieldnote-app",
+  "database": "/workspaces/codespaces-blank/fieldnote-final-preview-20261012-1706/runtime-metrics294.sqlite",
+  "backupDatabase": "/workspaces/codespaces-blank/fieldnote-final-preview-20261012-1706/pre-metrics-current.sqlite",
+  "currentDatabase": "/workspaces/codespaces-blank/fieldnote-qualified-preview-20261012-1607/runtime-approved294.sqlite",
+  "currentPid": 41490,
+  "currentSwitchReceiptSha256": "65843cbd7cf17728b5f6ec584c2b2099d71e451c42ee0674261a1b9f9dda57e8",
+  "temporaryPid": 84882,
+  "temporaryPort": 4175,
+  "bundleSha256": "f4c15f5bb0b59d187b4b52af15694ffa4137a735cab8e561e41129db9b858412",
+  "finalLedgerSha256": "cfd908f1983bc87d65ecafd51a66607a486ed4613981e24a137b8b06a185d564",
+  "runId": "panelmetrics-9a53ddb8-22e8-48f1-b765-e6406c988919",
+  "accepted": 1156,
+  "missing": 20,
+  "activityRowsAdded": 588,
+  "metricRowsAdded": 588,
+  "sourceTestsPassed": 329,
+  "allPriorRowsPreserved": true,
+  "currentPreviewUnchanged": true,
+  "schemaUnchanged": true,
+  "health": {
+    "status": "ok",
+    "schemaVersion": 3,
+    "gameCount": 1080,
+    "mode": "private_bounded_collection_cache",
+    "liveCollectionEnabled": false,
+    "boundedLocalCollectionAvailable": true,
+    "backgroundCollectionEnabled": false
+  },
+  "api": {
+    "reviews": {
+      "selectedRunId": "panelmetrics-9a53ddb8-22e8-48f1-b765-e6406c988919",
+      "knownValues": 294,
+      "missingValues": 0,
+      "eligibleReleaseCount": 267
+    },
+    "players": {
+      "selectedRunId": "panelmetrics-9a53ddb8-22e8-48f1-b765-e6406c988919",
+      "knownValues": 274,
+      "missingValues": 20,
+      "eligibleReleaseCount": 267
+    },
+    "reviews7d": {
+      "selectedRunId": "panelmetrics-9a53ddb8-22e8-48f1-b765-e6406c988919",
+      "knownValues": 294,
+      "missingValues": 0,
+      "eligibleReleaseCount": 267
+    },
+    "reviews30d": {
+      "selectedRunId": "panelmetrics-9a53ddb8-22e8-48f1-b765-e6406c988919",
+      "knownValues": 294,
+      "missingValues": 0,
+      "eligibleReleaseCount": 267
+    }
+  },
+  "steamTags": {
+    "labels": 20,
+    "covered": 1,
+    "missing": 293
+  },
+  "legacyCount": 36,
+  "currentLogicalSha256": "b40d97c1736b58c2e914ce3f820a55a2f31f3115221e5de4bb489598410c6fc2",
+  "targetLogicalSha256": "a85f94134aac8ee39882eae8f26a00fe922d54fa1ffa68794f89b6b54da20c48",
+  "databaseSha256": "d529f7a1ace360ad68e8af2bbf0e20ab6911b7a1f165aafcc36aae2359f75921",
+  "backupSha256": "7eab890524c1a70e8625ee91a087351389f9a540a5dd9f6a3b32142e0137d696"
+}

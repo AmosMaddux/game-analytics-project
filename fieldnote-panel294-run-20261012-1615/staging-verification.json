@@ -1,0 +1,55 @@
+{
+  "checkedAt": "2026-10-12T16:20:43.995801+00:00",
+  "status": "staged_offline_verified_no_live_run",
+  "stage": "/workspaces/codespaces-blank/fieldnote-panel294-run-20261012-1615",
+  "sourceZipSha256": "c0b4a9a367c14db6c5c0072fb487edb021c4e5694e2a32a7a6402d6e4b1e1c42",
+  "manifestSha256": "cc49b252a0d599ddf9f57504876f7310c5d9bed8486ae38e6f96a9e30991dd76",
+  "offlineTestsPassed": 70,
+  "savedSourceJobRequests": 736,
+  "enabledSchedules": 0,
+  "ledgerSha256": "f14af4ede086cb7616335a17875a28770869ea9605a241c06e5c6b1ca154b705",
+  "ledgerUnchanged": true,
+  "liveCalls": 0,
+  "dryRunTransition": {
+    "status": "staged",
+    "panelCount": 294,
+    "counters": {
+      "requests": 0,
+      "retries": 0,
+      "bytes": 0,
+      "elapsedMs": 0
+    },
+    "limits": {
+      "maxRequests": 1276,
+      "maxRetries": 100,
+      "retriesPerRequest": 1,
+      "minIntervalMs": 2000,
+      "requestTimeoutMs": 20000,
+      "maxRuntimeMs": 5400000,
+      "maxResponseBytes": 131072,
+      "maxBytes": 33554432,
+      "monthlyRequests": 12000
+    },
+    "monthlyUsed": 1594,
+    "bootstrapUsed": 786,
+    "windows": {
+      "seven": {
+        "start": 1791158400,
+        "endExclusive": 1791763200
+      },
+      "thirty": {
+        "start": 1789171200,
+        "endExclusive": 1791763200
+      }
+    },
+    "approval": {
+      "manifestSha256": "dc3840a01e9d68b2e0f7ecef873ecba6fa6430eb847595eacd01e7d4e932e3b9",
+      "manifestFileSha256": "c9b5d6497d6a2d4ddf15f7ca07a8d87f2603ac89da8b7998ca03137830e84220",
+      "selectedCount": 294,
+      "targetCount": 300,
+      "shortfallCount": 6,
+      "decisionAt": "2026-10-12T16:08:26Z",
+      "scope": "Explicit user-approved294 option, original quotas retained with6 missing recent slots"
+    }
+  }
+}

@@ -1,0 +1,323 @@
+{
+  "comparisonMode": "every_original_raw_row_retained_appends_allowed",
+  "status": "passed",
+  "sourceDatabaseSha256": "7eab890524c1a70e8625ee91a087351389f9a540a5dd9f6a3b32142e0137d696",
+  "targetDatabaseSha256": "d529f7a1ace360ad68e8af2bbf0e20ab6911b7a1f165aafcc36aae2359f75921",
+  "allPriorRowsPreserved": true,
+  "tables": [
+    {
+      "table": "catalog_admissions",
+      "sourceRows": 298,
+      "targetRows": 298,
+      "sourceRowsSha256": "85a61f3a06a1af7290e294bc97bc1d7ba08bd7457d32c20eaf833057645df6dd",
+      "targetRowsSha256": "85a61f3a06a1af7290e294bc97bc1d7ba08bd7457d32c20eaf833057645df6dd",
+      "preserved": true
+    },
+    {
+      "table": "catalog_company_roles",
+      "sourceRows": 1714,
+      "targetRows": 1714,
+      "sourceRowsSha256": "ef10ca82f37d17d08e00fc3051d8da81dbf54c06e73eb96c6ed3c061fc6ee0a6",
+      "targetRowsSha256": "ef10ca82f37d17d08e00fc3051d8da81dbf54c06e73eb96c6ed3c061fc6ee0a6",
+      "preserved": true
+    },
+    {
+      "table": "catalog_conflicts",
+      "sourceRows": 40,
+      "targetRows": 40,
+      "sourceRowsSha256": "f099fa0a8b18c801d6553a9583c2b892810197b205299fae9a6e25693bbe829f",
+      "targetRowsSha256": "f099fa0a8b18c801d6553a9583c2b892810197b205299fae9a6e25693bbe829f",
+      "preserved": true
+    },
+    {
+      "table": "catalog_field_provenance",
+      "sourceRows": 11204,
+      "targetRows": 11204,
+      "sourceRowsSha256": "21710387b813ccacaa9bc3de1898f6400d5f7df1ecd3660e003c04e762c6acf5",
+      "targetRowsSha256": "21710387b813ccacaa9bc3de1898f6400d5f7df1ecd3660e003c04e762c6acf5",
+      "preserved": true
+    },
+    {
+      "table": "catalog_games",
+      "sourceRows": 1080,
+      "targetRows": 1080,
+      "sourceRowsSha256": "c61f61461009c9b009f8ddfd03c5bdb3f20f90756e43580f04899ae33dba990a",
+      "targetRowsSha256": "c61f61461009c9b009f8ddfd03c5bdb3f20f90756e43580f04899ae33dba990a",
+      "preserved": true
+    },
+    {
+      "table": "catalog_labels",
+      "sourceRows": 15928,
+      "targetRows": 15928,
+      "sourceRowsSha256": "a2287cf4b9e01be8d99ba0c3cb39ccc5e86919ef5e286e0c7e4ba4fc0abc016e",
+      "targetRowsSha256": "a2287cf4b9e01be8d99ba0c3cb39ccc5e86919ef5e286e0c7e4ba4fc0abc016e",
+      "preserved": true
+    },
+    {
+      "table": "catalog_links",
+      "sourceRows": 2691,
+      "targetRows": 2691,
+      "sourceRowsSha256": "f5b1aeccc85fa797a0c17a90c7df4cf9af7ebba35c35a65b5876f9afa1a556d1",
+      "targetRowsSha256": "f5b1aeccc85fa797a0c17a90c7df4cf9af7ebba35c35a65b5876f9afa1a556d1",
+      "preserved": true
+    },
+    {
+      "table": "catalog_platforms",
+      "sourceRows": 2765,
+      "targetRows": 2765,
+      "sourceRowsSha256": "3ff08167ebc21ad93407c7f3b085afe562bee8f6ff583d43b572175cf6c6d6cb",
+      "targetRowsSha256": "3ff08167ebc21ad93407c7f3b085afe562bee8f6ff583d43b572175cf6c6d6cb",
+      "preserved": true
+    },
+    {
+      "table": "catalog_releases",
+      "sourceRows": 3401,
+      "targetRows": 3401,
+      "sourceRowsSha256": "7bcda530c5240284c3db463446f207eb1f2cc25d0065594b3e0443ca36e15aab",
+      "targetRowsSha256": "7bcda530c5240284c3db463446f207eb1f2cc25d0065594b3e0443ca36e15aab",
+      "preserved": true
+    },
+    {
+      "table": "cohorts",
+      "sourceRows": 4,
+      "targetRows": 4,
+      "sourceRowsSha256": "586c0f7585baef82842b67e0ed9cd85d20628d1b10c9faa6a7e6c75472d1c180",
+      "targetRowsSha256": "586c0f7585baef82842b67e0ed9cd85d20628d1b10c9faa6a7e6c75472d1c180",
+      "preserved": true
+    },
+    {
+      "table": "collection_attempts",
+      "sourceRows": 668,
+      "targetRows": 668,
+      "sourceRowsSha256": "6b8acd69bc9f2c2b9a82a036b3c7c1c66a65bf1df2f8614ea2b49f98bb08f931",
+      "targetRowsSha256": "6b8acd69bc9f2c2b9a82a036b3c7c1c66a65bf1df2f8614ea2b49f98bb08f931",
+      "preserved": true
+    },
+    {
+      "table": "collection_jobs",
+      "sourceRows": 7,
+      "targetRows": 7,
+      "sourceRowsSha256": "cc7cb1007b7cf79db335ec6f0ba7b8c8ae5560b6cf86604e1df647b5bd80e546",
+      "targetRowsSha256": "cc7cb1007b7cf79db335ec6f0ba7b8c8ae5560b6cf86604e1df647b5bd80e546",
+      "preserved": true
+    },
+    {
+      "table": "collection_rejections",
+      "sourceRows": 110,
+      "targetRows": 110,
+      "sourceRowsSha256": "5c2c7c7de522059fde56ed5cba8a0e4eed789eff3a3441601f022ad851b5ec8b",
+      "targetRowsSha256": "5c2c7c7de522059fde56ed5cba8a0e4eed789eff3a3441601f022ad851b5ec8b",
+      "preserved": true
+    },
+    {
+      "table": "collection_schedules",
+      "sourceRows": 3,
+      "targetRows": 3,
+      "sourceRowsSha256": "9080356ea968f7120844c5406f4a80302adffad736021461f17a78fe46e0befc",
+      "targetRowsSha256": "9080356ea968f7120844c5406f4a80302adffad736021461f17a78fe46e0befc",
+      "preserved": true
+    },
+    {
+      "table": "foundation_schema",
+      "sourceRows": 3,
+      "targetRows": 3,
+      "sourceRowsSha256": "c4ed67f01b89a13227b3e23c902bb367c0a309ea1e23e2b88dc9efe152b09efd",
+      "targetRowsSha256": "c4ed67f01b89a13227b3e23c902bb367c0a309ea1e23e2b88dc9efe152b09efd",
+      "preserved": true
+    },
+    {
+      "table": "games",
+      "sourceRows": 1080,
+      "targetRows": 1080,
+      "sourceRowsSha256": "1575b1b7d9a994554b738e13aa8a46e1d95922b76f6b769c9573eb85263874a1",
+      "targetRowsSha256": "1575b1b7d9a994554b738e13aa8a46e1d95922b76f6b769c9573eb85263874a1",
+      "preserved": true
+    },
+    {
+      "table": "genres",
+      "sourceRows": 13,
+      "targetRows": 13,
+      "sourceRowsSha256": "41391d107fe18d257acaff1b1b91e290b7a06a4e6390d4748e12c4c8c904db26",
+      "targetRowsSha256": "41391d107fe18d257acaff1b1b91e290b7a06a4e6390d4748e12c4c8c904db26",
+      "preserved": true
+    },
+    {
+      "table": "identity_crosswalks",
+      "sourceRows": 1080,
+      "targetRows": 1080,
+      "sourceRowsSha256": "7d4251c57cda6260aed8b8b08e19978354eed8dbd145fb3afdb15eee7a5c3d4e",
+      "targetRowsSha256": "7d4251c57cda6260aed8b8b08e19978354eed8dbd145fb3afdb15eee7a5c3d4e",
+      "preserved": true
+    },
+    {
+      "table": "local_migrations",
+      "sourceRows": 8,
+      "targetRows": 8,
+      "sourceRowsSha256": "bbecc941f9efe5e77d625716e6e901a83a7a97941af0eedba9eeac2ea783dcd1",
+      "targetRowsSha256": "bbecc941f9efe5e77d625716e6e901a83a7a97941af0eedba9eeac2ea783dcd1",
+      "preserved": true
+    },
+    {
+      "table": "marketing_events",
+      "sourceRows": 13,
+      "targetRows": 13,
+      "sourceRowsSha256": "7f79b1cd3a5a6673b0f004d8e1ee1e4330a9965eace3a8ed919a60d1805ef878",
+      "targetRowsSha256": "7f79b1cd3a5a6673b0f004d8e1ee1e4330a9965eace3a8ed919a60d1805ef878",
+      "preserved": true
+    },
+    {
+      "table": "marketing_profiles",
+      "sourceRows": 1080,
+      "targetRows": 1080,
+      "sourceRowsSha256": "f1e06374f1f90ba4c0234951058cf21ddb1c2fb3b650d3e677046098d63b36b3",
+      "targetRowsSha256": "f1e06374f1f90ba4c0234951058cf21ddb1c2fb3b650d3e677046098d63b36b3",
+      "preserved": true
+    },
+    {
+      "table": "metric_observations",
+      "sourceRows": 4684,
+      "targetRows": 5272,
+      "sourceRowsSha256": "fd4cd9732d8180626d7e4857d45b2f3ce5d224af649675bd02b416f77b92ad8b",
+      "targetRowsSha256": "06095ba75f95a7663fc57c913515939f6bdf01e51c04b71faa301f1ad8f7e7ee",
+      "preserved": true
+    },
+    {
+      "table": "research_activity_observations",
+      "sourceRows": 0,
+      "targetRows": 588,
+      "sourceRowsSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "targetRowsSha256": "b52fb5704a610a636a0a625c710964dfcca02df01416d67be3a38b380dad9ad6",
+      "preserved": true
+    },
+    {
+      "table": "research_application_evidence",
+      "sourceRows": 5,
+      "targetRows": 5,
+      "sourceRowsSha256": "bda6e3e185d782158cd9ba363441d4b79291524a97f5d315e96a9df365fb414c",
+      "targetRowsSha256": "bda6e3e185d782158cd9ba363441d4b79291524a97f5d315e96a9df365fb414c",
+      "preserved": true
+    },
+    {
+      "table": "research_catalog_imports",
+      "sourceRows": 2,
+      "targetRows": 2,
+      "sourceRowsSha256": "a200cf24c7d2c94e947c6466954592a3f3ebc0e668c05f2ef8a75c0d77797644",
+      "targetRowsSha256": "a200cf24c7d2c94e947c6466954592a3f3ebc0e668c05f2ef8a75c0d77797644",
+      "preserved": true
+    },
+    {
+      "table": "research_catalog_records",
+      "sourceRows": 1410,
+      "targetRows": 1410,
+      "sourceRowsSha256": "534b07668bf8a275ea8640e4c785902f857f5ba0fcd309bb67b57f0e24c32db6",
+      "targetRowsSha256": "534b07668bf8a275ea8640e4c785902f857f5ba0fcd309bb67b57f0e24c32db6",
+      "preserved": true
+    },
+    {
+      "table": "research_evidence_assertions",
+      "sourceRows": 17,
+      "targetRows": 17,
+      "sourceRowsSha256": "4c36f15fb14b8d03cd12fac8e3667565c62f2a3078cd71d975ea341cfbae87cb",
+      "targetRowsSha256": "4c36f15fb14b8d03cd12fac8e3667565c62f2a3078cd71d975ea341cfbae87cb",
+      "preserved": true
+    },
+    {
+      "table": "research_evidence_imports",
+      "sourceRows": 1,
+      "targetRows": 1,
+      "sourceRowsSha256": "5eaa9d2015f2f4ae30bf48fc6fbd11a1603d65a7d33173c9ec00fd8968f814fe",
+      "targetRowsSha256": "5eaa9d2015f2f4ae30bf48fc6fbd11a1603d65a7d33173c9ec00fd8968f814fe",
+      "preserved": true
+    },
+    {
+      "table": "research_metric_imports",
+      "sourceRows": 0,
+      "targetRows": 1,
+      "sourceRowsSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "targetRowsSha256": "206bb30c1aa2b9bb9084b595edc492ff8dab210d46964376af08bc2f35eea67c",
+      "preserved": true
+    },
+    {
+      "table": "research_panel_memberships",
+      "sourceRows": 294,
+      "targetRows": 294,
+      "sourceRowsSha256": "08d7a6c06ae5a2405d1d0659b686239bb78f1947dd9db19aa0997486b0216efc",
+      "targetRowsSha256": "08d7a6c06ae5a2405d1d0659b686239bb78f1947dd9db19aa0997486b0216efc",
+      "preserved": true
+    },
+    {
+      "table": "research_panels",
+      "sourceRows": 1,
+      "targetRows": 1,
+      "sourceRowsSha256": "1dfd9b0b85a6547d21481c6d03eb6ac892cf4427f66ec9a6162b4516e8eeaa1f",
+      "targetRowsSha256": "1dfd9b0b85a6547d21481c6d03eb6ac892cf4427f66ec9a6162b4516e8eeaa1f",
+      "preserved": true
+    },
+    {
+      "table": "research_qualification_imports",
+      "sourceRows": 2,
+      "targetRows": 2,
+      "sourceRowsSha256": "a08335c77dd555a691b809006376ff58c067f5d6464c12647224f34dbf0d3111",
+      "targetRowsSha256": "a08335c77dd555a691b809006376ff58c067f5d6464c12647224f34dbf0d3111",
+      "preserved": true
+    },
+    {
+      "table": "research_release_evidence",
+      "sourceRows": 5,
+      "targetRows": 5,
+      "sourceRowsSha256": "7447962a568a8a26930077bbb5166ff1a5155f407d646c6d1165201a908295bf",
+      "targetRowsSha256": "7447962a568a8a26930077bbb5166ff1a5155f407d646c6d1165201a908295bf",
+      "preserved": true
+    },
+    {
+      "table": "research_review_contracts",
+      "sourceRows": 0,
+      "targetRows": 1,
+      "sourceRowsSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "targetRowsSha256": "2d86860cc30cf675293f37dce9d227afc7822b746ad9869e1566a1abd642299a",
+      "preserved": true
+    },
+    {
+      "table": "review_windows",
+      "sourceRows": 6,
+      "targetRows": 6,
+      "sourceRowsSha256": "f631e208efcfc6ddf5877d555b0ad31c1f7fef2ec1383c2d9875d9d40dc8d80b",
+      "targetRowsSha256": "f631e208efcfc6ddf5877d555b0ad31c1f7fef2ec1383c2d9875d9d40dc8d80b",
+      "preserved": true
+    },
+    {
+      "table": "snapshot_metadata",
+      "sourceRows": 14,
+      "targetRows": 14,
+      "sourceRowsSha256": "e4901027825d46227ec0f5535b67724dabc1afc4b8747df54c03ec86ab131116",
+      "targetRowsSha256": "e4901027825d46227ec0f5535b67724dabc1afc4b8747df54c03ec86ab131116",
+      "preserved": true
+    },
+    {
+      "table": "source_health",
+      "sourceRows": 4,
+      "targetRows": 4,
+      "sourceRowsSha256": "6dec6a30bd189baa864c05c5b986cdfe0c4fb1fff761e6aaeed2ec8911a3d359",
+      "targetRowsSha256": "6dec6a30bd189baa864c05c5b986cdfe0c4fb1fff761e6aaeed2ec8911a3d359",
+      "preserved": true
+    },
+    {
+      "table": "steam_tags",
+      "sourceRows": 701,
+      "targetRows": 701,
+      "sourceRowsSha256": "3fb6a6f60bffb7989297a3aaab7d5bef66a823588522386aa105354fc3515ff9",
+      "targetRowsSha256": "3fb6a6f60bffb7989297a3aaab7d5bef66a823588522386aa105354fc3515ff9",
+      "preserved": true
+    },
+    {
+      "table": "ui_settings",
+      "sourceRows": 1,
+      "targetRows": 1,
+      "sourceRowsSha256": "47a7d9ca226f821853d296ac4007d94f6d2ba52eabf8fb5076024d872e071986",
+      "targetRowsSha256": "47a7d9ca226f821853d296ac4007d94f6d2ba52eabf8fb5076024d872e071986",
+      "preserved": true
+    }
+  ],
+  "integrityCheck": "ok",
+  "foreignKeyViolations": 0
+}

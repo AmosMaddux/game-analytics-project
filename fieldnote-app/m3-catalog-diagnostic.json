@@ -1,0 +1,162 @@
+{
+  "verifiedAt": "2026-10-10T19:20:25.953Z",
+  "totalGames": 276,
+  "verifiedGames": 276,
+  "uniqueSteamIds": 276,
+  "uniqueIgdbIds": 276,
+  "populatedGenres": 12,
+  "genreCount": 12,
+  "genres": [
+    {
+      "name": "Colony / settlement simulation",
+      "games": 52,
+      "under15": false
+    },
+    {
+      "name": "Cozy building toy",
+      "games": 6,
+      "under15": true
+    },
+    {
+      "name": "Farming / life simulation",
+      "games": 44,
+      "under15": false
+    },
+    {
+      "name": "Horror / exploration",
+      "games": 27,
+      "under15": false
+    },
+    {
+      "name": "Platformer / metroidvania",
+      "games": 22,
+      "under15": false
+    },
+    {
+      "name": "Puzzle",
+      "games": 28,
+      "under15": false
+    },
+    {
+      "name": "Roguelike deckbuilder",
+      "games": 6,
+      "under15": true
+    },
+    {
+      "name": "Role-playing",
+      "games": 16,
+      "under15": false
+    },
+    {
+      "name": "Shooter",
+      "games": 23,
+      "under15": false
+    },
+    {
+      "name": "Strategy",
+      "games": 18,
+      "under15": false
+    },
+    {
+      "name": "Survival / crafting",
+      "games": 19,
+      "under15": false
+    },
+    {
+      "name": "Racing / sports",
+      "games": 15,
+      "under15": false
+    }
+  ],
+  "catalogSizeGate": false,
+  "genreGate": true,
+  "metrics": [
+    {
+      "metric": "players",
+      "observations": 36,
+      "games": 36,
+      "firstCollectedAt": "2026-10-10T17:55:23.718Z",
+      "lastCollectedAt": "2026-10-10T17:56:41.046Z"
+    },
+    {
+      "metric": "reviews",
+      "observations": 36,
+      "games": 36,
+      "firstCollectedAt": "2026-10-10T17:55:25.050Z",
+      "lastCollectedAt": "2026-10-10T17:56:41.982Z"
+    },
+    {
+      "metric": "storeReviews",
+      "observations": 36,
+      "games": 36,
+      "firstCollectedAt": "2026-10-09T18:57:01.825932+00:00",
+      "lastCollectedAt": "2026-10-09T19:00:31.988666+00:00"
+    }
+  ],
+  "traction": {
+    "observedGames": 36,
+    "zero": 3,
+    "oneToTen": 8,
+    "elevenTo999": 17,
+    "atLeast1000": 8,
+    "note": "Editorial descriptive CCU bands; sample-only, not sales or market completeness."
+  },
+  "officialGameLinks": 235,
+  "taggedGames": 36,
+  "newTagCollectionEnabled": false,
+  "enabledSchedules": 0,
+  "foreignKeyViolations": 0,
+  "duplicateObservationKeys": 0,
+  "latestJobs": [
+    {
+      "job_id": "identity-45947898-5c21-453b-9025-250e4aa348c3",
+      "source": "steam_catalog",
+      "kind": "identity",
+      "status": "complete",
+      "started_at": "2026-10-10T19:15:23.917Z",
+      "finished_at": "2026-10-10T19:15:35.282Z",
+      "error_code": null
+    },
+    {
+      "job_id": "catalog-70c7cb59-72ab-4772-b2f2-c6ec5120603d",
+      "source": "igdb",
+      "kind": "catalog",
+      "status": "complete",
+      "started_at": "2026-10-10T19:14:39.210Z",
+      "finished_at": "2026-10-10T19:15:37.474Z",
+      "error_code": null
+    }
+  ],
+  "limitations": [
+    "Only completed live source runs establish current coverage.",
+    "Under-15 groups remain thin.",
+    "No sufficient multi-day trend history, sales/revenue, marketing spend or studio headcount is implied.",
+    "Steam tags are preserved saved evidence only; newly admitted games have missing tags."
+  ],
+  "rejections": [
+    {
+      "reason": "title_conflict_requires_review",
+      "count": 42
+    },
+    {
+      "reason": "steam_identity_missing",
+      "count": 42
+    }
+  ],
+  "jobCounters": [
+    {
+      "job_id": "identity-45947898-5c21-453b-9025-250e4aa348c3",
+      "source": "steam_catalog",
+      "status": "complete",
+      "counters_json": "{\"requests\":4,\"pages\":4,\"bytes\":19477008,\"retries\":0,\"elapsedMs\":10310}",
+      "error_code": null
+    },
+    {
+      "job_id": "catalog-70c7cb59-72ab-4772-b2f2-c6ec5120603d",
+      "source": "igdb",
+      "status": "complete",
+      "counters_json": "{\"requests\":30,\"pages\":27,\"bytes\":11806087,\"retries\":0,\"elapsedMs\":44294,\"accepted\":240,\"rejected\":84}",
+      "error_code": null
+    }
+  ]
+}

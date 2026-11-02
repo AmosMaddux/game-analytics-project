@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-10-12T17:47:02.478110+00:00",
+  "status": "source_fix_staged_and_api_verified_no_switch",
+  "app": "/workspaces/codespaces-blank/fieldnote-overview-preview-20261012-1744/fieldnote-app",
+  "database": "/workspaces/codespaces-blank/fieldnote-final-preview-20261012-1706/runtime-metrics294.sqlite",
+  "backupDatabase": "/workspaces/codespaces-blank/fieldnote-overview-preview-20261012-1744/pre-source-fix-backup.sqlite",
+  "testsPassed": 340,
+  "sourceSha256": "6c0de350573c19f0f1d4a728aceff32b034890f519a902189a0fdbeb3e171b2d",
+  "currentPromotionReceiptSha256": "9ac92e867054ba48730957185a1bcbbf7e51036a928222a212a126e688cbcd3d",
+  "currentPid": 85303,
+  "currentApp": "/workspaces/codespaces-blank/fieldnote-final-preview-20261012-1706/fieldnote-app",
+  "temporaryPid": 94506,
+  "temporaryPort": 4175,
+  "databaseLogicalSha256": "a85f94134aac8ee39882eae8f26a00fe922d54fa1ffa68794f89b6b54da20c48",
+  "databaseSchemaAndRowsUnchanged": true,
+  "health": {
+    "status": "ok",
+    "schemaVersion": 3,
+    "gameCount": 1080,
+    "mode": "private_bounded_collection_cache",
+    "liveCollectionEnabled": false,
+    "boundedLocalCollectionAvailable": true,
+    "backgroundCollectionEnabled": false
+  },
+  "panelSummary": {
+    "selectedCount": 294,
+    "igdbGenreCount": 21,
+    "legacyEditorialCount": 28,
+    "asOf": "2026-10-12T17:47:00.609Z"
+  },
+  "knownPlayers": 274,
+  "missingPlayers": 20,
+  "noMetricReimport": true
+}

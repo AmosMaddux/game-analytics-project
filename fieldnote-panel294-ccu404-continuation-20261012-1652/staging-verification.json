@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-10-12T16:52:27.765364+00:00",
+  "status": "staged_49_offline_tests_and_pure_repair_passed_no_live_execution",
+  "stage": "/workspaces/codespaces-blank/fieldnote-panel294-ccu404-continuation-20261012-1652",
+  "zipSha256": "f5e0092a0d44f69fec2e21d8f1ef15c2f1bb62380c977c0f838e8d63672c5463",
+  "liveLedgerSha256": "ffe944dc84fcff62f85db027d4cbfbe15a8e1741fce13e33317cc5ad903890ac",
+  "liveLedgerUnchanged": true,
+  "proof": {
+    "status": "pure_repair_passed_no_live_mutation",
+    "requests": 161,
+    "retries": 1,
+    "observations": 160,
+    "monthlyUsed": 1755,
+    "bootstrapUsed": 947,
+    "missingValue": {
+      "observationKey": "pm-4c790df8b81143b3ba845febe55416b2afe69f0673864eba84da22cd6bf85d70",
+      "appid": 917640,
+      "metric": "players",
+      "value": null,
+      "missingReason": "source_http_404",
+      "observedAt": "2026-10-12T16:44:51.297Z",
+      "window": null,
+      "sourceUrl": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
+      "sourceField": "player_count",
+      "unit": "current_online_players",
+      "methodVersion": "steam-dated-counts-1.0"
+    }
+  },
+  "wrapperForSeparatelyApprovedContinuation": "/workspaces/codespaces-blank/fieldnote-panel294-ccu404-continuation-20261012-1652/run-reviewed-ccu404-continuation.sh"
+}

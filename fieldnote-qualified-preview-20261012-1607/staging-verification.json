@@ -1,0 +1,48 @@
+{
+  "checkedAt": "2026-10-12T16:23:37.595297+00:00",
+  "status": "staged314tests_and_runtime_passed_not_switched",
+  "source": "/workspaces/codespaces-blank/fieldnote-qualified-preview-20261012-1607/fieldnote-app",
+  "runtimeDatabase": "/workspaces/codespaces-blank/fieldnote-qualified-preview-20261012-1607/runtime-approved294.sqlite",
+  "runtimeDatabaseSha256": "7eab890524c1a70e8625ee91a087351389f9a540a5dd9f6a3b32142e0137d696",
+  "checkpointSha256": "3274adc85de9941e8215c8b89bc8e7043cbe43b451eadce8b381ecb9762ab289",
+  "testsPassed": 314,
+  "priorPilotRowsPreserved": true,
+  "pilotUnchanged": true,
+  "appliedMigrations": [
+    "0001_foundation.sql",
+    "0002_review_windows.sql",
+    "0003_collection.sql",
+    "0004_release_research.sql",
+    "0005_research_panels.sql",
+    "0006_review_activity_contracts.sql",
+    "0007_broad_discovery_catalog.sql",
+    "0008_review_qualification.sql"
+  ],
+  "temporaryPort": 4175,
+  "temporaryPid": 37821,
+  "health": {
+    "status": "ok",
+    "schemaVersion": 3,
+    "gameCount": 1080,
+    "mode": "private_bounded_collection_cache",
+    "liveCollectionEnabled": false,
+    "boundedLocalCollectionAvailable": true,
+    "backgroundCollectionEnabled": false
+  },
+  "api": {
+    "broad": {
+      "selectedCount": 785,
+      "genres": 22,
+      "eligibleReleaseCount": 579,
+      "missingReleaseCount": 206,
+      "activityAnchors": 0
+    },
+    "panel": {
+      "selectedCount": 294,
+      "genres": 21,
+      "eligibleReleaseCount": 267,
+      "missingReleaseCount": 27,
+      "activityAnchors": 0
+    }
+  }
+}

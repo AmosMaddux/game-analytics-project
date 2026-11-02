@@ -1,0 +1,101 @@
+{
+  "checkedAt": "2026-10-12T15:40:37.193804+00:00",
+  "database": "/workspaces/codespaces-blank/fieldnote-redesign-stage-20261011/pilot-20261011-1746/pilot-evidence.sqlite",
+  "databaseSha256": "d6098cee4559cf2bdff2964869ec3c88beed4db62cc3acfd5a0ea724140a4b72",
+  "databaseIntegrity": "ok",
+  "foreignKeyFailureCount": 0,
+  "schemaSha256": "e59ad47293110a976a28213edde2f135f20f4b14dff4fde5c0d80fb5a3fcee31",
+  "unfinishedSourceOrLeaseJobs": [],
+  "collectorLockExists": false,
+  "discoveryLockExists": false,
+  "pendingReservation": false,
+  "processEvidence": "Named collector and discovery leases absent; no process arguments or environment read",
+  "sourceJobs": [
+    {
+      "id": "catalog-6b737fda-b294-43f9-891a-6219e4ee0479",
+      "source": "igdb",
+      "kind": "catalog",
+      "status": "complete",
+      "requests": 30,
+      "startedAt": "2026-10-10T19:27:13.957Z",
+      "finishedAt": "2026-10-10T19:28:12.499Z"
+    },
+    {
+      "id": "catalog-70c7cb59-72ab-4772-b2f2-c6ec5120603d",
+      "source": "igdb",
+      "kind": "catalog",
+      "status": "complete",
+      "requests": 30,
+      "startedAt": "2026-10-10T19:14:39.210Z",
+      "finishedAt": "2026-10-10T19:15:37.474Z"
+    },
+    {
+      "id": "identity-45947898-5c21-453b-9025-250e4aa348c3",
+      "source": "steam_catalog",
+      "kind": "identity",
+      "status": "complete",
+      "requests": 4,
+      "startedAt": "2026-10-10T19:15:23.917Z",
+      "finishedAt": "2026-10-10T19:15:35.282Z"
+    },
+    {
+      "id": "identity-56ad9006-e734-473d-b312-9b70d741a1cc",
+      "source": "steam_catalog",
+      "kind": "identity",
+      "status": "complete",
+      "requests": 4,
+      "startedAt": "2026-10-10T19:27:57.777Z",
+      "finishedAt": "2026-10-10T19:28:11.657Z"
+    },
+    {
+      "id": "metrics-14107c42-52a4-4b41-8c03-25b0cd3f9150",
+      "source": "steam_api",
+      "kind": "metrics",
+      "status": "partial",
+      "requests": 668,
+      "startedAt": "2026-10-10T19:28:49.160Z",
+      "finishedAt": "2026-10-10T19:40:02.671Z"
+    }
+  ],
+  "sourceJobRequests": 736,
+  "schedules": [
+    {
+      "id": "daily-catalog",
+      "source": "igdb",
+      "kind": "catalog",
+      "enabled": 0,
+      "interval_hours": 24,
+      "next_run_at": null,
+      "expires_at": null
+    },
+    {
+      "id": "daily-steam",
+      "source": "steam_api",
+      "kind": "metrics",
+      "enabled": 0,
+      "interval_hours": 24,
+      "next_run_at": null,
+      "expires_at": null
+    },
+    {
+      "id": "six-hour-watchlist",
+      "source": "steam_api",
+      "kind": "watchlist",
+      "enabled": 0,
+      "interval_hours": 6,
+      "next_run_at": null,
+      "expires_at": null
+    }
+  ],
+  "enabledScheduleCount": 0,
+  "authoritativeLedgerPath": "/workspaces/codespaces-blank/fieldnote-redesign-stage-20261011/pilot-20261011-1746/fieldnote-source-budget-2026-10.json",
+  "ledgerSha256": "d3ecb4525c6836638bf4a4304df6ebfb27d6dcd4320733048233123f331fd8e0",
+  "ledgerUsedRequests": 1433,
+  "ledgerBootstrapUsed": 625,
+  "completedQualificationRequests": 625,
+  "frozenBaselineRequests": 808,
+  "ownerDiscoveryCumulativeRequests": 32,
+  "newOwnerDiscoveryRequestDelta": 1,
+  "accountingAction": "none; addendum transition must charge only delta1 without replacing baseline",
+  "resumeCandidateSha256": "c6c5a8c61f9f8cbbd7bf24bfce2deb92a089cf40c6f90a78759a814769d28a42"
+}

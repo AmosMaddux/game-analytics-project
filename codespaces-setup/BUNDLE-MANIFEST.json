@@ -1,0 +1,49 @@
+{
+  "artifact": "igdb_catalog_importer_code_only",
+  "version": 1,
+  "archive_prefix": "codespaces-setup/",
+  "offline_tests_passed": 69,
+  "live_import_executed_by_builder": false,
+  "files": [
+    {
+      "path": "IMPORT-README.md",
+      "bytes": 5748,
+      "sha256": "772ee6b4bc276d0ee1d1b04acf27ac8877f5d1c41f93701d10e494eddd4ed51b"
+    },
+    {
+      "path": "data/cohort-36.json",
+      "bytes": 18273,
+      "sha256": "1670b52a56c804070acc00e33f151d0b77df62559a3a6195e7862ef563b9ac6d"
+    },
+    {
+      "path": "fixtures/synthetic-responses.json",
+      "bytes": 3401,
+      "sha256": "6033deb445efc6eea8a5e59e72d2f66802ccc53b366f391abd450d8a26dd8560"
+    },
+    {
+      "path": "scripts/check-igdb-connection.mjs",
+      "bytes": 14492,
+      "sha256": "564a822fb637877feb4e2dc8822148b3f29faae946ae0c7b1e30382433630838"
+    },
+    {
+      "path": "scripts/check-igdb-connection.test.mjs",
+      "bytes": 25755,
+      "sha256": "1ad6a32009b72cb6a802cd7ab2d7bdbd866b5d2b5be5f5dba0bcf269244887dd"
+    },
+    {
+      "path": "scripts/import-igdb-catalog.mjs",
+      "bytes": 28844,
+      "sha256": "73b8b07ed2f507b1f56ae3204c1c66d150a7fd52af75431757c30816cba34d1b"
+    },
+    {
+      "path": "scripts/import-igdb-catalog.test.mjs",
+      "bytes": 21210,
+      "sha256": "113d9d44c852fd222863df4bc26ebc0867118d962327829ec809b7a08717f3ff"
+    },
+    {
+      "path": "scripts/run-igdb-import.sh",
+      "bytes": 1023,
+      "sha256": "dc50b69af859483ad2b711c0bf6689c9e38cec6b66b06f36248f557e249896a9"
+    }
+  ]
+}

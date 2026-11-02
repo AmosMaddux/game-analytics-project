@@ -1,0 +1,134 @@
+{
+  "runId": "2026-10-11T18-49-27-593-_b96a46a7-1b3a-4cc7-a2a8-0fc0aa6a87bc",
+  "status": "partial",
+  "stopReason": "invalid_steam_catalog_page",
+  "summary": {
+    "discovered": 1000,
+    "metadataProcessed": 1000,
+    "identityVerified": 0,
+    "identityPending": 973,
+    "quarantined": 27,
+    "pcExactDate": 0,
+    "panelAllocated": 0
+  },
+  "counters": {
+    "requests": 31,
+    "retries": 0,
+    "igdbPages": 26,
+    "steamPages": 4,
+    "igdbBytes": 4366491,
+    "steamBytes": 19503394,
+    "elapsedMs": 40836,
+    "pendingReservation": false,
+    "blocked": null
+  },
+  "steamIdentity": {
+    "status": "partial",
+    "pages": 3,
+    "checkedThroughAppid": 4110900,
+    "fullCatalogComplete": false
+  },
+  "discoveryStreams": [
+    {
+      "id": "recent_pc_90_days",
+      "kind": "releases",
+      "start": 1783968567,
+      "end": 1791744567,
+      "target": 400,
+      "maxPages": 16,
+      "selected": 400,
+      "pages": 5,
+      "exhausted": false,
+      "shortfall": 0
+    },
+    {
+      "id": "older_pc_2021",
+      "kind": "releases",
+      "start": 1609459200,
+      "end": 1640995200,
+      "target": 100,
+      "maxPages": 4,
+      "selected": 100,
+      "pages": 1,
+      "exhausted": false,
+      "shortfall": 0
+    },
+    {
+      "id": "older_pc_2022",
+      "kind": "releases",
+      "start": 1640995200,
+      "end": 1672531200,
+      "target": 100,
+      "maxPages": 4,
+      "selected": 100,
+      "pages": 2,
+      "exhausted": false,
+      "shortfall": 0
+    },
+    {
+      "id": "older_pc_2023",
+      "kind": "releases",
+      "start": 1672531200,
+      "end": 1704067200,
+      "target": 100,
+      "maxPages": 4,
+      "selected": 100,
+      "pages": 1,
+      "exhausted": false,
+      "shortfall": 0
+    },
+    {
+      "id": "older_pc_2024",
+      "kind": "releases",
+      "start": 1704067200,
+      "end": 1735689600,
+      "target": 100,
+      "maxPages": 4,
+      "selected": 100,
+      "pages": 2,
+      "exhausted": false,
+      "shortfall": 0
+    },
+    {
+      "id": "older_pc_2025",
+      "kind": "releases",
+      "start": 1735689600,
+      "end": 1767225600,
+      "target": 100,
+      "maxPages": 4,
+      "selected": 100,
+      "pages": 2,
+      "exhausted": false,
+      "shortfall": 0
+    },
+    {
+      "id": "broad_desktop",
+      "kind": "games",
+      "start": null,
+      "end": null,
+      "target": 100,
+      "maxPages": 4,
+      "selected": 100,
+      "pages": 1,
+      "exhausted": false,
+      "shortfall": 0
+    }
+  ],
+  "rejectionCounts": {
+    "ambiguous_or_invalid_steam_crosswalk": 27
+  },
+  "checkpointIntegrity": true,
+  "candidateCheckpointEqual": true,
+  "sourceArchiveSha256": "09af94c793a346596e7ce7262f9a4189ea2eac57584fe555af8cf6d167794c62",
+  "preflight": "Reviewed allowlisted source checks passed; credential reflection blocked before persistence; artifact sensitive-key/pattern and keyed-URL scan passed; no config or environment read by audit.",
+  "files": {
+    "checkpoint.json": {
+      "bytes": 3380740,
+      "sha256": "7327d3ee4f06de3ab8f0eebd58c99fb02eb522708da2e13847511282acea9f57"
+    },
+    "candidates.json": {
+      "bytes": 3268777,
+      "sha256": "cdd2278bea3fa218f987d08a7d0f71090c668cab9b74cea15f5910b322eff80f"
+    }
+  }
+}

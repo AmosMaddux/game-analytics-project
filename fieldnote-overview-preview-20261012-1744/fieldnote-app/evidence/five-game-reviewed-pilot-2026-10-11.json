@@ -1,0 +1,964 @@
+{
+  "schemaVersion": "fieldnote-release-evidence-v1",
+  "manifestId": "five-game-reviewed-pilot-2026-10-11",
+  "policyVersion": "reviewed-steam-release-pilot-v1",
+  "review": {
+    "reviewer": "offline-implementation-from-bounded-source-audit",
+    "reviewedAt": "2026-10-11T17:38:52Z",
+    "status": "offline_candidate_not_live_approved",
+    "basis": "RELEASE-EVIDENCE-AUDIT.md; public primary pages inspected 2026-10-11 17:25–17:30 UTC. This machine-readable transcription requires independent review before any live application. Addendum: five official Steam product pages manually reviewed at 17:38 UTC; review completed 17:38:52Z. Source observations are cached/retrieved web-tool text, not origin HTTP captures."
+  },
+  "scope": {
+    "appids": [
+      2142790,
+      1336490,
+      2784470,
+      274520,
+      70
+    ],
+    "selection": "Five manually chosen existing games illustrating EA, actual 1.0, future plans, uncertain Steam scope and original-release ambiguity; not a random or representative Steam sample.",
+    "reconstructedTypeCandidates": 298,
+    "reconstructedTypeDisposition": "pending_not_verified"
+  },
+  "limitations": [
+    "No new network calls or page capture occurred during manifest preparation. Origin HTTP status, raw page hashes and exact fetch times are unavailable; the reviewed audit interval is retained.",
+    "This manually selected five-game pilot and its date coverage are not representative of all Steam releases, Steam demand or genre success.",
+    "All 298 saved-query reconstructed classifications remain pending. The two pilot reconstructed candidates are retained as pending; the other 296 are not itemized or imported. Five accepted manual classifications come from separately reviewed direct product-page evidence, not these reconstructed rows.",
+    "Accepted means a release assertion satisfies this offline candidate policy on a disposable copy, not human signoff or live-import approval. First-playable mapping is an explicit same-AppID EA policy with historical beta/demo/Advance Access limitations.",
+    "Source publication dates are separate from event dates. Planned dates stay in this manifest/registry, outside accepted research release rows. Existing evidence is append-only; conflicts require explicit review rather than overwrite."
+  ],
+  "observations": [
+    {
+      "observationId": "mistria-ea-date",
+      "appid": 2142790,
+      "sourceId": "mistria-steam",
+      "sourceUrl": "https://store.steampowered.com/app/2142790/Fields_of_Mistria/?l=english",
+      "sourceKind": "steam_store",
+      "role": "steam_ea_date",
+      "originalLabel": "Early Access Release Date",
+      "originalValue": "5 Aug, 2024",
+      "date": "2024-08-05",
+      "precision": "day",
+      "status": "released",
+      "state": "unknown",
+      "store": "steam",
+      "platform": "pc",
+      "retrieved": {
+        "start": "2026-10-11T17:25:00Z",
+        "end": "2026-10-11T17:30:00Z",
+        "precision": "interval"
+      },
+      "publicationDate": null,
+      "capture": {
+        "method": "reviewed_web_tool_text",
+        "originHttpStatus": null,
+        "responseSha256": null
+      }
+    },
+    {
+      "observationId": "mistria-display",
+      "appid": 2142790,
+      "sourceId": "mistria-steam",
+      "sourceUrl": "https://store.steampowered.com/app/2142790/Fields_of_Mistria/?l=english",
+      "sourceKind": "steam_store",
+      "role": "steam_display_date",
+      "originalLabel": "Release Date",
+      "originalValue": "5 Aug, 2026",
+      "date": "2026-08-05",
+      "precision": "day",
+      "status": "unknown",
+      "state": "unknown",
+      "store": "steam",
+      "platform": "pc",
+      "retrieved": {
+        "start": "2026-10-11T17:25:00Z",
+        "end": "2026-10-11T17:30:00Z",
+        "precision": "interval"
+      },
+      "publicationDate": null,
+      "capture": {
+        "method": "reviewed_web_tool_text",
+        "originHttpStatus": null,
+        "responseSha256": null
+      }
+    },
+    {
+      "observationId": "mistria-state",
+      "appid": 2142790,
+      "sourceId": "mistria-steam",
+      "sourceUrl": "https://store.steampowered.com/app/2142790/Fields_of_Mistria/?l=english",
+      "sourceKind": "steam_store",
+      "role": "current_state",
+      "originalLabel": "Availability",
+      "originalValue": "Released",
+      "date": null,
+      "precision": "unknown",
+      "status": "released",
+      "state": "released",
+      "store": "steam",
+      "platform": "pc",
+      "retrieved": {
+        "start": "2026-10-11T17:25:00Z",
+        "end": "2026-10-11T17:30:00Z",
+        "precision": "interval"
+      },
+      "publicationDate": null,
+      "capture": {
+        "method": "reviewed_web_tool_text",
+        "originHttpStatus": null,
+        "responseSha256": null
+      }
+    },
+    {
+      "observationId": "mistria-ea-available",
+      "appid": 2142790,
+      "sourceId": "mistria-ea",
+      "sourceUrl": "https://www.fieldsofmistria.com/post/fields-of-mistria-early-access-roadmap-have-arrived",
+      "sourceKind": "developer",
+      "role": "ea_available",
+      "originalLabel": "Early Access availability",
+      "originalValue": "Early Access & Roadmap Have Arrived",
+      "date": "2024-08-05",
+      "precision": "day",
+      "status": "released",
+      "state": "unknown",
+      "store": "unspecified",
+      "platform": "unspecified",
+      "retrieved": {
+        "start": "2026-10-11T17:25:00Z",
+        "end": "2026-10-11T17:30:00Z",
+        "precision": "interval"
+      },
+      "publicationDate": "2024-08-05",
+      "capture": {
+        "method": "reviewed_web_tool_text",
+        "originHttpStatus": null,
+        "responseSha256": null
+      }
+    },
+    {
+      "observationId": "mistria-plan",
+      "appid": 2142790,
+      "sourceId": "mistria-plan",
+      "sourceUrl": "https://www.fieldsofmistria.com/post/fields-of-mistria-1-0-release-date-announcement",
+      "sourceKind": "developer",
+      "role": "planned_full_release",
+      "originalLabel": "1.0 release date announcement",
+      "originalValue": "August 5, 2026",
+      "date": "2026-08-05",
+      "precision": "day",
+      "status": "planned",
+      "state": "unknown",
+      "store": "unspecified",
+      "platform": "unspecified",
+      "retrieved": {
+        "start": "2026-10-11T17:25:00Z",
+        "end": "2026-10-11T17:30:00Z",
+        "precision": "interval"
+      },
+      "publicationDate": null,
+      "capture": {
+        "method": "reviewed_web_tool_text",
+        "originHttpStatus": null,
+        "responseSha256": null
+      }
+    },
+    {
+      "observationId": "mistria-full-available",
+      "appid": 2142790,
+      "sourceId": "mistria-full",
+      "sourceUrl": "https://www.fieldsofmistria.com/post/fields-of-mistria-s-1-0-update-patch-notes-are-here",
+      "sourceKind": "developer",
+      "role": "full_release_available",
+      "originalLabel": "Actual release statement",
+      "originalValue": "1.0 Update has arrived; we have now reached full release",
+      "date": null,
+      "precision": "unknown",
+      "status": "released",
+      "state": "unknown",
+      "store": "unspecified",
+      "platform": "unspecified",
+      "retrieved": {
+        "start": "2026-10-11T17:25:00Z",
+        "end": "2026-10-11T17:30:00Z",
+        "precision": "interval"
+      },
+      "publicationDate": null,
+      "capture": {
+        "method": "reviewed_web_tool_text",
+        "originHttpStatus": null,
+        "responseSha256": null
+      }
+    },
+    {
+      "observationId": "storm-ea-date",
+      "appid": 1336490,
+      "sourceId": "storm-steam",
+      "sourceUrl": "https://store.steampowered.com/app/1336490/Against_the_Storm/",
+      "sourceKind": "steam_store",
+      "role": "steam_ea_date",
+      "originalLabel": "Early Access Release Date",
+      "originalValue": "1 Nov, 2022",
+      "date": "2022-11-01",
+      "precision": "day",
+      "status": "released",
+      "state": "unknown",
+      "store": "steam",
+      "platform": "pc",
+      "retrieved": {
+        "start": "2026-10-11T17:25:00Z",
+        "end": "2026-10-11T17:30:00Z",
+        "precision": "interval"
+      },
+      "publicationDate": null,
+      "capture": {
+        "method": "reviewed_web_tool_text",
+        "originHttpStatus": null,
+        "responseSha256": null
+      }
+    },
+    {
+      "observationId": "storm-display",
+      "appid": 1336490,
+      "sourceId": "storm-steam",
+      "sourceUrl": "https://store.steampowered.com/app/1336490/Against_the_Storm/",
+      "sourceKind": "steam_store",
+      "role": "steam_display_date",
+      "originalLabel": "Release Date",
+      "originalValue": "8 Dec, 2023",
+      "date": "2023-12-08",
+      "precision": "day",
+      "status": "unknown",
+      "state": "unknown",
+      "store": "steam",
+      "platform": "pc",
+      "retrieved": {
+        "start": "2026-10-11T17:25:00Z",
+        "end": "2026-10-11T17:30:00Z",
+        "precision": "interval"
+      },
+      "publicationDate": null,
+      "capture": {
+        "method": "reviewed_web_tool_text",
+        "originHttpStatus": null,
+        "responseSha256": null
+      }
+    },
+    {
+      "observationId": "storm-state",
+      "appid": 1336490,
+      "sourceId": "storm-steam",
+      "sourceUrl": "https://store.steampowered.com/app/1336490/Against_the_Storm/",
+      "sourceKind": "steam_store",
+      "role": "current_state",
+      "originalLabel": "Availability",
+      "originalValue": "Released",
+      "date": null,
+      "precision": "unknown",
+      "status": "released",
+      "state": "released",
+      "store": "steam",
+      "platform": "pc",
+      "retrieved": {
+        "start": "2026-10-11T17:25:00Z",
+        "end": "2026-10-11T17:30:00Z",
+        "precision": "interval"
+      },
+      "publicationDate": null,
+      "capture": {
+        "method": "reviewed_web_tool_text",
+        "originHttpStatus": null,
+        "responseSha256": null
+      }
+    },
+    {
+      "observationId": "storm-full-available",
+      "appid": 1336490,
+      "sourceId": "storm-full",
+      "sourceUrl": "https://eremitegames.com/1-0-available/",
+      "sourceKind": "developer",
+      "role": "full_release_available",
+      "originalLabel": "Actual 1.0 availability",
+      "originalValue": "1.0 available",
+      "date": null,
+      "precision": "unknown",
+      "status": "released",
+      "state": "unknown",
+      "store": "unspecified",
+      "platform": "unspecified",
+      "retrieved": {
+        "start": "2026-10-11T17:25:00Z",
+        "end": "2026-10-11T17:30:00Z",
+        "precision": "interval"
+      },
+      "publicationDate": "2023-12-30",
+      "capture": {
+        "method": "reviewed_web_tool_text",
+        "originHttpStatus": null,
+        "responseSha256": null
+      }
+    },
+    {
+      "observationId": "kings-ea-date",
+      "appid": 2784470,
+      "sourceId": "kings-steam",
+      "sourceUrl": "https://store.steampowered.com/app/2784470/9_Kings/",
+      "sourceKind": "steam_store",
+      "role": "steam_ea_date",
+      "originalLabel": "Early Access Release Date",
+      "originalValue": "23 May, 2025",
+      "date": "2025-05-23",
+      "precision": "day",
+      "status": "released",
+      "state": "unknown",
+      "store": "steam",
+      "platform": "pc",
+      "retrieved": {
+        "start": "2026-10-11T17:25:00Z",
+        "end": "2026-10-11T17:30:00Z",
+        "precision": "interval"
+      },
+      "publicationDate": null,
+      "capture": {
+        "method": "reviewed_web_tool_text",
+        "originHttpStatus": null,
+        "responseSha256": null
+      }
+    },
+    {
+      "observationId": "kings-state",
+      "appid": 2784470,
+      "sourceId": "kings-steam",
+      "sourceUrl": "https://store.steampowered.com/app/2784470/9_Kings/",
+      "sourceKind": "steam_store",
+      "role": "current_state",
+      "originalLabel": "Availability",
+      "originalValue": "Early Access Game",
+      "date": null,
+      "precision": "unknown",
+      "status": "released",
+      "state": "early_access",
+      "store": "steam",
+      "platform": "pc",
+      "retrieved": {
+        "start": "2026-10-11T17:25:00Z",
+        "end": "2026-10-11T17:30:00Z",
+        "precision": "interval"
+      },
+      "publicationDate": null,
+      "capture": {
+        "method": "reviewed_web_tool_text",
+        "originHttpStatus": null,
+        "responseSha256": null
+      }
+    },
+    {
+      "observationId": "kings-plan",
+      "appid": 2784470,
+      "sourceId": "kings-steam",
+      "sourceUrl": "https://store.steampowered.com/app/2784470/9_Kings/",
+      "sourceKind": "steam_store",
+      "role": "planned_full_release",
+      "originalLabel": "Planned full release",
+      "originalValue": "12 Nov, 2026",
+      "date": "2026-11-12",
+      "precision": "day",
+      "status": "planned",
+      "state": "unknown",
+      "store": "steam",
+      "platform": "pc",
+      "retrieved": {
+        "start": "2026-10-11T17:25:00Z",
+        "end": "2026-10-11T17:30:00Z",
+        "precision": "interval"
+      },
+      "publicationDate": null,
+      "capture": {
+        "method": "reviewed_web_tool_text",
+        "originHttpStatus": null,
+        "responseSha256": null
+      }
+    },
+    {
+      "observationId": "darkwood-display",
+      "appid": 274520,
+      "sourceId": "darkwood-steam",
+      "sourceUrl": "https://store.steampowered.com/app/274520/Darkwood/?l=english",
+      "sourceKind": "steam_store",
+      "role": "steam_display_date",
+      "originalLabel": "Release Date",
+      "originalValue": "17 Aug, 2017",
+      "date": "2017-08-17",
+      "precision": "day",
+      "status": "unknown",
+      "state": "unknown",
+      "store": "steam",
+      "platform": "pc",
+      "retrieved": {
+        "start": "2026-10-11T17:25:00Z",
+        "end": "2026-10-11T17:30:00Z",
+        "precision": "interval"
+      },
+      "publicationDate": null,
+      "capture": {
+        "method": "reviewed_web_tool_text",
+        "originHttpStatus": null,
+        "responseSha256": null
+      }
+    },
+    {
+      "observationId": "darkwood-ea",
+      "appid": 274520,
+      "sourceId": "darkwood-presskit",
+      "sourceUrl": "https://www.darkwoodgame.com/presskit/",
+      "sourceKind": "developer",
+      "role": "general_ea_date",
+      "originalLabel": "Early Access launch",
+      "originalValue": "2014-07-24",
+      "date": "2014-07-24",
+      "precision": "day",
+      "status": "released",
+      "state": "unknown",
+      "store": "unspecified",
+      "platform": "unspecified",
+      "retrieved": {
+        "start": "2026-10-11T17:25:00Z",
+        "end": "2026-10-11T17:30:00Z",
+        "precision": "interval"
+      },
+      "publicationDate": null,
+      "capture": {
+        "method": "reviewed_web_tool_text",
+        "originHttpStatus": null,
+        "responseSha256": null
+      }
+    },
+    {
+      "observationId": "darkwood-launch",
+      "appid": 274520,
+      "sourceId": "darkwood-presskit",
+      "sourceUrl": "https://www.darkwoodgame.com/presskit/",
+      "sourceKind": "developer",
+      "role": "general_launch_date",
+      "originalLabel": "Release",
+      "originalValue": "2017-08-17",
+      "date": "2017-08-17",
+      "precision": "day",
+      "status": "released",
+      "state": "unknown",
+      "store": "unspecified",
+      "platform": "unspecified",
+      "retrieved": {
+        "start": "2026-10-11T17:25:00Z",
+        "end": "2026-10-11T17:30:00Z",
+        "precision": "interval"
+      },
+      "publicationDate": null,
+      "capture": {
+        "method": "reviewed_web_tool_text",
+        "originHttpStatus": null,
+        "responseSha256": null
+      }
+    },
+    {
+      "observationId": "halflife-display",
+      "appid": 70,
+      "sourceId": "halflife-steam",
+      "sourceUrl": "https://store.steampowered.com/app/70/",
+      "sourceKind": "steam_store",
+      "role": "steam_display_date",
+      "originalLabel": "Release Date",
+      "originalValue": "19 Nov, 1998",
+      "date": "1998-11-19",
+      "precision": "day",
+      "status": "unknown",
+      "state": "unknown",
+      "store": "steam",
+      "platform": "pc",
+      "retrieved": {
+        "start": "2026-10-11T17:25:00Z",
+        "end": "2026-10-11T17:30:00Z",
+        "precision": "interval"
+      },
+      "publicationDate": null,
+      "capture": {
+        "method": "reviewed_web_tool_text",
+        "originHttpStatus": null,
+        "responseSha256": null
+      }
+    },
+    {
+      "observationId": "manual-game-type-2142790",
+      "appid": 2142790,
+      "sourceId": "mistria-steam",
+      "sourceUrl": "https://store.steampowered.com/app/2142790/Fields_of_Mistria/?l=english",
+      "sourceKind": "steam_store",
+      "role": "manual_base_game_review",
+      "originalLabel": "Product title",
+      "originalValue": "Fields of Mistria",
+      "date": null,
+      "precision": "unknown",
+      "status": "unknown",
+      "state": "unknown",
+      "store": "steam",
+      "platform": "pc",
+      "retrieved": {
+        "start": "2026-10-11T17:38:00Z",
+        "end": "2026-10-11T17:38:52Z",
+        "precision": "interval"
+      },
+      "publicationDate": null,
+      "capture": {
+        "method": "reviewed_web_tool_text",
+        "originHttpStatus": null,
+        "responseSha256": null
+      },
+      "classification": {
+        "title": "Fields of Mistria",
+        "developer": "NPC Studio",
+        "ownNamedPurchaseOffer": true,
+        "gameplayDescription": true,
+        "otherProductsDistinguished": true,
+        "rationale": "Exact title and NPC Studio identity; own named main-product purchase offer and single-player farming/RPG gameplay. Separately corroborated developer release posts concern this playable game."
+      }
+    },
+    {
+      "observationId": "manual-game-type-1336490",
+      "appid": 1336490,
+      "sourceId": "storm-steam",
+      "sourceUrl": "https://store.steampowered.com/app/1336490/Against_the_Storm/",
+      "sourceKind": "steam_store",
+      "role": "manual_base_game_review",
+      "originalLabel": "Product title",
+      "originalValue": "Against the Storm",
+      "date": null,
+      "precision": "unknown",
+      "status": "unknown",
+      "state": "unknown",
+      "store": "steam",
+      "platform": "pc",
+      "retrieved": {
+        "start": "2026-10-11T17:38:00Z",
+        "end": "2026-10-11T17:38:52Z",
+        "precision": "interval"
+      },
+      "publicationDate": null,
+      "capture": {
+        "method": "reviewed_web_tool_text",
+        "originHttpStatus": null,
+        "responseSha256": null
+      },
+      "classification": {
+        "title": "Against the Storm",
+        "developer": "Eremite Games",
+        "ownNamedPurchaseOffer": true,
+        "gameplayDescription": true,
+        "otherProductsDistinguished": true,
+        "rationale": "Exact title and Eremite Games identity; own purchase offer and roguelite city-building gameplay. The page separately offers a demo and named DLC, distinguishing the parent game."
+      }
+    },
+    {
+      "observationId": "manual-game-type-2784470",
+      "appid": 2784470,
+      "sourceId": "kings-steam",
+      "sourceUrl": "https://store.steampowered.com/app/2784470/9_Kings/",
+      "sourceKind": "steam_store",
+      "role": "manual_base_game_review",
+      "originalLabel": "Product title",
+      "originalValue": "9 Kings",
+      "date": null,
+      "precision": "unknown",
+      "status": "unknown",
+      "state": "unknown",
+      "store": "steam",
+      "platform": "pc",
+      "retrieved": {
+        "start": "2026-10-11T17:38:00Z",
+        "end": "2026-10-11T17:38:52Z",
+        "precision": "interval"
+      },
+      "publicationDate": null,
+      "capture": {
+        "method": "reviewed_web_tool_text",
+        "originHttpStatus": null,
+        "responseSha256": null
+      },
+      "classification": {
+        "title": "9 Kings",
+        "developer": "Sad Socket",
+        "ownNamedPurchaseOffer": true,
+        "gameplayDescription": true,
+        "otherProductsDistinguished": true,
+        "rationale": "Exact title and Sad Socket identity; own purchase offer, Early Access Game presentation and current playability. The separate demo is distinguished from this parent game."
+      }
+    },
+    {
+      "observationId": "manual-game-type-274520",
+      "appid": 274520,
+      "sourceId": "darkwood-steam",
+      "sourceUrl": "https://store.steampowered.com/app/274520/Darkwood/?l=english",
+      "sourceKind": "steam_store",
+      "role": "manual_base_game_review",
+      "originalLabel": "Product title",
+      "originalValue": "Darkwood",
+      "date": null,
+      "precision": "unknown",
+      "status": "unknown",
+      "state": "unknown",
+      "store": "steam",
+      "platform": "pc",
+      "retrieved": {
+        "start": "2026-10-11T17:38:00Z",
+        "end": "2026-10-11T17:38:52Z",
+        "precision": "interval"
+      },
+      "publicationDate": null,
+      "capture": {
+        "method": "reviewed_web_tool_text",
+        "originHttpStatus": null,
+        "responseSha256": null
+      },
+      "classification": {
+        "title": "Darkwood",
+        "developer": "Acid Wizard Studio",
+        "ownNamedPurchaseOffer": true,
+        "gameplayDescription": true,
+        "otherProductsDistinguished": true,
+        "rationale": "Exact title and Acid Wizard Studio identity; own named purchase offer and survival gameplay. Soundtrack/artbook products are separately identified alongside the main game in a bundle."
+      }
+    },
+    {
+      "observationId": "manual-game-type-70",
+      "appid": 70,
+      "sourceId": "halflife-steam",
+      "sourceUrl": "https://store.steampowered.com/app/70/",
+      "sourceKind": "steam_store",
+      "role": "manual_base_game_review",
+      "originalLabel": "Product title",
+      "originalValue": "Half-Life",
+      "date": null,
+      "precision": "unknown",
+      "status": "unknown",
+      "state": "unknown",
+      "store": "steam",
+      "platform": "pc",
+      "retrieved": {
+        "start": "2026-10-11T17:38:00Z",
+        "end": "2026-10-11T17:38:52Z",
+        "precision": "interval"
+      },
+      "publicationDate": null,
+      "capture": {
+        "method": "reviewed_web_tool_text",
+        "originHttpStatus": null,
+        "responseSha256": null
+      },
+      "classification": {
+        "title": "Half-Life",
+        "developer": "Valve",
+        "ownNamedPurchaseOffer": true,
+        "gameplayDescription": true,
+        "otherProductsDistinguished": true,
+        "rationale": "Exact title and Valve developer/publisher identity; own purchase offer and single/multiplayer gameplay. Soundtrack and multi-game bundles appear separately from the main product."
+      }
+    }
+  ],
+  "assertions": [
+    {
+      "assertionId": "mistria-first-playable",
+      "appid": 2142790,
+      "kind": "release",
+      "disposition": "accepted",
+      "method": "steam_ea_same_app_first_playable_v1",
+      "confidence": "reviewed_primary_corroborated",
+      "supportingObservationIds": [
+        "mistria-ea-date",
+        "mistria-state",
+        "mistria-ea-available"
+      ],
+      "note": "Explicit Steam EA date interpreted as first public release of this same Steam AppID. Separate demos/playtests and closed betas are excluded; no claim of exhaustive historical beta or Advance Access research.",
+      "basis": "first_playable",
+      "date": "2024-08-05",
+      "precision": "day",
+      "status": "released",
+      "phase": "early_access",
+      "store": "steam",
+      "platform": "pc",
+      "firstPlayablePolicy": "same-steam-appid-public-ea-release-v1"
+    },
+    {
+      "assertionId": "mistria-full-release",
+      "appid": 2142790,
+      "kind": "release",
+      "disposition": "accepted",
+      "method": "steam_full_release_corroborated_v1",
+      "confidence": "reviewed_primary_corroborated",
+      "supportingObservationIds": [
+        "mistria-display",
+        "mistria-full-available",
+        "mistria-plan"
+      ],
+      "note": "Steam exact date and actual full-release post support 2026-08-05. The actual post heading says Aug 5 without a year; the year is corroborated by Steam and the planned-date announcement. The earlier plan is context only, not a separate accepted release row. No publication year is fabricated.",
+      "basis": "full_release",
+      "date": "2026-08-05",
+      "precision": "day",
+      "status": "released",
+      "phase": "full_release",
+      "store": "steam",
+      "platform": "pc",
+      "firstPlayablePolicy": null
+    },
+    {
+      "assertionId": "storm-first-playable",
+      "appid": 1336490,
+      "kind": "release",
+      "disposition": "accepted",
+      "method": "steam_ea_same_app_first_playable_v1",
+      "confidence": "reviewed_primary_corroborated",
+      "supportingObservationIds": [
+        "storm-ea-date",
+        "storm-state"
+      ],
+      "note": "Explicit Steam EA date interpreted as first public release of this same Steam AppID. Separate demos/playtests and closed betas are excluded; no claim of exhaustive historical beta or Advance Access research.",
+      "basis": "first_playable",
+      "date": "2022-11-01",
+      "precision": "day",
+      "status": "released",
+      "phase": "early_access",
+      "store": "steam",
+      "platform": "pc",
+      "firstPlayablePolicy": "same-steam-appid-public-ea-release-v1"
+    },
+    {
+      "assertionId": "storm-full-release",
+      "appid": 1336490,
+      "kind": "release",
+      "disposition": "accepted",
+      "method": "steam_full_release_corroborated_v1",
+      "confidence": "reviewed_primary_corroborated",
+      "supportingObservationIds": [
+        "storm-display",
+        "storm-full-available"
+      ],
+      "note": "Steam event date 2023-12-08 plus actual 1.0 availability statement. The developer post publication date 2023-12-30 is preserved separately, not used as the release day. IGDB beta dates do not establish Steam playability.",
+      "basis": "full_release",
+      "date": "2023-12-08",
+      "precision": "day",
+      "status": "released",
+      "phase": "full_release",
+      "store": "steam",
+      "platform": "pc",
+      "firstPlayablePolicy": null
+    },
+    {
+      "assertionId": "kings-first-playable",
+      "appid": 2784470,
+      "kind": "release",
+      "disposition": "accepted",
+      "method": "steam_ea_same_app_first_playable_v1",
+      "confidence": "reviewed_primary_corroborated",
+      "supportingObservationIds": [
+        "kings-ea-date",
+        "kings-state"
+      ],
+      "note": "Explicit Steam EA date interpreted as first public release of this same Steam AppID. Separate demos/playtests and closed betas are excluded; no claim of exhaustive historical beta or Advance Access research.",
+      "basis": "first_playable",
+      "date": "2025-05-23",
+      "precision": "day",
+      "status": "released",
+      "phase": "early_access",
+      "store": "steam",
+      "platform": "pc",
+      "firstPlayablePolicy": "same-steam-appid-public-ea-release-v1"
+    },
+    {
+      "assertionId": "kings-planned-full-release",
+      "appid": 2784470,
+      "kind": "release",
+      "disposition": "pending",
+      "method": "planned_not_released",
+      "confidence": "unresolved",
+      "supportingObservationIds": [
+        "kings-plan"
+      ],
+      "note": "Future planned exit from Early Access as of the audit. Not accepted release evidence, not eligible for full-release filters.",
+      "basis": "full_release",
+      "date": "2026-11-12",
+      "precision": "day",
+      "status": "planned",
+      "phase": "full_release",
+      "store": "steam",
+      "platform": "pc",
+      "firstPlayablePolicy": null
+    },
+    {
+      "assertionId": "darkwood-first-playable-pending",
+      "appid": 274520,
+      "kind": "release",
+      "disposition": "pending",
+      "method": "steam_scope_unresolved",
+      "confidence": "unresolved",
+      "supportingObservationIds": [
+        "darkwood-ea"
+      ],
+      "note": "Official presskit EA launch date retained as a lead. No audited Steam-specific EA launch statement; first Steam playability remains unresolved.",
+      "basis": "first_playable",
+      "date": "2014-07-24",
+      "precision": "day",
+      "status": "released",
+      "phase": "early_access",
+      "store": "unspecified",
+      "platform": "unspecified",
+      "firstPlayablePolicy": null
+    },
+    {
+      "assertionId": "darkwood-full-release-pending",
+      "appid": 274520,
+      "kind": "release",
+      "disposition": "pending",
+      "method": "full_release_semantics_unresolved",
+      "confidence": "unresolved",
+      "supportingObservationIds": [
+        "darkwood-display",
+        "darkwood-launch"
+      ],
+      "note": "Steam display date agrees with developer presskit release. The bounded audit does not preserve an explicit actual Steam 1.0 statement; conservative candidate pending review.",
+      "basis": "full_release",
+      "date": "2017-08-17",
+      "precision": "day",
+      "status": "unknown",
+      "phase": "full_release",
+      "store": "steam",
+      "platform": "pc",
+      "firstPlayablePolicy": null
+    },
+    {
+      "assertionId": "halflife-first-playable-pending",
+      "appid": 70,
+      "kind": "release",
+      "disposition": "pending",
+      "method": "original_vs_steam_date_unresolved",
+      "confidence": "unresolved",
+      "supportingObservationIds": [
+        "halflife-display"
+      ],
+      "note": "Generic 1998-11-19 store date is an original-release reference, not proof of Steam first playability or Steam 1.0. Keep this date basis unknown.",
+      "basis": "first_playable",
+      "date": null,
+      "precision": "unknown",
+      "status": "unknown",
+      "phase": null,
+      "store": "steam",
+      "platform": "pc",
+      "firstPlayablePolicy": null
+    },
+    {
+      "assertionId": "halflife-full-release-pending",
+      "appid": 70,
+      "kind": "release",
+      "disposition": "pending",
+      "method": "original_vs_steam_date_unresolved",
+      "confidence": "unresolved",
+      "supportingObservationIds": [
+        "halflife-display"
+      ],
+      "note": "Generic 1998-11-19 store date is an original-release reference, not proof of Steam first playability or Steam 1.0. Keep this date basis unknown.",
+      "basis": "full_release",
+      "date": null,
+      "precision": "unknown",
+      "status": "unknown",
+      "phase": null,
+      "store": "steam",
+      "platform": "pc",
+      "firstPlayablePolicy": null
+    },
+    {
+      "assertionId": "type-2784470-pending",
+      "appid": 2784470,
+      "kind": "application_type",
+      "disposition": "pending",
+      "method": "saved_game_only_catalog_reconstruction",
+      "confidence": "corroborated_derived",
+      "supportingObservationIds": [],
+      "appType": "game",
+      "note": "Among 298 M3 game-only admissions. Original per-app responses/request manifests are unavailable and the identity-job association was reconstructed by time. Pending named type-policy review; not a verified Steam app_type field."
+    },
+    {
+      "assertionId": "type-70-pending",
+      "appid": 70,
+      "kind": "application_type",
+      "disposition": "pending",
+      "method": "saved_game_only_catalog_reconstruction",
+      "confidence": "corroborated_derived",
+      "supportingObservationIds": [],
+      "appType": "game",
+      "note": "Among 298 M3 game-only admissions. Original per-app responses/request manifests are unavailable and the identity-job association was reconstructed by time. Pending named type-policy review; not a verified Steam app_type field."
+    },
+    {
+      "assertionId": "type-2142790-manual-reviewed",
+      "appid": 2142790,
+      "kind": "application_type",
+      "disposition": "accepted",
+      "method": "steam_store_base_game_manual_review_v1",
+      "confidence": "high_reviewed_classification",
+      "supportingObservationIds": [
+        "manual-game-type-2142790"
+      ],
+      "note": "Manually reviewed classification from official product-page evidence. Exact title and NPC Studio identity; own named main-product purchase offer and single-player farming/RPG gameplay. Separately corroborated developer release posts concern this playable game. This is a normalized reviewed classification, not an API-returned app_type field, IGDB relabeling or promotion of reconstructed catalog evidence.",
+      "appType": "game"
+    },
+    {
+      "assertionId": "type-1336490-manual-reviewed",
+      "appid": 1336490,
+      "kind": "application_type",
+      "disposition": "accepted",
+      "method": "steam_store_base_game_manual_review_v1",
+      "confidence": "high_reviewed_classification",
+      "supportingObservationIds": [
+        "manual-game-type-1336490"
+      ],
+      "note": "Manually reviewed classification from official product-page evidence. Exact title and Eremite Games identity; own purchase offer and roguelite city-building gameplay. The page separately offers a demo and named DLC, distinguishing the parent game. This is a normalized reviewed classification, not an API-returned app_type field, IGDB relabeling or promotion of reconstructed catalog evidence.",
+      "appType": "game"
+    },
+    {
+      "assertionId": "type-2784470-manual-reviewed",
+      "appid": 2784470,
+      "kind": "application_type",
+      "disposition": "accepted",
+      "method": "steam_store_base_game_manual_review_v1",
+      "confidence": "high_reviewed_classification",
+      "supportingObservationIds": [
+        "manual-game-type-2784470"
+      ],
+      "note": "Manually reviewed classification from official product-page evidence. Exact title and Sad Socket identity; own purchase offer, Early Access Game presentation and current playability. The separate demo is distinguished from this parent game. This is a normalized reviewed classification, not an API-returned app_type field, IGDB relabeling or promotion of reconstructed catalog evidence.",
+      "appType": "game"
+    },
+    {
+      "assertionId": "type-274520-manual-reviewed",
+      "appid": 274520,
+      "kind": "application_type",
+      "disposition": "accepted",
+      "method": "steam_store_base_game_manual_review_v1",
+      "confidence": "high_reviewed_classification",
+      "supportingObservationIds": [
+        "manual-game-type-274520"
+      ],
+      "note": "Manually reviewed classification from official product-page evidence. Exact title and Acid Wizard Studio identity; own named purchase offer and survival gameplay. Soundtrack/artbook products are separately identified alongside the main game in a bundle. This is a normalized reviewed classification, not an API-returned app_type field, IGDB relabeling or promotion of reconstructed catalog evidence.",
+      "appType": "game"
+    },
+    {
+      "assertionId": "type-70-manual-reviewed",
+      "appid": 70,
+      "kind": "application_type",
+      "disposition": "accepted",
+      "method": "steam_store_base_game_manual_review_v1",
+      "confidence": "high_reviewed_classification",
+      "supportingObservationIds": [
+        "manual-game-type-70"
+      ],
+      "note": "Manually reviewed classification from official product-page evidence. Exact title and Valve developer/publisher identity; own purchase offer and single/multiplayer gameplay. Soundtrack and multi-game bundles appear separately from the main product. This is a normalized reviewed classification, not an API-returned app_type field, IGDB relabeling or promotion of reconstructed catalog evidence.",
+      "appType": "game"
+    }
+  ],
+  "contentSha256": "b6e081b3c1895626e93dc8dcc204bb7cfedfd40d9dc218b0b01355bc58650bfb"
+}

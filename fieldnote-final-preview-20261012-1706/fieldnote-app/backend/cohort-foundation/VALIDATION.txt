@@ -1,0 +1,103 @@
+Fieldnote redesign foundation validation
+Validation UTC: 2026-10-11T14:22:40Z
+Runtime: v24.19.0
+
+Command: node --test test/*.test.mjs review/*.test.mjs
+✔ review: calendar-month subtraction clamps Gregorian month ends (1.242236ms)
+✔ review: calendar year and fixed review days remain different concepts (0.621584ms)
+✔ review: week presets mean exactly 7, 14, and 21 UTC days across a DST date (0.202514ms)
+✔ review: custom inclusive end days convert to the following UTC midnight (0.348985ms)
+✔ review: invalid literal dates must not be normalized into valid cohorts (0.61887ms)
+✔ review: exact UTC timestamp is frozen without accepting ambiguous local timestamps (0.899412ms)
+✔ review: inclusive-second adapter loses no second and rejects fractional boundaries (0.37313ms)
+✔ review: releases are filtered before genre counts and outlier statistics (1.43074ms)
+✔ review: EA and 1.0 bases never substitute for each other (1.273303ms)
+✔ review: unknown, coarse, unverified and coming-soon dates remain excluded (0.520131ms)
+✔ review: future releases are excluded even when a custom window extends beyond asOf (0.211828ms)
+✔ review: canonical duplicate IDs merge once per genre, retain zero and preserve provenance (0.630817ms)
+✔ review: sparse missing input rows are never reported as duplicate games (0.238879ms)
+✔ review: conflicting duplicate dates and statuses exclude rather than choose a row (0.307262ms)
+✔ review: contradictory cross-basis chronology cannot silently enter the first-playable cohort (0.291077ms)
+✔ review: missing, invalid and conflicting observations never become zeros (0.637047ms)
+✔ review: user-supplied missing reason labels are own numeric counts (0.203415ms)
+✔ review: negative counts are unavailable for numeric and object metric inputs (0.348914ms)
+✔ review: negative duplicate fragments retain missing reasons without poisoning valid counts (0.441824ms)
+✔ review: review windows cannot be substituted for release cohorts (0.194232ms)
+✔ review: R7 quartiles, trimming floor and sample thresholds have independent fixtures (0.427802ms)
+✔ review: overflow, underflow and outliers do not corrupt representative statistics (0.304037ms)
+✔ review: statistics never coerce missing, text or infinite inputs (0.316876ms)
+✔ recent-release filtering precedes per-genre statistics (2.160165ms)
+✔ each unique app is equally weighted once per genre despite duplicates and multiple labels (1.127885ms)
+✔ missing, nonfinite, invalid and zero retain distinct coverage and reasons (0.862716ms)
+✔ empty genre, all missing and genuinely zero are distinguishable (0.471258ms)
+✔ conflicting duplicate metric values are unavailable rather than averaged or first-wins (0.641394ms)
+✔ one observed duplicate plus an unavailable duplicate preserves value and audit reason (0.268413ms)
+✔ supplied missing reasons use own-key-safe counting (0.314272ms)
+✔ unclassified games stay in cohort coverage but do not invent a genre (1.101595ms)
+✔ large finite values remain finite through genre aggregation (0.262294ms)
+✔ extreme hit leaves median descriptive and raises largest-game concentration (0.600552ms)
+✔ small-sample status is based on observed unique games, never eligible row count (0.423166ms)
+✔ invalid options fail closed and review windows cannot masquerade as release cohorts (0.570427ms)
+✔ analysis does not mutate inputs and publishes version and weighting metadata (0.448925ms)
+✔ negative raw numeric and object metrics are missing, while zero remains observed (0.314853ms)
+✔ filters release before activity: old game with recent measurements stays excluded (2.681709ms)
+✔ Early Access stays the first playable date and full 1.0 is an explicit switch (0.693182ms)
+✔ unknown, imprecise, unverified, invalid, future and planned dates have reasons (0.743036ms)
+✔ duplicate IDs normalize, merge genre labels and retain one eligible game (0.40572ms)
+✔ conflicting verified dates or planned/released states are never first-row wins (0.429556ms)
+✔ full release earlier than claimed first playable is a chronology conflict (0.246741ms)
+✔ source provenance and rejected evidence are preserved without mutating input (0.446681ms)
+✔ invalid IDs remain audited separately from unique game coverage (0.280842ms)
+✔ exports a statistic version and an explicit empty result (2.256851ms)
+✔ one value and genuine zeros remain measured observations (0.651208ms)
+✔ rejects missing, nonnumeric, infinite, NaN, and sparse input (0.874174ms)
+✔ R7 reference quartiles interpolate rather than use median-of-halves (0.566021ms)
+✔ sample labels and ranking eligibility use explicit n boundaries (0.430337ms)
+✔ 10% per-tail trimming starts at 20 and uses floor for 29 (0.396986ms)
+✔ an extreme hit changes raw mean and share, not the primary median (0.241703ms)
+✔ input order and frozen arrays are preserved (0.235965ms)
+✔ MAX_VALUE repeated remains finite in mean, quartiles, trimming, and share (5.076557ms)
+✔ nonuniform huge nonnegative observations do not overflow intermediate sums (0.576807ms)
+✔ signed extremes cancel without losing a small residual (0.578649ms)
+✔ true IQR overflow is explicit while other signed statistics stay available (0.211228ms)
+✔ negative-only values are valid observations, with no largest-game share (0.217908ms)
+✔ subnormal observations and final ties round correctly without scaling loss (0.191758ms)
+✔ all preset windows are deterministic, clamped, half-open UTC intervals (3.717646ms)
+✔ year subtraction clamps leap day while months use one direct subtraction (0.388494ms)
+✔ custom dates include end day and do not silently clip requested window (0.688945ms)
+✔ review lookbacks are 7 and 30 elapsed UTC days, separate from release cohorts (0.385399ms)
+✔ strict date validation rejects normalized invalid dates and ambiguous instants (0.773362ms)
+✔ inclusive-second conversion subtracts one second and rejects precision loss (0.394213ms)
+ℹ tests 65
+ℹ suites 0
+ℹ pass 65
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 128.315342
+
+Syntax checks: node --check on every runtime module and test
+PASS: 10 .mjs files
+
+Additional executed checks: README example smoke test PASS; no package dependencies PASS.
+Independent arithmetic oracle: reviewer reported 200 deterministic cases, 1400 exact-rational comparisons, all matched.
+
+Scope: standalone offline computation foundation only.
+NOT RUN: authoritative Codespaces app integration, database migration, UI tests, live source collection, Cloudflare compatibility or deployment.
+No prototype/app/database files, environment files, credentials or schedules were read or changed.
+Only the supplied plan and foundation source/test/documentation files were read for implementation.
+
+Final file SHA-256 checksums (excluding this report):
+f5b030aada6c8ef8ff0a0a609e38dce415a7ecc0dac137f005e1faa3ba2c9c4d  README.md
+4eb79e54769a7cd274a0aa442b7ecd572e246578a330e8b61eeb21a1b153e888  package.json
+477784a70ba639da398504ce64d5de5ac15100e8d0ffcaa25efff015af82e6a1  analysis.mjs
+4864587d6cab28266459cd76d64ce2c94914a7db1e2b90b678f33b0a3fdf785f  index.mjs
+77d2654c3b1fdfc9c4eee73bb4840546f602d46120638731b28d758ce99cd762  releases.mjs
+07b12395b5c0d80f9fea5bda6a5a0f9477e7b7852a03ba2355f42b66d34ca7d4  statistics.mjs
+f1f45b5fc324da39fc259a10b811a5b18496708723a5656aae48dab8e9747b70  windows.mjs
+2ec2f5c9e0fd1109ef4219ebae2a16612b167787e3bbb0dd23557bada2fcac65  test/analysis.test.mjs
+a5e7b76c6a0ba49b4a0ce2577ee7684db44b50c91af569aa7435c06acd9631fc  test/cohort.test.mjs
+acccc8c9e96777817c10168dbe32f0721e3662a54c0dca7f7682cbffd41693cf  test/statistics.test.mjs
+61ae76fcc8bcb3581fe65889b66f9c98dd8061b285aecc60dd19b93cf2ad4e78  test/windows.test.mjs
+e4a4ac5a4095dd5f6fcc2e74ccf5666fb8784abf8dd78dc854c08d70b63dc5e8  review/adversarial.test.mjs

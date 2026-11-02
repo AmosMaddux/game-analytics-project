@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "fieldnote-source-validation-budget-1.0",
+  "campaign": "fieldnote-five-sentinel-review-validation-2026-10-11",
+  "entries": [
+    {
+      "kind": "sentinel_stopped_schema",
+      "runId": "sentinels-5b0cb1c6-665f-46ae-8387-fc39fbe2df04",
+      "reportSha256": "3a8aefec83375d04c74beabeeacad930d9060e1259dbe621ff64bcf233840f5d",
+      "counters": { "requests": 2, "retries": 0, "bytes": 2184, "elapsedMs": 2238 }
+    },
+    {
+      "kind": "shape_diagnostic",
+      "reportSha256": "6dc0714074c3208ad399aa7c2027d8516e267c9d00987a2547330f70ef061468",
+      "counters": { "requests": 3, "retries": 0, "bytes": 2936, "elapsedMs": 4409 }
+    }
+  ]
+}

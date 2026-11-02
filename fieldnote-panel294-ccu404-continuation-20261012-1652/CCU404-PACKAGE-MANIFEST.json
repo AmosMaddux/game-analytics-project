@@ -1,0 +1,96 @@
+{
+  "schemaVersion": "fieldnote-ccu404-continuation-package-1.0",
+  "expectedLedgerSha256": "ffe944dc84fcff62f85db027d4cbfbe15a8e1741fce13e33317cc5ad903890ac",
+  "members": [
+    {
+      "path": "CCU404-CONTINUATION-RUNBOOK.md",
+      "bytes": 2684,
+      "sha256": "6a77608b9e0bd63be3e3680b895f84ea4e1e2833b025b4c81e76909d8127a17b"
+    },
+    {
+      "path": "campaign-exports.mjs",
+      "bytes": 4071,
+      "sha256": "c25631b221452734545268a68a555afee3287d9ca024848ba45f02720216e425"
+    },
+    {
+      "path": "ccu404-resume.test.mjs",
+      "bytes": 6567,
+      "sha256": "888ea6e667580a8d26d7004b2614e8655038f7fa93e5b253b93889f8117394e3"
+    },
+    {
+      "path": "collect-panel-metrics.mjs",
+      "bytes": 37950,
+      "sha256": "57d472ec100971fd9f8a3f4095f3c282e04e898e15ef1445c3076c11d00dcb17"
+    },
+    {
+      "path": "collect-review-campaign.mjs",
+      "bytes": 35545,
+      "sha256": "1b037f450a736e72cd71b5f009dadf7b64db265cdae74703a457296c4faa1ff5"
+    },
+    {
+      "path": "collect-review-campaign.regression.test.mjs",
+      "bytes": 18573,
+      "sha256": "884a4697cab3469c0772b8a2c2e4a88d8a0e2cc11d8c5c9ae8a4802f0bbd7b53"
+    },
+    {
+      "path": "diagnostic-ledger-fixture.json",
+      "bytes": 537161,
+      "sha256": "ffe944dc84fcff62f85db027d4cbfbe15a8e1741fce13e33317cc5ad903890ac"
+    },
+    {
+      "path": "join-qualified-candidates.mjs",
+      "bytes": 5028,
+      "sha256": "bfba48043f2e50a3d9a340132df4569f4392f3c0d4a44fbaa175540c4449446d"
+    },
+    {
+      "path": "panel-294-frozen.json",
+      "bytes": 674437,
+      "sha256": "c9b5d6497d6a2d4ddf15f7ca07a8d87f2603ac89da8b7998ca03137830e84220"
+    },
+    {
+      "path": "panel294-fixtures/authoritative-ledger-final.json",
+      "bytes": 445526,
+      "sha256": "f14af4ede086cb7616335a17875a28770869ea9605a241c06e5c6b1ca154b705"
+    },
+    {
+      "path": "panel294-fixtures/qualification-campaign-785-live.json",
+      "bytes": 551420,
+      "sha256": "b31ba4d90a768c9ff191c8b4d54df9016ecc7df1a462e49bee35e7ea8c150532"
+    },
+    {
+      "path": "panel294.test.mjs",
+      "bytes": 7445,
+      "sha256": "2ae4d8c21faa7546445532bd38aaeb18cb8ef785eb133addfdc00ddab799016b"
+    },
+    {
+      "path": "passed-sentinel-evidence.json",
+      "bytes": 11475,
+      "sha256": "a8efd1423272343178ed1813ad03660a18e74169f032c0e06fceb90bd2e40b6f"
+    },
+    {
+      "path": "qualification-campaign.mjs",
+      "bytes": 18534,
+      "sha256": "ec7e7815a317a9d41f69657d9d09314d3cf16bd4223eb535e1906fa7e074676e"
+    },
+    {
+      "path": "qualification-panel294.mjs",
+      "bytes": 7339,
+      "sha256": "6385f27fa4c40b100df1a0f711697e7a0f03d64ab467aa3c71bcb966082300f1"
+    },
+    {
+      "path": "resume-panel294-ccu404.mjs",
+      "bytes": 5302,
+      "sha256": "7190b71be1b4068803446434baca5d650a83e22e8173ed6dc0b9efce70a8a269"
+    },
+    {
+      "path": "validate-reviews.mjs",
+      "bytes": 21395,
+      "sha256": "b8dd20609af67841c0f6449cef1c94ea50930670f79d6c52118022e0d004357c"
+    },
+    {
+      "path": "run-reviewed-ccu404-continuation.sh",
+      "bytes": 2143,
+      "sha256": "7a7926b6fae98dbf9a01e02e9b69768ddab7e20f4dccd11f6c437d658436d03e"
+    }
+  ]
+}

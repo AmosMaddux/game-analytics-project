@@ -1,0 +1,113 @@
+{
+  "package": "fieldnote-population-discovery-resume-fix-1.0.1",
+  "checkpointSchema": "fieldnote-population-discovery-1.0",
+  "baseArchiveSha256": "09af94c793a346596e7ce7262f9a4189ea2eac57584fe555af8cf6d167794c62",
+  "validation": "57 offline tests passed; cached actual-data export independently reviewed; no credential or network execution by agents",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 13,
+      "sha256": "0cca18050cbff8b48f4f592761496338b046c19f8e9fe7c250b3b18e2e77784c"
+    },
+    {
+      "path": "PATCH-NOTES.md",
+      "bytes": 6899,
+      "sha256": "87d6d376ff4acff58953a771403d29de0447b7784c5776028ca6d1d8ea7a035e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 13505,
+      "sha256": "d3acf2b6bcdfb97ce793648597b54b94928e6f1e5c6b7a4fbe2853e3a959b61b"
+    },
+    {
+      "path": "VERIFICATION.md",
+      "bytes": 2170,
+      "sha256": "92024054a898ed89fd61f3bc5df8c55541d377728eed50835e5df4ef0e4c949c"
+    },
+    {
+      "path": "cached-identity-analysis.json",
+      "bytes": 1049,
+      "sha256": "38a8decfba3b399e6e0859a42130cebae39a9d4d14635bf389a942b559b15c9d"
+    },
+    {
+      "path": "cli.mjs",
+      "bytes": 3981,
+      "sha256": "e19cf2a0cdf760c6447623025f4c9ac960e89137f7bf238049f88725842dac09"
+    },
+    {
+      "path": "domain.mjs",
+      "bytes": 13683,
+      "sha256": "ce59c6f8357a69ad024c953e60f03d60129be9aa7a6b125e976d372bc432c449"
+    },
+    {
+      "path": "io.mjs",
+      "bytes": 4785,
+      "sha256": "bd4ee258c71f51b36ea12e607a3d06457259314c03a75eb1557a68778127ae61"
+    },
+    {
+      "path": "launch.mjs",
+      "bytes": 1132,
+      "sha256": "1f21013dbadb4660b149d4759bb7426fd064c47efceb87366cc09cbeec54fd10"
+    },
+    {
+      "path": "materialize-cached-identities.mjs",
+      "bytes": 5619,
+      "sha256": "1e0b8f052b86496edf686b45b53b05ce16ba8bcaaefff9abf3dc33357fabdabf"
+    },
+    {
+      "path": "offline-plan.json",
+      "bytes": 2099,
+      "sha256": "2bc9e80484a216cfe4ee20004396d665dd8ceb9e5ffe23b1538269f7530c511c"
+    },
+    {
+      "path": "offline-tests.log",
+      "bytes": 5375,
+      "sha256": "142d981434fa2020ae274f95665b1f022d8df382d7d2227c291c4ad428fe45c4"
+    },
+    {
+      "path": "runner.mjs",
+      "bytes": 15624,
+      "sha256": "57a539a0d4beda61359761c9baf06f44dc366843a66948b37619d4565b40c5be"
+    },
+    {
+      "path": "tests/domain.test.mjs",
+      "bytes": 6401,
+      "sha256": "b2143d3c90c0136db015bee71541e5aecf3edaaf11ddc80d3b03df12bd0c4117"
+    },
+    {
+      "path": "tests/fixtures.mjs",
+      "bytes": 940,
+      "sha256": "a448e7d61a01c5554eabbe55d367e71bc5e227151e3527a3d0680b6d28e96ccb"
+    },
+    {
+      "path": "tests/io.test.mjs",
+      "bytes": 4275,
+      "sha256": "40e20c7b7815ee93cbc6a4ef7f4c3ea78f0b17331dbb310ad032659d6d3e91bd"
+    },
+    {
+      "path": "tests/materialize.test.mjs",
+      "bytes": 3797,
+      "sha256": "d697ff90973031af746d61b8cbca8ad5dede6c498dd1edfd1ec505bd521a900e"
+    },
+    {
+      "path": "tests/runner.test.mjs",
+      "bytes": 7759,
+      "sha256": "caeb27162ca09c761780ddb891ab79471da38a152c6aa1e47b6353709f919129"
+    },
+    {
+      "path": "tests/steam-resume.test.mjs",
+      "bytes": 7731,
+      "sha256": "41e25a7f402b7db19afa95b36178c83bddff7287cfd4b1434690e630f777f7aa"
+    },
+    {
+      "path": "tests/transport.test.mjs",
+      "bytes": 5259,
+      "sha256": "ccca7e60d538a411aaffda685893b6b8dd46540234b4f7ccce9b6d8567a57f29"
+    },
+    {
+      "path": "transport.mjs",
+      "bytes": 10000,
+      "sha256": "bea841c01d8d37ffdee5e0af51c1e42381aa996037bc9817955c81d12cc39c52"
+    }
+  ]
+}

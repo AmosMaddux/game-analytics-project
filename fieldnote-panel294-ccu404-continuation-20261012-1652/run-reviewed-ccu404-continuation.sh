@@ -1,0 +1,27 @@
+#!/bin/bash
+set -euo pipefail
+cd -- "$(dirname -- "$0")"
+sha256sum --check <<'CHECKS'
+6a77608b9e0bd63be3e3680b895f84ea4e1e2833b025b4c81e76909d8127a17b  CCU404-CONTINUATION-RUNBOOK.md
+c25631b221452734545268a68a555afee3287d9ca024848ba45f02720216e425  campaign-exports.mjs
+888ea6e667580a8d26d7004b2614e8655038f7fa93e5b253b93889f8117394e3  ccu404-resume.test.mjs
+57d472ec100971fd9f8a3f4095f3c282e04e898e15ef1445c3076c11d00dcb17  collect-panel-metrics.mjs
+1b037f450a736e72cd71b5f009dadf7b64db265cdae74703a457296c4faa1ff5  collect-review-campaign.mjs
+884a4697cab3469c0772b8a2c2e4a88d8a0e2cc11d8c5c9ae8a4802f0bbd7b53  collect-review-campaign.regression.test.mjs
+ffe944dc84fcff62f85db027d4cbfbe15a8e1741fce13e33317cc5ad903890ac  diagnostic-ledger-fixture.json
+bfba48043f2e50a3d9a340132df4569f4392f3c0d4a44fbaa175540c4449446d  join-qualified-candidates.mjs
+c9b5d6497d6a2d4ddf15f7ca07a8d87f2603ac89da8b7998ca03137830e84220  panel-294-frozen.json
+f14af4ede086cb7616335a17875a28770869ea9605a241c06e5c6b1ca154b705  panel294-fixtures/authoritative-ledger-final.json
+b31ba4d90a768c9ff191c8b4d54df9016ecc7df1a462e49bee35e7ea8c150532  panel294-fixtures/qualification-campaign-785-live.json
+2ae4d8c21faa7546445532bd38aaeb18cb8ef785eb133addfdc00ddab799016b  panel294.test.mjs
+a8efd1423272343178ed1813ad03660a18e74169f032c0e06fceb90bd2e40b6f  passed-sentinel-evidence.json
+ec7e7815a317a9d41f69657d9d09314d3cf16bd4223eb535e1906fa7e074676e  qualification-campaign.mjs
+6385f27fa4c40b100df1a0f711697e7a0f03d64ab467aa3c71bcb966082300f1  qualification-panel294.mjs
+7190b71be1b4068803446434baca5d650a83e22e8173ed6dc0b9efce70a8a269  resume-panel294-ccu404.mjs
+b8dd20609af67841c0f6449cef1c94ea50930670f79d6c52118022e0d004357c  validate-reviews.mjs
+CHECKS
+exec node resume-panel294-ccu404.mjs \
+ --state /workspaces/codespaces-blank/fieldnote-redesign-stage-20261011/pilot-20261011-1746/fieldnote-source-budget-2026-10.json \
+ --output /workspaces/codespaces-blank/fieldnote-panel294-run-20261012-1615/panel-metrics-294-live.json \
+ --expected-ledger-sha ffe944dc84fcff62f85db027d4cbfbe15a8e1741fce13e33317cc5ad903890ac \
+ --validation "$PWD/passed-sentinel-evidence.json"

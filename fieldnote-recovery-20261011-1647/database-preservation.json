@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-10-11T16:47:40.697288+00:00",
+  "source_path": "/workspaces/codespaces-blank/fieldnote-app/.data/fieldnote.sqlite",
+  "source": {
+    "integrity": [
+      [
+        "ok"
+      ]
+    ],
+    "foreign_key_violations": [],
+    "counts": {
+      "catalog_admissions": 298,
+      "catalog_company_roles": 1714,
+      "catalog_conflicts": 40,
+      "catalog_field_provenance": 5236,
+      "catalog_games": 334,
+      "catalog_labels": 9765,
+      "catalog_links": 2691,
+      "catalog_platforms": 1129,
+      "catalog_releases": 1605,
+      "cohorts": 3,
+      "collection_attempts": 668,
+      "collection_jobs": 7,
+      "collection_rejections": 110,
+      "collection_schedules": 3,
+      "foundation_schema": 3,
+      "games": 334,
+      "genres": 13,
+      "identity_crosswalks": 334,
+      "local_migrations": 3,
+      "marketing_events": 13,
+      "marketing_profiles": 334,
+      "metric_observations": 1661,
+      "review_windows": 6,
+      "snapshot_metadata": 14,
+      "source_health": 4,
+      "steam_tags": 701,
+      "ui_settings": 1
+    }
+  },
+  "backup": {
+    "integrity": [
+      [
+        "ok"
+      ]
+    ],
+    "foreign_key_violations": [],
+    "counts": {
+      "catalog_admissions": 298,
+      "catalog_company_roles": 1714,
+      "catalog_conflicts": 40,
+      "catalog_field_provenance": 5236,
+      "catalog_games": 334,
+      "catalog_labels": 9765,
+      "catalog_links": 2691,
+      "catalog_platforms": 1129,
+      "catalog_releases": 1605,
+      "cohorts": 3,
+      "collection_attempts": 668,
+      "collection_jobs": 7,
+      "collection_rejections": 110,
+      "collection_schedules": 3,
+      "foundation_schema": 3,
+      "games": 334,
+      "genres": 13,
+      "identity_crosswalks": 334,
+      "local_migrations": 3,
+      "marketing_events": 13,
+      "marketing_profiles": 334,
+      "metric_observations": 1661,
+      "review_windows": 6,
+      "snapshot_metadata": 14,
+      "source_health": 4,
+      "steam_tags": 701,
+      "ui_settings": 1
+    }
+  },
+  "restored": {
+    "integrity": [
+      [
+        "ok"
+      ]
+    ],
+    "foreign_key_violations": [],
+    "counts": {
+      "catalog_admissions": 298,
+      "catalog_company_roles": 1714,
+      "catalog_conflicts": 40,
+      "catalog_field_provenance": 5236,
+      "catalog_games": 334,
+      "catalog_labels": 9765,
+      "catalog_links": 2691,
+      "catalog_platforms": 1129,
+      "catalog_releases": 1605,
+      "cohorts": 3,
+      "collection_attempts": 668,
+      "collection_jobs": 7,
+      "collection_rejections": 110,
+      "collection_schedules": 3,
+      "foundation_schema": 3,
+      "games": 334,
+      "genres": 13,
+      "identity_crosswalks": 334,
+      "local_migrations": 3,
+      "marketing_events": 13,
+      "marketing_profiles": 334,
+      "metric_observations": 1661,
+      "review_windows": 6,
+      "snapshot_metadata": 14,
+      "source_health": 4,
+      "steam_tags": 701,
+      "ui_settings": 1
+    }
+  },
+  "counts_match": true,
+  "files": {
+    "fieldnote-backup.sqlite": {
+      "bytes": 8142848,
+      "sha256": "74cd94847b7f5cd73bfb3196dbbc5d4b478b1ee0b6eef49e3919b8db08510767"
+    },
+    "fieldnote-restore-test.sqlite": {
+      "bytes": 8142848,
+      "sha256": "74cd94847b7f5cd73bfb3196dbbc5d4b478b1ee0b6eef49e3919b8db08510767"
+    }
+  }
+}

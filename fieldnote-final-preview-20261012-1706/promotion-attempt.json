@@ -1,0 +1,8 @@
+{
+  "startedAt": "2026-10-12T17:35:48.911524+00:00",
+  "previousPid": 41490,
+  "previousApp": "/workspaces/codespaces-blank/fieldnote-qualified-preview-20261012-1607/fieldnote-app",
+  "previousDatabase": "/workspaces/codespaces-blank/fieldnote-qualified-preview-20261012-1607/runtime-approved294.sqlite",
+  "targetDatabase": "/workspaces/codespaces-blank/fieldnote-final-preview-20261012-1706/runtime-metrics294.sqlite",
+  "bundleSha256": "f4c15f5bb0b59d187b4b52af15694ffa4137a735cab8e561e41129db9b858412"
+}

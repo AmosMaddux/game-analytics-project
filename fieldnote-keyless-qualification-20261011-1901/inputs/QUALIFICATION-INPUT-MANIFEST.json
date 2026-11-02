@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "fieldnote-qualification-input-package-1.0",
+  "createdAt": "2026-10-11T19:01:00.000Z",
+  "verifiedCandidateCount": 625,
+  "sourceRequestCount": 31,
+  "newNetworkRequests": 0,
+  "expectedQualificationRequests": 625,
+  "maximumQualificationAttemptsForThisPool": 725,
+  "phaseRequestCap": 1200,
+  "phaseRuntimeMinutes": 40,
+  "passedSourceEvidenceSha256": "a8efd1423272343178ed1813ad03660a18e74169f032c0e06fceb90bd2e40b6f",
+  "files": [
+    {
+      "name": "cached-identity-candidates.json",
+      "bytes": 3648558,
+      "sha256": "db69bb4688fe30d7d23710b21c86513693214b4576d9f611b69e6c4a21661de2"
+    },
+    {
+      "name": "materialization-manifest.json",
+      "bytes": 1711,
+      "sha256": "eaf867264770a727ca26f3a730db4f6cc31ec92e50d537b49169526642cd2949"
+    },
+    {
+      "name": "original/candidates.json",
+      "bytes": 3268777,
+      "sha256": "cdd2278bea3fa218f987d08a7d0f71090c668cab9b74cea15f5910b322eff80f"
+    },
+    {
+      "name": "original/checkpoint.json",
+      "bytes": 3380740,
+      "sha256": "7327d3ee4f06de3ab8f0eebd58c99fb02eb522708da2e13847511282acea9f57"
+    }
+  ]
+}
